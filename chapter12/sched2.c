@@ -3,18 +3,22 @@
 extern struct pcb *run_queue[];
 static struct pcb *zombies;
 
-void reap_zombies(void) {
-    while (zombies != 0) {
+void reap_zombies(void)
+{
+    while (zombies != 0)
+    {
         struct pcb *pcb = zombies;
         zombies = zombies->next;
         proc_release(pcb);
     }
 }
 
-void sched_idle() {
+void sched_idle()
+{
     struct pcb *self = sched_self();
     L1(L_BASE, L_SCHED_IDLE, self->hart->id);
-    for (;;) {
+    for (;;)
+    {
         proc_enqueue(&run_queue[2], self);
         sched_block(self);
         extern spinlock_t bkl;
@@ -25,10 +29,46 @@ void sched_idle() {
     }
 }
 
-void sched_exit(void) {
+void sched_exit(void)
+{
     struct pcb *self = sched_self();
     L0(L_NORM, L_SCHED_EXIT);
     io_exit(self);
+
+    // Remove from sleep queue if sleeping
+    if (self->sleeping)
+    {
+        extern struct pcb *sleep_queue;
+        if (sleep_queue != 0)
+        {
+            // Find the process before self in the circular queue
+            struct pcb *prev = sleep_queue;
+            while (prev->next != self && prev->next != sleep_queue)
+            {
+                prev = prev->next;
+            }
+
+            if (prev->next == self)
+            {
+                // Found it, remove from queue
+                if (self == self->next)
+                {
+                    // Only one process
+                    sleep_queue = 0;
+                }
+                else
+                {
+                    prev->next = self->next;
+                    if (self == sleep_queue)
+                    {
+                        sleep_queue = prev;
+                    }
+                }
+            }
+        }
+        self->sleeping = 0;
+    }
+
     self->next = zombies;
     zombies = self;
     sched_block(self);

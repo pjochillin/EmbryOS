@@ -14,8 +14,18 @@ extern int user_write(int file, int off, const void *src, int n);
 extern int user_size(int file);
 extern void user_delete(int file);
 
-static inline void user_delay(int ms) {  // pseudo system call
-    user_yield();
-    while (--ms > 0)
-        for (volatile int i = 0; i < DELAY_MS; i++) ;
+extern uint64_t user_gettime(void);
+extern void user_sleep(uint64_t deadline);
+
+static inline void user_delay(int ms)
+{
+    // Get current time in nanoseconds
+    uint64_t current_time = user_gettime();
+
+    // Convert milliseconds to nanoseconds and compute absolute deadline
+    uint64_t delay_ns = (uint64_t)ms * 1000000ULL;
+    uint64_t deadline = current_time + delay_ns;
+
+    // Sleep until the deadline
+    user_sleep(deadline);
 }

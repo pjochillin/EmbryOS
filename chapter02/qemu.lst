@@ -1,0 +1,4108 @@
+
+qemu.elf:     file format elf64-littleriscv
+qemu.elf
+architecture: riscv:rv64, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x0000000080200000
+
+Program Header:
+0x70000003 off    0x0000000000012170 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
+         filesz 0x0000000000000063 memsz 0x0000000000000000 flags r--
+    LOAD off    0x0000000000001000 vaddr 0x0000000080200000 paddr 0x0000000080200000 align 2**12
+         filesz 0x0000000000002097 memsz 0x0000000000002097 flags r-x
+    LOAD off    0x00000000000120a0 vaddr 0x00000000802020a0 paddr 0x00000000802020a0 align 2**16
+         filesz 0x00000000000000d0 memsz 0x000000000030f760 flags rw-
+
+Sections:
+Idx Name              Size      VMA               LMA               File off  Algn  Flags
+  0 .text             00002097  0000000080200000  0000000080200000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data             000000d0  00000000802020a0  00000000802020a0  000120a0  2**4  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss              00001028  0000000080210000  0000000080210000  00012170  2**16  ALLOC
+  3 .log              00100000  0000000080211040  0000000080211040  00012170  2**6  ALLOC
+  4 .ramdisk          00200000  0000000080311800  0000000080311800  00012170  2**11  ALLOC
+  5 .riscv.attributes 00000063  0000000000000000  0000000000000000  00012170  2**0  CONTENTS, READONLY
+  6 .comment          00000034  0000000000000000  0000000000000000  000121d3  2**0  CONTENTS, READONLY
+  7 .debug_line       00002380  0000000000000000  0000000000000000  00012207  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_line_str   000001d6  0000000000000000  0000000000000000  00014587  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_info       000032fa  0000000000000000  0000000000000000  0001475d  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_abbrev     000012a8  0000000000000000  0000000000000000  00017a57  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_aranges    00000540  0000000000000000  0000000000000000  00018d00  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .debug_str        000008c5  0000000000000000  0000000000000000  00019240  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_rnglists   000002ac  0000000000000000  0000000000000000  00019b05  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 14 .debug_frame      000009d8  0000000000000000  0000000000000000  00019db8  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+0000000080200000 l    d  .text	0000000000000000 .text
+00000000802020a0 l    d  .data	0000000000000000 .data
+0000000080210000 l    d  .bss	0000000000000000 .bss
+0000000080211040 l    d  .log	0000000000000000 .log
+0000000080311800 l    d  .ramdisk	0000000000000000 .ramdisk
+0000000000000000 l    d  .riscv.attributes	0000000000000000 .riscv.attributes
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_line_str	0000000000000000 .debug_line_str
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_aranges	0000000000000000 .debug_aranges
+0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
+0000000000000000 l    d  .debug_rnglists	0000000000000000 .debug_rnglists
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000000000000 l    df *ABS*	0000000000000000 ccnSL8SP.o
+0000000080200000 l       .text	0000000000000000 _startS
+0000000000000000 l    df *ABS*	0000000000000000 ccnXXpDT.o
+0000000000000000 l    df *ABS*	0000000000000000 log.c
+0000000080200052 l     F .text	0000000000000146 L
+0000000080200198 l     F .text	0000000000000032 L0
+0000000000000000 l    df *ABS*	0000000000000000 string.c
+0000000000000000 l    df *ABS*	0000000000000000 hello.c
+0000000000000000 l    df *ABS*	0000000000000000 kprintf.c
+000000008020049c l     F .text	00000000000000b4 print_unsigned
+0000000000000000 l    df *ABS*	0000000000000000 io.c
+00000000802007d8 l     F .text	0000000000000146 L
+000000008020091e l     F .text	0000000000000044 L1
+0000000000000000 l    df *ABS*	0000000000000000 uart.c
+00000000802009c4 l     F .text	0000000000000146 L
+0000000080200b0a l     F .text	0000000000000052 L2
+00000000802020b8 l     O .data	00000000000000a0 uart_info
+0000000080200b5c l     F .text	0000000000000066 match_uart_type
+0000000000000000 l    df *ABS*	0000000000000000 uart_16550.c
+0000000000000000 l    df *ABS*	0000000000000000 uart_sifive.c
+0000000000000000 l    df *ABS*	0000000000000000 uart_pxa.c
+0000000000000000 l    df *ABS*	0000000000000000 uart_litex.c
+0000000000000000 l    df *ABS*	0000000000000000 die.c
+0000000080200e30 l     F .text	0000000000000146 L
+0000000080200f76 l     F .text	0000000000000032 L0
+0000000000000000 l    df *ABS*	0000000000000000 screen.c
+0000000080202160 l     O .data	0000000000000004 cur_row.3
+0000000080202164 l     O .data	0000000000000004 cur_col.2
+0000000080202168 l     O .data	0000000000000004 cur_fg.1
+000000008020216c l     O .data	0000000000000004 cur_bg.0
+0000000000000000 l    df *ABS*	0000000000000000 blockdemo.c
+0000000080201490 l     F .text	0000000000000146 L
+00000000802015d6 l     F .text	0000000000000044 L1
+000000008020161a l     F .text	0000000000000066 user_delay
+0000000000000000 l    df *ABS*	0000000000000000 blockpixel.c
+00000000802017bc l     F .text	0000000000000146 L
+0000000080201902 l     F .text	000000000000005e L3
+0000000080201960 l     F .text	0000000000000054 user_put
+00000000802019b4 l     F .text	000000000000003c idx
+00000000802019f0 l     F .text	000000000000008a bp_render_pair
+0000000000000000 l    df *ABS*	0000000000000000 config.c
+0000000080211040 g       .log	0000000000000000 log
+0000000080202960 g       .data	0000000000000000 __global_pointer$
+0000000080200dd0 g     F .text	0000000000000016 uart_pxa_init
+0000000080200cbe g     F .text	0000000000000016 uart_ns16550_init
+0000000080201680 g     F .text	0000000000000062 in_range
+0000000080200040 g       .text	0000000000000000 sbi_set_timer
+00000000802001ca g     F .text	00000000000000ce log_init
+0000000000000400 g       *ABS*	0000000000000000 RAMDISK_BLOCKS
+00000000802003fe g     F .text	000000000000009e embryos_main
+0000000080200fd0 g     F .text	0000000000000386 screen_put
+00000000802020a0 g     O .data	0000000000000018 log_header
+0000000000000800 g       *ABS*	0000000000000000 BLOCK_SIZE
+0000000080200cd4 g     F .text	0000000000000042 uart_ns16550_putchar
+0000000000004000 g       *ABS*	0000000000000000 N_LOG_EVENTS
+0000000080211028 g       .bss	0000000000000000 __bss_end
+00000000802016e2 g     F .text	00000000000000da blockdemo_main
+0000000080200962 g     F .text	0000000000000062 io_putchar
+0000000080201b1c g     F .text	000000000000024c bp_put
+0000000080201d68 g     F .text	000000000000020a bp_flush
+0000000080201a7a g     F .text	00000000000000a2 bp_init
+0000000080200bc2 g     F .text	00000000000000fc uart_init
+0000000080200000 g       .text	0000000000000000 _start
+00000000802002d8 g     F .text	00000000000000a8 strstr
+0000000080211000 g       .bss	0000000000000000 stack_end
+0000000080200034 g       .text	0000000000000000 sbi_putchar
+0000000080210000 g       .bss	0000000000000000 __bss_start
+0000000080200fa8 g     F .text	0000000000000028 die
+0000000080200d62 g     F .text	0000000000000040 uart_pxa_wait_tx_empty
+0000000080311040 g       .log	0000000000000000 __log_end
+0000000080201356 g     F .text	000000000000013a screen_fill
+0000000080200550 g     F .text	0000000000000288 kprintf
+0000000080200380 g     F .text	000000000000007e print_string
+0000000080200da2 g     F .text	000000000000002e uart_pxa_putchar
+0000000080200de6 g     F .text	0000000000000016 uart_litex_init
+0000000080200d16 g     F .text	0000000000000016 uart_sifive_init
+0000000080211020 g     O .bss	0000000000000008 uart
+0000000000000040 g       *ABS*	0000000000000000 LOG_EVENT_SIZE
+0000000080200298 g     F .text	0000000000000040 strlen
+0000000080512000 g       .riscv.attributes	0000000000000000 frames
+0000000080200dfc g     F .text	0000000000000034 uart_litex_putchar
+0000000080200d2c g     F .text	0000000000000036 uart_sifive_putchar
+0000000080211000 g     O .bss	0000000000000020 config
+
+
+
+Disassembly of section .text:
+
+0000000080200000 <_start>:
+_startS():
+/embryos/chapter02/start.S:45
+#endif
+
+# Entry point executed in S-mode after OpenSBI hands control to us.
+# a0 = hartid, a1 = fdt_ptr (both passed by OpenSBI)
+_startS:
+    li   tp, 0
+    80200000:	4201                	li	tp,0
+/embryos/chapter02/start.S:46
+    la   t0, __bss_start
+    80200002:	00010297          	auipc	t0,0x10
+    80200006:	ffe28293          	addi	t0,t0,-2 # 80210000 <__bss_start>
+/embryos/chapter02/start.S:47
+    la   t1, __bss_end
+    8020000a:	00011317          	auipc	t1,0x11
+    8020000e:	01e30313          	addi	t1,t1,30 # 80211028 <__bss_end>
+/embryos/chapter02/start.S:50
+
+    # Clear bss (uninitialized variables) section
+    li   t2, 0
+    80200012:	4381                	li	t2,0
+/embryos/chapter02/start.S:51
+1:  bgeu t0, t1, 2f
+    80200014:	0062f663          	bgeu	t0,t1,80200020 <_start+0x20>
+/embryos/chapter02/start.S:52
+    sw   t2, 0(t0)
+    80200018:	0072a023          	sw	t2,0(t0)
+/embryos/chapter02/start.S:53
+    addi t0, t0, 4
+    8020001c:	0291                	addi	t0,t0,4
+/embryos/chapter02/start.S:54
+    j    1b
+    8020001e:	bfdd                	j	80200014 <_start+0x14>
+/embryos/chapter02/start.S:57
+
+    # Call embryos_main() with valid stack
+2:  la   sp, stack_end
+    80200020:	00011117          	auipc	sp,0x11
+    80200024:	fe010113          	addi	sp,sp,-32 # 80211000 <config>
+/embryos/chapter02/start.S:61
+
+    .option push
+    .option norelax
+    la   gp, __global_pointer$
+    80200028:	00003197          	auipc	gp,0x3
+    8020002c:	93818193          	addi	gp,gp,-1736 # 80202960 <__global_pointer$>
+/embryos/chapter02/start.S:64
+    .option pop
+
+    call embryos_main                 # jump into C code
+    80200030:	3ce000ef          	jal	802003fe <embryos_main>
+
+0000000080200034 <sbi_putchar>:
+sbi_putchar():
+/embryos/chapter02/sbi.S:9
+    .global sbi_putchar, sbi_set_timer
+
+# void sbi_putchar(int ch);
+#   a0 = ch
+sbi_putchar:
+    andi    a0, a0, 0xFF         # only low 8 bits matter
+    80200034:	0ff57513          	zext.b	a0,a0
+/embryos/chapter02/sbi.S:10
+    li      a7, 1                # SBI_CONSOLE_PUTCHAR
+    80200038:	4885                	li	a7,1
+/embryos/chapter02/sbi.S:11
+    ecall
+    8020003a:	00000073          	ecall
+/embryos/chapter02/sbi.S:12
+    ret
+    8020003e:	8082                	ret
+
+0000000080200040 <sbi_set_timer>:
+sbi_set_timer():
+/embryos/chapter02/sbi.S:23
+# RV32: a0=low32, a1=hi32
+# RV64: a0=full64
+sbi_set_timer:
+    # RV32: ABI already placed low32 in a0 and high32 in a1
+    # RV64: ABI already placed full 64-bit value in a0
+    li      a6, 0
+    80200040:	4801                	li	a6,0
+/embryos/chapter02/sbi.S:24
+    li      a7, 0x54494D45       # "TIME"
+    80200042:	544958b7          	lui	a7,0x54495
+    80200046:	d458889b          	addiw	a7,a7,-699 # 54494d45 <N_LOG_EVENTS+0x54490d45>
+/embryos/chapter02/sbi.S:25
+    ecall
+    8020004a:	00000073          	ecall
+/embryos/chapter02/sbi.S:26
+    ret
+    8020004e:	8082                	ret
+    80200050:	0001                	nop
+
+0000000080200052 <L>:
+L():
+/embryos/chapter02/log.h:9
+#include "log_defs.h"
+
+extern struct log_entry log[], __log_end[];
+extern struct log_header log_header;
+
+static inline struct log_entry *L(unsigned int level, enum log_type type, int arity) {
+    80200052:	715d                	addi	sp,sp,-80
+    80200054:	e486                	sd	ra,72(sp)
+    80200056:	e0a2                	sd	s0,64(sp)
+    80200058:	0880                	addi	s0,sp,80
+    8020005a:	87aa                	mv	a5,a0
+    8020005c:	86ae                	mv	a3,a1
+    8020005e:	8732                	mv	a4,a2
+    80200060:	faf42e23          	sw	a5,-68(s0)
+    80200064:	87b6                	mv	a5,a3
+    80200066:	faf42c23          	sw	a5,-72(s0)
+    8020006a:	87ba                	mv	a5,a4
+    8020006c:	faf42a23          	sw	a5,-76(s0)
+/embryos/chapter02/log.h:10
+    struct log_header *lh = &log_header;
+    80200070:	00002797          	auipc	a5,0x2
+    80200074:	03078793          	addi	a5,a5,48 # 802020a0 <log_header>
+    80200078:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/log.h:11
+    uint32_t offset = 0;
+    8020007c:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/log.h:12
+    for (unsigned i = 0; i < level; i++) offset += lh->sizes[i];
+    80200080:	fe042423          	sw	zero,-24(s0)
+    80200084:	a015                	j	802000a8 <L+0x56>
+/embryos/chapter02/log.h:12 (discriminator 3)
+    80200086:	fd843703          	ld	a4,-40(s0)
+    8020008a:	fe846783          	lwu	a5,-24(s0)
+    8020008e:	078a                	slli	a5,a5,0x2
+    80200090:	97ba                	add	a5,a5,a4
+    80200092:	47dc                	lw	a5,12(a5)
+    80200094:	fec42703          	lw	a4,-20(s0)
+    80200098:	9fb9                	addw	a5,a5,a4
+    8020009a:	fef42623          	sw	a5,-20(s0)
+    8020009e:	fe842783          	lw	a5,-24(s0)
+    802000a2:	2785                	addiw	a5,a5,1
+    802000a4:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/log.h:12 (discriminator 1)
+    802000a8:	fe842783          	lw	a5,-24(s0)
+    802000ac:	873e                	mv	a4,a5
+    802000ae:	fbc42783          	lw	a5,-68(s0)
+    802000b2:	2701                	sext.w	a4,a4
+    802000b4:	2781                	sext.w	a5,a5
+    802000b6:	fcf768e3          	bltu	a4,a5,80200086 <L+0x34>
+/embryos/chapter02/log.h:13
+    struct log_entry *le = &log[offset + lh->ts[level] % lh->sizes[level]];
+    802000ba:	fd843703          	ld	a4,-40(s0)
+    802000be:	fbc46783          	lwu	a5,-68(s0)
+    802000c2:	078a                	slli	a5,a5,0x2
+    802000c4:	97ba                	add	a5,a5,a4
+    802000c6:	4394                	lw	a3,0(a5)
+    802000c8:	fd843703          	ld	a4,-40(s0)
+    802000cc:	fbc46783          	lwu	a5,-68(s0)
+    802000d0:	078a                	slli	a5,a5,0x2
+    802000d2:	97ba                	add	a5,a5,a4
+    802000d4:	47dc                	lw	a5,12(a5)
+    802000d6:	8736                	mv	a4,a3
+    802000d8:	02f777bb          	remuw	a5,a4,a5
+    802000dc:	2781                	sext.w	a5,a5
+    802000de:	fec42703          	lw	a4,-20(s0)
+    802000e2:	9fb9                	addw	a5,a5,a4
+    802000e4:	2781                	sext.w	a5,a5
+    802000e6:	1782                	slli	a5,a5,0x20
+    802000e8:	9381                	srli	a5,a5,0x20
+    802000ea:	00679713          	slli	a4,a5,0x6
+    802000ee:	00011797          	auipc	a5,0x11
+    802000f2:	f5278793          	addi	a5,a5,-174 # 80211040 <log>
+    802000f6:	97ba                	add	a5,a5,a4
+    802000f8:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter02/log.h:14
+    le->type = type;
+    802000fc:	fb842783          	lw	a5,-72(s0)
+    80200100:	03079713          	slli	a4,a5,0x30
+    80200104:	9341                	srli	a4,a4,0x30
+    80200106:	fd043783          	ld	a5,-48(s0)
+    8020010a:	00e79023          	sh	a4,0(a5)
+/embryos/chapter02/log.h:15
+    le->arity = arity;
+    8020010e:	fb442783          	lw	a5,-76(s0)
+    80200112:	0ff7f713          	zext.b	a4,a5
+    80200116:	fd043783          	ld	a5,-48(s0)
+    8020011a:	00e78123          	sb	a4,2(a5)
+/embryos/chapter02/log.h:16
+    for (unsigned i = 0; i < LOG_N_LEVELS; i++) le->ts[i] = lh->ts[i];
+    8020011e:	fe042223          	sw	zero,-28(s0)
+    80200122:	a025                	j	8020014a <L+0xf8>
+/embryos/chapter02/log.h:16 (discriminator 3)
+    80200124:	fd843703          	ld	a4,-40(s0)
+    80200128:	fe446783          	lwu	a5,-28(s0)
+    8020012c:	078a                	slli	a5,a5,0x2
+    8020012e:	97ba                	add	a5,a5,a4
+    80200130:	4398                	lw	a4,0(a5)
+    80200132:	fd043683          	ld	a3,-48(s0)
+    80200136:	fe446783          	lwu	a5,-28(s0)
+    8020013a:	078a                	slli	a5,a5,0x2
+    8020013c:	97b6                	add	a5,a5,a3
+    8020013e:	c3d8                	sw	a4,4(a5)
+    80200140:	fe442783          	lw	a5,-28(s0)
+    80200144:	2785                	addiw	a5,a5,1
+    80200146:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/log.h:16 (discriminator 1)
+    8020014a:	fe442783          	lw	a5,-28(s0)
+    8020014e:	0007871b          	sext.w	a4,a5
+    80200152:	4789                	li	a5,2
+    80200154:	fce7f8e3          	bgeu	a5,a4,80200124 <L+0xd2>
+/embryos/chapter02/log.h:18
+    uintptr_t tmp;
+    asm volatile ("mv %0, tp" : "=r"(tmp));
+    80200158:	8792                	mv	a5,tp
+    8020015a:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/log.h:19
+    le->self = (uint64_t)tmp;
+    8020015e:	fd043783          	ld	a5,-48(s0)
+    80200162:	fc843703          	ld	a4,-56(s0)
+    80200166:	eb98                	sd	a4,16(a5)
+/embryos/chapter02/log.h:20
+    lh->ts[level]++;
+    80200168:	fd843703          	ld	a4,-40(s0)
+    8020016c:	fbc46783          	lwu	a5,-68(s0)
+    80200170:	078a                	slli	a5,a5,0x2
+    80200172:	97ba                	add	a5,a5,a4
+    80200174:	439c                	lw	a5,0(a5)
+    80200176:	2785                	addiw	a5,a5,1
+    80200178:	0007871b          	sext.w	a4,a5
+    8020017c:	fd843683          	ld	a3,-40(s0)
+    80200180:	fbc46783          	lwu	a5,-68(s0)
+    80200184:	078a                	slli	a5,a5,0x2
+    80200186:	97b6                	add	a5,a5,a3
+    80200188:	c398                	sw	a4,0(a5)
+/embryos/chapter02/log.h:21
+    return le;
+    8020018a:	fd043783          	ld	a5,-48(s0)
+/embryos/chapter02/log.h:22
+}
+    8020018e:	853e                	mv	a0,a5
+    80200190:	60a6                	ld	ra,72(sp)
+    80200192:	6406                	ld	s0,64(sp)
+    80200194:	6161                	addi	sp,sp,80
+    80200196:	8082                	ret
+
+0000000080200198 <L0>:
+L0():
+/embryos/chapter02/log.h:24
+
+static inline void L0(unsigned int level, enum log_type type) {
+    80200198:	1101                	addi	sp,sp,-32
+    8020019a:	ec06                	sd	ra,24(sp)
+    8020019c:	e822                	sd	s0,16(sp)
+    8020019e:	1000                	addi	s0,sp,32
+    802001a0:	87aa                	mv	a5,a0
+    802001a2:	872e                	mv	a4,a1
+    802001a4:	fef42623          	sw	a5,-20(s0)
+    802001a8:	87ba                	mv	a5,a4
+    802001aa:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/log.h:25
+    (void) L(level, type, 0);
+    802001ae:	fe842703          	lw	a4,-24(s0)
+    802001b2:	fec42783          	lw	a5,-20(s0)
+    802001b6:	4601                	li	a2,0
+    802001b8:	85ba                	mv	a1,a4
+    802001ba:	853e                	mv	a0,a5
+    802001bc:	e97ff0ef          	jal	80200052 <L>
+/embryos/chapter02/log.h:26
+}
+    802001c0:	0001                	nop
+    802001c2:	60e2                	ld	ra,24(sp)
+    802001c4:	6442                	ld	s0,16(sp)
+    802001c6:	6105                	addi	sp,sp,32
+    802001c8:	8082                	ret
+
+00000000802001ca <log_init>:
+log_init():
+/embryos/chapter02/log.c:9
+struct log_header log_header = {
+    .ts = { 0, 0, 0 },
+    .sizes = { 1, 1, 1 }
+};
+
+void log_init(void) {
+    802001ca:	1101                	addi	sp,sp,-32
+    802001cc:	ec06                	sd	ra,24(sp)
+    802001ce:	e822                	sd	s0,16(sp)
+    802001d0:	1000                	addi	s0,sp,32
+/embryos/chapter02/log.c:10
+    if (log_header.ts[0] != 0) {
+    802001d2:	00002797          	auipc	a5,0x2
+    802001d6:	ece78793          	addi	a5,a5,-306 # 802020a0 <log_header>
+    802001da:	439c                	lw	a5,0(a5)
+    802001dc:	cb89                	beqz	a5,802001ee <log_init+0x24>
+/embryos/chapter02/log.c:11
+        kprintf("\nRestart blocked\n");
+    802001de:	00002517          	auipc	a0,0x2
+    802001e2:	d9a50513          	addi	a0,a0,-614 # 80201f78 <bp_flush+0x210>
+    802001e6:	36a000ef          	jal	80200550 <kprintf>
+/embryos/chapter02/log.c:12
+        for (;;) ;
+    802001ea:	0001                	nop
+    802001ec:	bffd                	j	802001ea <log_init+0x20>
+/embryos/chapter02/log.c:14
+    }
+    size_t n = __log_end - log;
+    802001ee:	00111717          	auipc	a4,0x111
+    802001f2:	e5270713          	addi	a4,a4,-430 # 80311040 <__log_end>
+    802001f6:	00011797          	auipc	a5,0x11
+    802001fa:	e4a78793          	addi	a5,a5,-438 # 80211040 <log>
+    802001fe:	40f707b3          	sub	a5,a4,a5
+    80200202:	8799                	srai	a5,a5,0x6
+    80200204:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter02/log.c:15
+    log_header.sizes[0] = n / 4;
+    80200208:	fe843783          	ld	a5,-24(s0)
+    8020020c:	8389                	srli	a5,a5,0x2
+    8020020e:	0007871b          	sext.w	a4,a5
+    80200212:	00002797          	auipc	a5,0x2
+    80200216:	e8e78793          	addi	a5,a5,-370 # 802020a0 <log_header>
+    8020021a:	c7d8                	sw	a4,12(a5)
+/embryos/chapter02/log.c:16
+    if (log_header.sizes[0] > 100) log_header.sizes[0] = 100;
+    8020021c:	00002797          	auipc	a5,0x2
+    80200220:	e8478793          	addi	a5,a5,-380 # 802020a0 <log_header>
+    80200224:	47d8                	lw	a4,12(a5)
+    80200226:	06400793          	li	a5,100
+    8020022a:	00e7f963          	bgeu	a5,a4,8020023c <log_init+0x72>
+/embryos/chapter02/log.c:16 (discriminator 1)
+    8020022e:	00002797          	auipc	a5,0x2
+    80200232:	e7278793          	addi	a5,a5,-398 # 802020a0 <log_header>
+    80200236:	06400713          	li	a4,100
+    8020023a:	c7d8                	sw	a4,12(a5)
+/embryos/chapter02/log.c:17
+    log_header.sizes[2] = n / 4;
+    8020023c:	fe843783          	ld	a5,-24(s0)
+    80200240:	8389                	srli	a5,a5,0x2
+    80200242:	0007871b          	sext.w	a4,a5
+    80200246:	00002797          	auipc	a5,0x2
+    8020024a:	e5a78793          	addi	a5,a5,-422 # 802020a0 <log_header>
+    8020024e:	cbd8                	sw	a4,20(a5)
+/embryos/chapter02/log.c:18
+    log_header.sizes[1] = n - log_header.sizes[0] - log_header.sizes[2];
+    80200250:	fe843783          	ld	a5,-24(s0)
+    80200254:	0007871b          	sext.w	a4,a5
+    80200258:	00002797          	auipc	a5,0x2
+    8020025c:	e4878793          	addi	a5,a5,-440 # 802020a0 <log_header>
+    80200260:	47dc                	lw	a5,12(a5)
+    80200262:	40f707bb          	subw	a5,a4,a5
+    80200266:	0007871b          	sext.w	a4,a5
+    8020026a:	00002797          	auipc	a5,0x2
+    8020026e:	e3678793          	addi	a5,a5,-458 # 802020a0 <log_header>
+    80200272:	4bdc                	lw	a5,20(a5)
+    80200274:	40f707bb          	subw	a5,a4,a5
+    80200278:	0007871b          	sext.w	a4,a5
+    8020027c:	00002797          	auipc	a5,0x2
+    80200280:	e2478793          	addi	a5,a5,-476 # 802020a0 <log_header>
+    80200284:	cb98                	sw	a4,16(a5)
+/embryos/chapter02/log.c:19
+    L0(L_BASE, L_BOOT);
+    80200286:	4581                	li	a1,0
+    80200288:	4501                	li	a0,0
+    8020028a:	f0fff0ef          	jal	80200198 <L0>
+/embryos/chapter02/log.c:20
+}
+    8020028e:	0001                	nop
+    80200290:	60e2                	ld	ra,24(sp)
+    80200292:	6442                	ld	s0,16(sp)
+    80200294:	6105                	addi	sp,sp,32
+    80200296:	8082                	ret
+
+0000000080200298 <strlen>:
+strlen():
+/embryos/chapter02/shared/string.c:24
+    for (; i < n && src[i] != '\0'; i++) dst[i] = src[i];
+    for (; i < n; i++) dst[i] = '\0';
+    return dst;
+}
+
+size_t strlen(const char *s) {
+    80200298:	7179                	addi	sp,sp,-48
+    8020029a:	f406                	sd	ra,40(sp)
+    8020029c:	f022                	sd	s0,32(sp)
+    8020029e:	1800                	addi	s0,sp,48
+    802002a0:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter02/shared/string.c:25
+    const char *p = s;
+    802002a4:	fd843783          	ld	a5,-40(s0)
+    802002a8:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter02/shared/string.c:26
+    while (*p) p++;
+    802002ac:	a031                	j	802002b8 <strlen+0x20>
+/embryos/chapter02/shared/string.c:26 (discriminator 2)
+    802002ae:	fe843783          	ld	a5,-24(s0)
+    802002b2:	0785                	addi	a5,a5,1
+    802002b4:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter02/shared/string.c:26 (discriminator 1)
+    802002b8:	fe843783          	ld	a5,-24(s0)
+    802002bc:	0007c783          	lbu	a5,0(a5)
+    802002c0:	f7fd                	bnez	a5,802002ae <strlen+0x16>
+/embryos/chapter02/shared/string.c:27
+    return (size_t) (p - s);
+    802002c2:	fe843703          	ld	a4,-24(s0)
+    802002c6:	fd843783          	ld	a5,-40(s0)
+    802002ca:	40f707b3          	sub	a5,a4,a5
+/embryos/chapter02/shared/string.c:28
+}
+    802002ce:	853e                	mv	a0,a5
+    802002d0:	70a2                	ld	ra,40(sp)
+    802002d2:	7402                	ld	s0,32(sp)
+    802002d4:	6145                	addi	sp,sp,48
+    802002d6:	8082                	ret
+
+00000000802002d8 <strstr>:
+strstr():
+/embryos/chapter02/shared/string.c:30
+
+char *strstr(const char *haystack, const char *needle) {
+    802002d8:	7139                	addi	sp,sp,-64
+    802002da:	fc06                	sd	ra,56(sp)
+    802002dc:	f822                	sd	s0,48(sp)
+    802002de:	0080                	addi	s0,sp,64
+    802002e0:	fca43423          	sd	a0,-56(s0)
+    802002e4:	fcb43023          	sd	a1,-64(s0)
+/embryos/chapter02/shared/string.c:31
+    if (*needle == 0) return (char *) haystack;
+    802002e8:	fc043783          	ld	a5,-64(s0)
+    802002ec:	0007c783          	lbu	a5,0(a5)
+    802002f0:	e781                	bnez	a5,802002f8 <strstr+0x20>
+/embryos/chapter02/shared/string.c:31 (discriminator 1)
+    802002f2:	fc843783          	ld	a5,-56(s0)
+/embryos/chapter02/shared/string.c:31
+    802002f6:	a041                	j	80200376 <strstr+0x9e>
+/embryos/chapter02/shared/string.c:32
+    for (const char *h = haystack; *h; h++) {
+    802002f8:	fc843783          	ld	a5,-56(s0)
+    802002fc:	fef43423          	sd	a5,-24(s0)
+    80200300:	a0ad                	j	8020036a <strstr+0x92>
+/embryos/chapter02/shared/string.c:33
+        const char *h2 = h, *n2 = needle;
+    80200302:	fe843783          	ld	a5,-24(s0)
+    80200306:	fef43023          	sd	a5,-32(s0)
+    8020030a:	fc043783          	ld	a5,-64(s0)
+    8020030e:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/shared/string.c:34
+        while (*h2 && *n2 && *h2 == *n2) { h2++; n2++; }
+    80200312:	a819                	j	80200328 <strstr+0x50>
+/embryos/chapter02/shared/string.c:34 (discriminator 4)
+    80200314:	fe043783          	ld	a5,-32(s0)
+    80200318:	0785                	addi	a5,a5,1
+    8020031a:	fef43023          	sd	a5,-32(s0)
+    8020031e:	fd843783          	ld	a5,-40(s0)
+    80200322:	0785                	addi	a5,a5,1
+    80200324:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/shared/string.c:34 (discriminator 1)
+    80200328:	fe043783          	ld	a5,-32(s0)
+    8020032c:	0007c783          	lbu	a5,0(a5)
+    80200330:	c385                	beqz	a5,80200350 <strstr+0x78>
+/embryos/chapter02/shared/string.c:34 (discriminator 2)
+    80200332:	fd843783          	ld	a5,-40(s0)
+    80200336:	0007c783          	lbu	a5,0(a5)
+    8020033a:	cb99                	beqz	a5,80200350 <strstr+0x78>
+/embryos/chapter02/shared/string.c:34 (discriminator 3)
+    8020033c:	fe043783          	ld	a5,-32(s0)
+    80200340:	0007c703          	lbu	a4,0(a5)
+    80200344:	fd843783          	ld	a5,-40(s0)
+    80200348:	0007c783          	lbu	a5,0(a5)
+    8020034c:	fcf704e3          	beq	a4,a5,80200314 <strstr+0x3c>
+/embryos/chapter02/shared/string.c:35
+        if (!*n2) return (char *) h;
+    80200350:	fd843783          	ld	a5,-40(s0)
+    80200354:	0007c783          	lbu	a5,0(a5)
+    80200358:	e781                	bnez	a5,80200360 <strstr+0x88>
+/embryos/chapter02/shared/string.c:35 (discriminator 1)
+    8020035a:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter02/shared/string.c:35
+    8020035e:	a821                	j	80200376 <strstr+0x9e>
+/embryos/chapter02/shared/string.c:32 (discriminator 2)
+    for (const char *h = haystack; *h; h++) {
+    80200360:	fe843783          	ld	a5,-24(s0)
+    80200364:	0785                	addi	a5,a5,1
+    80200366:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter02/shared/string.c:32 (discriminator 1)
+    8020036a:	fe843783          	ld	a5,-24(s0)
+    8020036e:	0007c783          	lbu	a5,0(a5)
+    80200372:	fbc1                	bnez	a5,80200302 <strstr+0x2a>
+/embryos/chapter02/shared/string.c:37
+    }
+    return 0;
+    80200374:	4781                	li	a5,0
+/embryos/chapter02/shared/string.c:38
+}
+    80200376:	853e                	mv	a0,a5
+    80200378:	70e2                	ld	ra,56(sp)
+    8020037a:	7442                	ld	s0,48(sp)
+    8020037c:	6121                	addi	sp,sp,64
+    8020037e:	8082                	ret
+
+0000000080200380 <print_string>:
+print_string():
+/embryos/chapter02/hello.c:3
+#include "embryos.h"
+
+void print_string(int col, int row, char *str) {
+    80200380:	1101                	addi	sp,sp,-32
+    80200382:	ec06                	sd	ra,24(sp)
+    80200384:	e822                	sd	s0,16(sp)
+    80200386:	1000                	addi	s0,sp,32
+    80200388:	87aa                	mv	a5,a0
+    8020038a:	872e                	mv	a4,a1
+    8020038c:	fec43023          	sd	a2,-32(s0)
+    80200390:	fef42623          	sw	a5,-20(s0)
+    80200394:	87ba                	mv	a5,a4
+    80200396:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/hello.c:4
+    while (*str != 0) {
+    8020039a:	a0b9                	j	802003e8 <print_string+0x68>
+/embryos/chapter02/hello.c:5
+        screen_put(col, row, CELL(*str, ANSI_YELLOW, ANSI_RED));
+    8020039c:	fe043783          	ld	a5,-32(s0)
+    802003a0:	0007c783          	lbu	a5,0(a5)
+    802003a4:	0107971b          	slliw	a4,a5,0x10
+    802003a8:	4107571b          	sraiw	a4,a4,0x10
+    802003ac:	6785                	lui	a5,0x1
+    802003ae:	b0078793          	addi	a5,a5,-1280 # b00 <BLOCK_SIZE+0x300>
+    802003b2:	8fd9                	or	a5,a5,a4
+    802003b4:	0107979b          	slliw	a5,a5,0x10
+    802003b8:	4107d79b          	sraiw	a5,a5,0x10
+    802003bc:	03079693          	slli	a3,a5,0x30
+    802003c0:	92c1                	srli	a3,a3,0x30
+    802003c2:	fe842703          	lw	a4,-24(s0)
+    802003c6:	fec42783          	lw	a5,-20(s0)
+    802003ca:	8636                	mv	a2,a3
+    802003cc:	85ba                	mv	a1,a4
+    802003ce:	853e                	mv	a0,a5
+    802003d0:	401000ef          	jal	80200fd0 <screen_put>
+/embryos/chapter02/hello.c:6
+        str++;
+    802003d4:	fe043783          	ld	a5,-32(s0)
+    802003d8:	0785                	addi	a5,a5,1
+    802003da:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter02/hello.c:7
+        col++;
+    802003de:	fec42783          	lw	a5,-20(s0)
+    802003e2:	2785                	addiw	a5,a5,1
+    802003e4:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/hello.c:4
+    while (*str != 0) {
+    802003e8:	fe043783          	ld	a5,-32(s0)
+    802003ec:	0007c783          	lbu	a5,0(a5)
+    802003f0:	f7d5                	bnez	a5,8020039c <print_string+0x1c>
+/embryos/chapter02/hello.c:9
+    }
+}
+    802003f2:	0001                	nop
+    802003f4:	0001                	nop
+    802003f6:	60e2                	ld	ra,24(sp)
+    802003f8:	6442                	ld	s0,16(sp)
+    802003fa:	6105                	addi	sp,sp,32
+    802003fc:	8082                	ret
+
+00000000802003fe <embryos_main>:
+embryos_main():
+/embryos/chapter02/hello.c:11
+
+int embryos_main(void) {
+    802003fe:	1141                	addi	sp,sp,-16
+    80200400:	e406                	sd	ra,8(sp)
+    80200402:	e022                	sd	s0,0(sp)
+    80200404:	0800                	addi	s0,sp,16
+/embryos/chapter02/hello.c:12
+    log_init();
+    80200406:	dc5ff0ef          	jal	802001ca <log_init>
+/embryos/chapter02/hello.c:13
+    if (config.uart_type != 0)
+    8020040a:	00011797          	auipc	a5,0x11
+    8020040e:	bf678793          	addi	a5,a5,-1034 # 80211000 <config>
+    80200412:	639c                	ld	a5,0(a5)
+    80200414:	c385                	beqz	a5,80200434 <embryos_main+0x36>
+/embryos/chapter02/hello.c:14
+        uart_init(config.uart_type, 0, config.uart_base);
+    80200416:	00011797          	auipc	a5,0x11
+    8020041a:	bea78793          	addi	a5,a5,-1046 # 80211000 <config>
+    8020041e:	6398                	ld	a4,0(a5)
+    80200420:	00011797          	auipc	a5,0x11
+    80200424:	be078793          	addi	a5,a5,-1056 # 80211000 <config>
+    80200428:	679c                	ld	a5,8(a5)
+    8020042a:	863e                	mv	a2,a5
+    8020042c:	4581                	li	a1,0
+    8020042e:	853a                	mv	a0,a4
+    80200430:	792000ef          	jal	80200bc2 <uart_init>
+/embryos/chapter02/hello.c:15
+    screen_fill(0, 0, SCREEN_COLS, SCREEN_ROWS,
+    80200434:	72000713          	li	a4,1824
+    80200438:	46e1                	li	a3,24
+    8020043a:	05000613          	li	a2,80
+    8020043e:	4581                	li	a1,0
+    80200440:	4501                	li	a0,0
+    80200442:	715000ef          	jal	80201356 <screen_fill>
+/embryos/chapter02/hello.c:18
+                        CELL(' ', ANSI_WHITE, ANSI_BLACK));
+    extern char _start, frames;
+    kprintf("\n\r\033[30m\033[47mpmemsave 0x%p 0x%p mem.bin",
+    80200446:	00312717          	auipc	a4,0x312
+    8020044a:	bba70713          	addi	a4,a4,-1094 # 80512000 <frames>
+    8020044e:	00000797          	auipc	a5,0x0
+    80200452:	bb278793          	addi	a5,a5,-1102 # 80200000 <_start>
+    80200456:	40f707b3          	sub	a5,a4,a5
+    8020045a:	863e                	mv	a2,a5
+    8020045c:	00000597          	auipc	a1,0x0
+    80200460:	ba458593          	addi	a1,a1,-1116 # 80200000 <_start>
+    80200464:	00002517          	auipc	a0,0x2
+    80200468:	b2c50513          	addi	a0,a0,-1236 # 80201f90 <bp_flush+0x228>
+    8020046c:	0e4000ef          	jal	80200550 <kprintf>
+/embryos/chapter02/hello.c:21
+                            &_start, &frames - &_start);
+
+    print_string(50, 5, "EmbryOS");
+    80200470:	00002617          	auipc	a2,0x2
+    80200474:	b4860613          	addi	a2,a2,-1208 # 80201fb8 <bp_flush+0x250>
+    80200478:	4595                	li	a1,5
+    8020047a:	03200513          	li	a0,50
+    8020047e:	f03ff0ef          	jal	80200380 <print_string>
+/embryos/chapter02/hello.c:22
+    print_string(47, 7, "Life has Begun");
+    80200482:	00002617          	auipc	a2,0x2
+    80200486:	b3e60613          	addi	a2,a2,-1218 # 80201fc0 <bp_flush+0x258>
+    8020048a:	459d                	li	a1,7
+    8020048c:	02f00513          	li	a0,47
+    80200490:	ef1ff0ef          	jal	80200380 <print_string>
+/embryos/chapter02/hello.c:25
+
+    extern void blockdemo_main();
+    blockdemo_main();
+    80200494:	24e010ef          	jal	802016e2 <blockdemo_main>
+/embryos/chapter02/hello.c:26
+    for (;;) ;
+    80200498:	0001                	nop
+    8020049a:	bffd                	j	80200498 <embryos_main+0x9a>
+
+000000008020049c <print_unsigned>:
+print_unsigned():
+/embryos/chapter02/kprintf.c:4
+#include <stdarg.h>
+#include "embryos.h"
+
+static void print_unsigned(uword_t x, unsigned int base) {
+    8020049c:	715d                	addi	sp,sp,-80
+    8020049e:	e486                	sd	ra,72(sp)
+    802004a0:	e0a2                	sd	s0,64(sp)
+    802004a2:	0880                	addi	s0,sp,80
+    802004a4:	faa43c23          	sd	a0,-72(s0)
+    802004a8:	87ae                	mv	a5,a1
+    802004aa:	faf42a23          	sw	a5,-76(s0)
+/embryos/chapter02/kprintf.c:6
+    char buf[32];
+    int i = 0;
+    802004ae:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/kprintf.c:8
+    do {
+        int d = x % base;
+    802004b2:	fb446783          	lwu	a5,-76(s0)
+    802004b6:	fb843703          	ld	a4,-72(s0)
+    802004ba:	02f777b3          	remu	a5,a4,a5
+    802004be:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/kprintf.c:9
+        buf[i++] = (d < 10) ? '0'+d : 'a'+(d-10);
+    802004c2:	fe842783          	lw	a5,-24(s0)
+    802004c6:	0007871b          	sext.w	a4,a5
+    802004ca:	47a5                	li	a5,9
+    802004cc:	00e7cb63          	blt	a5,a4,802004e2 <print_unsigned+0x46>
+/embryos/chapter02/kprintf.c:9 (discriminator 1)
+    802004d0:	fe842783          	lw	a5,-24(s0)
+    802004d4:	0ff7f793          	zext.b	a5,a5
+    802004d8:	0307879b          	addiw	a5,a5,48
+    802004dc:	0ff7f793          	zext.b	a5,a5
+    802004e0:	a809                	j	802004f2 <print_unsigned+0x56>
+/embryos/chapter02/kprintf.c:9 (discriminator 2)
+    802004e2:	fe842783          	lw	a5,-24(s0)
+    802004e6:	0ff7f793          	zext.b	a5,a5
+    802004ea:	0577879b          	addiw	a5,a5,87
+    802004ee:	0ff7f793          	zext.b	a5,a5
+/embryos/chapter02/kprintf.c:9 (discriminator 4)
+    802004f2:	fec42703          	lw	a4,-20(s0)
+    802004f6:	0017069b          	addiw	a3,a4,1
+    802004fa:	fed42623          	sw	a3,-20(s0)
+    802004fe:	1741                	addi	a4,a4,-16
+    80200500:	9722                	add	a4,a4,s0
+    80200502:	fcf70c23          	sb	a5,-40(a4)
+/embryos/chapter02/kprintf.c:10
+        x /= base;
+    80200506:	fb446783          	lwu	a5,-76(s0)
+    8020050a:	fb843703          	ld	a4,-72(s0)
+    8020050e:	02f757b3          	divu	a5,a4,a5
+    80200512:	faf43c23          	sd	a5,-72(s0)
+/embryos/chapter02/kprintf.c:11
+    } while (x);
+    80200516:	fb843783          	ld	a5,-72(s0)
+    8020051a:	ffc1                	bnez	a5,802004b2 <print_unsigned+0x16>
+/embryos/chapter02/kprintf.c:12
+    while (--i >= 0) io_putchar(buf[i]);
+    8020051c:	a811                	j	80200530 <print_unsigned+0x94>
+/embryos/chapter02/kprintf.c:12 (discriminator 3)
+    8020051e:	fec42783          	lw	a5,-20(s0)
+    80200522:	17c1                	addi	a5,a5,-16
+    80200524:	97a2                	add	a5,a5,s0
+    80200526:	fd87c783          	lbu	a5,-40(a5)
+    8020052a:	853e                	mv	a0,a5
+    8020052c:	436000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:12 (discriminator 2)
+    80200530:	fec42783          	lw	a5,-20(s0)
+    80200534:	37fd                	addiw	a5,a5,-1
+    80200536:	fef42623          	sw	a5,-20(s0)
+    8020053a:	fec42783          	lw	a5,-20(s0)
+    8020053e:	2781                	sext.w	a5,a5
+    80200540:	fc07dfe3          	bgez	a5,8020051e <print_unsigned+0x82>
+/embryos/chapter02/kprintf.c:13
+}
+    80200544:	0001                	nop
+    80200546:	0001                	nop
+    80200548:	60a6                	ld	ra,72(sp)
+    8020054a:	6406                	ld	s0,64(sp)
+    8020054c:	6161                	addi	sp,sp,80
+    8020054e:	8082                	ret
+
+0000000080200550 <kprintf>:
+kprintf():
+/embryos/chapter02/kprintf.c:15
+
+void kprintf(const char *fmt, ...) {
+    80200550:	7119                	addi	sp,sp,-128
+    80200552:	fc06                	sd	ra,56(sp)
+    80200554:	f822                	sd	s0,48(sp)
+    80200556:	0080                	addi	s0,sp,64
+    80200558:	fca43423          	sd	a0,-56(s0)
+    8020055c:	e40c                	sd	a1,8(s0)
+    8020055e:	e810                	sd	a2,16(s0)
+    80200560:	ec14                	sd	a3,24(s0)
+    80200562:	f018                	sd	a4,32(s0)
+    80200564:	f41c                	sd	a5,40(s0)
+    80200566:	03043823          	sd	a6,48(s0)
+    8020056a:	03143c23          	sd	a7,56(s0)
+/embryos/chapter02/kprintf.c:16
+    va_list ap; va_start(ap, fmt);
+    8020056e:	04040793          	addi	a5,s0,64
+    80200572:	fcf43023          	sd	a5,-64(s0)
+    80200576:	fc043783          	ld	a5,-64(s0)
+    8020057a:	fc878793          	addi	a5,a5,-56
+    8020057e:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter02/kprintf.c:17
+    for (; *fmt; fmt++) {
+    80200582:	ac3d                	j	802007c0 <kprintf+0x270>
+/embryos/chapter02/kprintf.c:18
+        if (*fmt != '%') { io_putchar(*fmt); continue; }
+    80200584:	fc843783          	ld	a5,-56(s0)
+    80200588:	0007c783          	lbu	a5,0(a5)
+    8020058c:	873e                	mv	a4,a5
+    8020058e:	02500793          	li	a5,37
+    80200592:	00f70a63          	beq	a4,a5,802005a6 <kprintf+0x56>
+/embryos/chapter02/kprintf.c:18 (discriminator 1)
+    80200596:	fc843783          	ld	a5,-56(s0)
+    8020059a:	0007c783          	lbu	a5,0(a5)
+    8020059e:	853e                	mv	a0,a5
+    802005a0:	3c2000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:18
+    802005a4:	ac09                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:19
+        fmt++;
+    802005a6:	fc843783          	ld	a5,-56(s0)
+    802005aa:	0785                	addi	a5,a5,1
+    802005ac:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/kprintf.c:20
+        switch (*fmt) {
+    802005b0:	fc843783          	ld	a5,-56(s0)
+    802005b4:	0007c783          	lbu	a5,0(a5)
+    802005b8:	2781                	sext.w	a5,a5
+    802005ba:	07800713          	li	a4,120
+    802005be:	12e78e63          	beq	a5,a4,802006fa <kprintf+0x1aa>
+    802005c2:	07800713          	li	a4,120
+    802005c6:	1cf74d63          	blt	a4,a5,802007a0 <kprintf+0x250>
+    802005ca:	07500713          	li	a4,117
+    802005ce:	0ee78c63          	beq	a5,a4,802006c6 <kprintf+0x176>
+    802005d2:	07500713          	li	a4,117
+    802005d6:	1cf74563          	blt	a4,a5,802007a0 <kprintf+0x250>
+    802005da:	07300713          	li	a4,115
+    802005de:	18e78163          	beq	a5,a4,80200760 <kprintf+0x210>
+    802005e2:	07300713          	li	a4,115
+    802005e6:	1af74d63          	blt	a4,a5,802007a0 <kprintf+0x250>
+    802005ea:	07000713          	li	a4,112
+    802005ee:	14e78063          	beq	a5,a4,8020072e <kprintf+0x1de>
+    802005f2:	07000713          	li	a4,112
+    802005f6:	1af74563          	blt	a4,a5,802007a0 <kprintf+0x250>
+    802005fa:	06400713          	li	a4,100
+    802005fe:	04e78763          	beq	a5,a4,8020064c <kprintf+0xfc>
+    80200602:	06400713          	li	a4,100
+    80200606:	18f74d63          	blt	a4,a5,802007a0 <kprintf+0x250>
+    8020060a:	06300713          	li	a4,99
+    8020060e:	12e78c63          	beq	a5,a4,80200746 <kprintf+0x1f6>
+    80200612:	06300713          	li	a4,99
+    80200616:	18f74563          	blt	a4,a5,802007a0 <kprintf+0x250>
+    8020061a:	05800713          	li	a4,88
+    8020061e:	0ee78c63          	beq	a5,a4,80200716 <kprintf+0x1c6>
+    80200622:	05800713          	li	a4,88
+    80200626:	16f74d63          	blt	a4,a5,802007a0 <kprintf+0x250>
+    8020062a:	05500713          	li	a4,85
+    8020062e:	0ae78a63          	beq	a5,a4,802006e2 <kprintf+0x192>
+    80200632:	05500713          	li	a4,85
+    80200636:	16f74563          	blt	a4,a5,802007a0 <kprintf+0x250>
+    8020063a:	02500713          	li	a4,37
+    8020063e:	14e78c63          	beq	a5,a4,80200796 <kprintf+0x246>
+    80200642:	04400713          	li	a4,68
+    80200646:	04e78263          	beq	a5,a4,8020068a <kprintf+0x13a>
+    8020064a:	aa99                	j	802007a0 <kprintf+0x250>
+/embryos/chapter02/kprintf.c:22
+        case 'd': {
+            int x = va_arg(ap, int);
+    8020064c:	fd043783          	ld	a5,-48(s0)
+    80200650:	00878713          	addi	a4,a5,8
+    80200654:	fce43823          	sd	a4,-48(s0)
+    80200658:	439c                	lw	a5,0(a5)
+    8020065a:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/kprintf.c:23
+            if (x < 0) { io_putchar('-'); x = -x; }
+    8020065e:	fec42783          	lw	a5,-20(s0)
+    80200662:	2781                	sext.w	a5,a5
+    80200664:	0007dc63          	bgez	a5,8020067c <kprintf+0x12c>
+/embryos/chapter02/kprintf.c:23 (discriminator 1)
+    80200668:	02d00513          	li	a0,45
+    8020066c:	2f6000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:23 (discriminator 2)
+    80200670:	fec42783          	lw	a5,-20(s0)
+    80200674:	40f007bb          	negw	a5,a5
+    80200678:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/kprintf.c:24
+            print_unsigned((uword_t) x, 10);
+    8020067c:	fec42783          	lw	a5,-20(s0)
+    80200680:	45a9                	li	a1,10
+    80200682:	853e                	mv	a0,a5
+    80200684:	e19ff0ef          	jal	8020049c <print_unsigned>
+/embryos/chapter02/kprintf.c:25
+            break;
+    80200688:	a23d                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:28
+        }
+        case 'D': {
+            sword_t x = va_arg(ap, sword_t);
+    8020068a:	fd043783          	ld	a5,-48(s0)
+    8020068e:	00878713          	addi	a4,a5,8
+    80200692:	fce43823          	sd	a4,-48(s0)
+    80200696:	639c                	ld	a5,0(a5)
+    80200698:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter02/kprintf.c:29
+            if (x < 0) { io_putchar('-'); x = -x; }
+    8020069c:	fe043783          	ld	a5,-32(s0)
+    802006a0:	0007dc63          	bgez	a5,802006b8 <kprintf+0x168>
+/embryos/chapter02/kprintf.c:29 (discriminator 1)
+    802006a4:	02d00513          	li	a0,45
+    802006a8:	2ba000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:29 (discriminator 2)
+    802006ac:	fe043783          	ld	a5,-32(s0)
+    802006b0:	40f007b3          	neg	a5,a5
+    802006b4:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter02/kprintf.c:30
+            print_unsigned((uword_t) x, 10);
+    802006b8:	fe043783          	ld	a5,-32(s0)
+    802006bc:	45a9                	li	a1,10
+    802006be:	853e                	mv	a0,a5
+    802006c0:	dddff0ef          	jal	8020049c <print_unsigned>
+/embryos/chapter02/kprintf.c:31
+            break;
+    802006c4:	a8cd                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:33
+        }
+        case 'u': print_unsigned(va_arg(ap, unsigned int), 10); break;
+    802006c6:	fd043783          	ld	a5,-48(s0)
+    802006ca:	00878713          	addi	a4,a5,8
+    802006ce:	fce43823          	sd	a4,-48(s0)
+    802006d2:	439c                	lw	a5,0(a5)
+/embryos/chapter02/kprintf.c:33 (discriminator 1)
+    802006d4:	1782                	slli	a5,a5,0x20
+    802006d6:	9381                	srli	a5,a5,0x20
+    802006d8:	45a9                	li	a1,10
+    802006da:	853e                	mv	a0,a5
+    802006dc:	dc1ff0ef          	jal	8020049c <print_unsigned>
+/embryos/chapter02/kprintf.c:33
+    802006e0:	a8d9                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:34
+        case 'U': print_unsigned(va_arg(ap, uword_t),      10); break;
+    802006e2:	fd043783          	ld	a5,-48(s0)
+    802006e6:	00878713          	addi	a4,a5,8
+    802006ea:	fce43823          	sd	a4,-48(s0)
+    802006ee:	639c                	ld	a5,0(a5)
+/embryos/chapter02/kprintf.c:34 (discriminator 1)
+    802006f0:	45a9                	li	a1,10
+    802006f2:	853e                	mv	a0,a5
+    802006f4:	da9ff0ef          	jal	8020049c <print_unsigned>
+/embryos/chapter02/kprintf.c:34
+    802006f8:	a87d                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:35
+        case 'x': print_unsigned(va_arg(ap, unsigned int), 16); break;
+    802006fa:	fd043783          	ld	a5,-48(s0)
+    802006fe:	00878713          	addi	a4,a5,8
+    80200702:	fce43823          	sd	a4,-48(s0)
+    80200706:	439c                	lw	a5,0(a5)
+/embryos/chapter02/kprintf.c:35 (discriminator 1)
+    80200708:	1782                	slli	a5,a5,0x20
+    8020070a:	9381                	srli	a5,a5,0x20
+    8020070c:	45c1                	li	a1,16
+    8020070e:	853e                	mv	a0,a5
+    80200710:	d8dff0ef          	jal	8020049c <print_unsigned>
+/embryos/chapter02/kprintf.c:35
+    80200714:	a04d                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:36
+        case 'X': print_unsigned(va_arg(ap, uword_t),      16); break;
+    80200716:	fd043783          	ld	a5,-48(s0)
+    8020071a:	00878713          	addi	a4,a5,8
+    8020071e:	fce43823          	sd	a4,-48(s0)
+    80200722:	639c                	ld	a5,0(a5)
+/embryos/chapter02/kprintf.c:36 (discriminator 1)
+    80200724:	45c1                	li	a1,16
+    80200726:	853e                	mv	a0,a5
+    80200728:	d75ff0ef          	jal	8020049c <print_unsigned>
+/embryos/chapter02/kprintf.c:36
+    8020072c:	a069                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:37
+        case 'p': print_unsigned(va_arg(ap, uintptr_t),    16); break;
+    8020072e:	fd043783          	ld	a5,-48(s0)
+    80200732:	00878713          	addi	a4,a5,8
+    80200736:	fce43823          	sd	a4,-48(s0)
+    8020073a:	639c                	ld	a5,0(a5)
+/embryos/chapter02/kprintf.c:37 (discriminator 1)
+    8020073c:	45c1                	li	a1,16
+    8020073e:	853e                	mv	a0,a5
+    80200740:	d5dff0ef          	jal	8020049c <print_unsigned>
+/embryos/chapter02/kprintf.c:37
+    80200744:	a88d                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:38
+        case 'c': io_putchar(va_arg(ap, int)); break;
+    80200746:	fd043783          	ld	a5,-48(s0)
+    8020074a:	00878713          	addi	a4,a5,8
+    8020074e:	fce43823          	sd	a4,-48(s0)
+    80200752:	439c                	lw	a5,0(a5)
+/embryos/chapter02/kprintf.c:38 (discriminator 1)
+    80200754:	0ff7f793          	zext.b	a5,a5
+    80200758:	853e                	mv	a0,a5
+    8020075a:	208000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:38
+    8020075e:	a8a1                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:40
+        case 's': {
+            char *s = va_arg(ap, char*);
+    80200760:	fd043783          	ld	a5,-48(s0)
+    80200764:	00878713          	addi	a4,a5,8
+    80200768:	fce43823          	sd	a4,-48(s0)
+    8020076c:	639c                	ld	a5,0(a5)
+    8020076e:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/kprintf.c:41
+            while (*s) io_putchar(*s++);
+    80200772:	a821                	j	8020078a <kprintf+0x23a>
+/embryos/chapter02/kprintf.c:41 (discriminator 3)
+    80200774:	fd843783          	ld	a5,-40(s0)
+    80200778:	00178713          	addi	a4,a5,1
+    8020077c:	fce43c23          	sd	a4,-40(s0)
+    80200780:	0007c783          	lbu	a5,0(a5)
+    80200784:	853e                	mv	a0,a5
+    80200786:	1dc000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:41 (discriminator 2)
+    8020078a:	fd843783          	ld	a5,-40(s0)
+    8020078e:	0007c783          	lbu	a5,0(a5)
+    80200792:	f3ed                	bnez	a5,80200774 <kprintf+0x224>
+/embryos/chapter02/kprintf.c:42
+            break;
+    80200794:	a00d                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:44
+        }
+        case '%': io_putchar('%'); break;
+    80200796:	02500513          	li	a0,37
+    8020079a:	1c8000ef          	jal	80200962 <io_putchar>
+    8020079e:	a821                	j	802007b6 <kprintf+0x266>
+/embryos/chapter02/kprintf.c:45
+        default:  io_putchar('%'); io_putchar(*fmt);
+    802007a0:	02500513          	li	a0,37
+    802007a4:	1be000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:45 (discriminator 1)
+    802007a8:	fc843783          	ld	a5,-56(s0)
+    802007ac:	0007c783          	lbu	a5,0(a5)
+    802007b0:	853e                	mv	a0,a5
+    802007b2:	1b0000ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/kprintf.c:17
+    for (; *fmt; fmt++) {
+    802007b6:	fc843783          	ld	a5,-56(s0)
+    802007ba:	0785                	addi	a5,a5,1
+    802007bc:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/kprintf.c:17 (discriminator 1)
+    802007c0:	fc843783          	ld	a5,-56(s0)
+    802007c4:	0007c783          	lbu	a5,0(a5)
+    802007c8:	da079ee3          	bnez	a5,80200584 <kprintf+0x34>
+/embryos/chapter02/kprintf.c:49
+        }
+    }
+    va_end(ap);
+}
+    802007cc:	0001                	nop
+    802007ce:	0001                	nop
+    802007d0:	70e2                	ld	ra,56(sp)
+    802007d2:	7442                	ld	s0,48(sp)
+    802007d4:	6109                	addi	sp,sp,128
+    802007d6:	8082                	ret
+
+00000000802007d8 <L>:
+L():
+/embryos/chapter02/log.h:9
+static inline struct log_entry *L(unsigned int level, enum log_type type, int arity) {
+    802007d8:	715d                	addi	sp,sp,-80
+    802007da:	e486                	sd	ra,72(sp)
+    802007dc:	e0a2                	sd	s0,64(sp)
+    802007de:	0880                	addi	s0,sp,80
+    802007e0:	87aa                	mv	a5,a0
+    802007e2:	86ae                	mv	a3,a1
+    802007e4:	8732                	mv	a4,a2
+    802007e6:	faf42e23          	sw	a5,-68(s0)
+    802007ea:	87b6                	mv	a5,a3
+    802007ec:	faf42c23          	sw	a5,-72(s0)
+    802007f0:	87ba                	mv	a5,a4
+    802007f2:	faf42a23          	sw	a5,-76(s0)
+/embryos/chapter02/log.h:10
+    struct log_header *lh = &log_header;
+    802007f6:	00002797          	auipc	a5,0x2
+    802007fa:	8aa78793          	addi	a5,a5,-1878 # 802020a0 <log_header>
+    802007fe:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/log.h:11
+    uint32_t offset = 0;
+    80200802:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/log.h:12
+    for (unsigned i = 0; i < level; i++) offset += lh->sizes[i];
+    80200806:	fe042423          	sw	zero,-24(s0)
+    8020080a:	a015                	j	8020082e <L+0x56>
+/embryos/chapter02/log.h:12 (discriminator 3)
+    8020080c:	fd843703          	ld	a4,-40(s0)
+    80200810:	fe846783          	lwu	a5,-24(s0)
+    80200814:	078a                	slli	a5,a5,0x2
+    80200816:	97ba                	add	a5,a5,a4
+    80200818:	47dc                	lw	a5,12(a5)
+    8020081a:	fec42703          	lw	a4,-20(s0)
+    8020081e:	9fb9                	addw	a5,a5,a4
+    80200820:	fef42623          	sw	a5,-20(s0)
+    80200824:	fe842783          	lw	a5,-24(s0)
+    80200828:	2785                	addiw	a5,a5,1
+    8020082a:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/log.h:12 (discriminator 1)
+    8020082e:	fe842783          	lw	a5,-24(s0)
+    80200832:	873e                	mv	a4,a5
+    80200834:	fbc42783          	lw	a5,-68(s0)
+    80200838:	2701                	sext.w	a4,a4
+    8020083a:	2781                	sext.w	a5,a5
+    8020083c:	fcf768e3          	bltu	a4,a5,8020080c <L+0x34>
+/embryos/chapter02/log.h:13
+    struct log_entry *le = &log[offset + lh->ts[level] % lh->sizes[level]];
+    80200840:	fd843703          	ld	a4,-40(s0)
+    80200844:	fbc46783          	lwu	a5,-68(s0)
+    80200848:	078a                	slli	a5,a5,0x2
+    8020084a:	97ba                	add	a5,a5,a4
+    8020084c:	4394                	lw	a3,0(a5)
+    8020084e:	fd843703          	ld	a4,-40(s0)
+    80200852:	fbc46783          	lwu	a5,-68(s0)
+    80200856:	078a                	slli	a5,a5,0x2
+    80200858:	97ba                	add	a5,a5,a4
+    8020085a:	47dc                	lw	a5,12(a5)
+    8020085c:	8736                	mv	a4,a3
+    8020085e:	02f777bb          	remuw	a5,a4,a5
+    80200862:	2781                	sext.w	a5,a5
+    80200864:	fec42703          	lw	a4,-20(s0)
+    80200868:	9fb9                	addw	a5,a5,a4
+    8020086a:	2781                	sext.w	a5,a5
+    8020086c:	1782                	slli	a5,a5,0x20
+    8020086e:	9381                	srli	a5,a5,0x20
+    80200870:	00679713          	slli	a4,a5,0x6
+    80200874:	00010797          	auipc	a5,0x10
+    80200878:	7cc78793          	addi	a5,a5,1996 # 80211040 <log>
+    8020087c:	97ba                	add	a5,a5,a4
+    8020087e:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter02/log.h:14
+    le->type = type;
+    80200882:	fb842783          	lw	a5,-72(s0)
+    80200886:	03079713          	slli	a4,a5,0x30
+    8020088a:	9341                	srli	a4,a4,0x30
+    8020088c:	fd043783          	ld	a5,-48(s0)
+    80200890:	00e79023          	sh	a4,0(a5)
+/embryos/chapter02/log.h:15
+    le->arity = arity;
+    80200894:	fb442783          	lw	a5,-76(s0)
+    80200898:	0ff7f713          	zext.b	a4,a5
+    8020089c:	fd043783          	ld	a5,-48(s0)
+    802008a0:	00e78123          	sb	a4,2(a5)
+/embryos/chapter02/log.h:16
+    for (unsigned i = 0; i < LOG_N_LEVELS; i++) le->ts[i] = lh->ts[i];
+    802008a4:	fe042223          	sw	zero,-28(s0)
+    802008a8:	a025                	j	802008d0 <L+0xf8>
+/embryos/chapter02/log.h:16 (discriminator 3)
+    802008aa:	fd843703          	ld	a4,-40(s0)
+    802008ae:	fe446783          	lwu	a5,-28(s0)
+    802008b2:	078a                	slli	a5,a5,0x2
+    802008b4:	97ba                	add	a5,a5,a4
+    802008b6:	4398                	lw	a4,0(a5)
+    802008b8:	fd043683          	ld	a3,-48(s0)
+    802008bc:	fe446783          	lwu	a5,-28(s0)
+    802008c0:	078a                	slli	a5,a5,0x2
+    802008c2:	97b6                	add	a5,a5,a3
+    802008c4:	c3d8                	sw	a4,4(a5)
+    802008c6:	fe442783          	lw	a5,-28(s0)
+    802008ca:	2785                	addiw	a5,a5,1
+    802008cc:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/log.h:16 (discriminator 1)
+    802008d0:	fe442783          	lw	a5,-28(s0)
+    802008d4:	0007871b          	sext.w	a4,a5
+    802008d8:	4789                	li	a5,2
+    802008da:	fce7f8e3          	bgeu	a5,a4,802008aa <L+0xd2>
+/embryos/chapter02/log.h:18
+    asm volatile ("mv %0, tp" : "=r"(tmp));
+    802008de:	8792                	mv	a5,tp
+    802008e0:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/log.h:19
+    le->self = (uint64_t)tmp;
+    802008e4:	fd043783          	ld	a5,-48(s0)
+    802008e8:	fc843703          	ld	a4,-56(s0)
+    802008ec:	eb98                	sd	a4,16(a5)
+/embryos/chapter02/log.h:20
+    lh->ts[level]++;
+    802008ee:	fd843703          	ld	a4,-40(s0)
+    802008f2:	fbc46783          	lwu	a5,-68(s0)
+    802008f6:	078a                	slli	a5,a5,0x2
+    802008f8:	97ba                	add	a5,a5,a4
+    802008fa:	439c                	lw	a5,0(a5)
+    802008fc:	2785                	addiw	a5,a5,1
+    802008fe:	0007871b          	sext.w	a4,a5
+    80200902:	fd843683          	ld	a3,-40(s0)
+    80200906:	fbc46783          	lwu	a5,-68(s0)
+    8020090a:	078a                	slli	a5,a5,0x2
+    8020090c:	97b6                	add	a5,a5,a3
+    8020090e:	c398                	sw	a4,0(a5)
+/embryos/chapter02/log.h:21
+    return le;
+    80200910:	fd043783          	ld	a5,-48(s0)
+/embryos/chapter02/log.h:22
+}
+    80200914:	853e                	mv	a0,a5
+    80200916:	60a6                	ld	ra,72(sp)
+    80200918:	6406                	ld	s0,64(sp)
+    8020091a:	6161                	addi	sp,sp,80
+    8020091c:	8082                	ret
+
+000000008020091e <L1>:
+L1():
+/embryos/chapter02/log.h:29
+
+static inline void L1(unsigned int level, enum log_type type,
+        uint64_t w0) {
+    8020091e:	7179                	addi	sp,sp,-48
+    80200920:	f406                	sd	ra,40(sp)
+    80200922:	f022                	sd	s0,32(sp)
+    80200924:	1800                	addi	s0,sp,48
+    80200926:	87aa                	mv	a5,a0
+    80200928:	872e                	mv	a4,a1
+    8020092a:	fcc43823          	sd	a2,-48(s0)
+    8020092e:	fcf42e23          	sw	a5,-36(s0)
+    80200932:	87ba                	mv	a5,a4
+    80200934:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter02/log.h:30
+    struct log_entry *le = L(level, type, 1);
+    80200938:	fd842703          	lw	a4,-40(s0)
+    8020093c:	fdc42783          	lw	a5,-36(s0)
+    80200940:	4605                	li	a2,1
+    80200942:	85ba                	mv	a1,a4
+    80200944:	853e                	mv	a0,a5
+    80200946:	e93ff0ef          	jal	802007d8 <L>
+    8020094a:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter02/log.h:31
+    le->payload[0] = w0;
+    8020094e:	fe843783          	ld	a5,-24(s0)
+    80200952:	fd043703          	ld	a4,-48(s0)
+    80200956:	ef98                	sd	a4,24(a5)
+/embryos/chapter02/log.h:32
+}
+    80200958:	0001                	nop
+    8020095a:	70a2                	ld	ra,40(sp)
+    8020095c:	7402                	ld	s0,32(sp)
+    8020095e:	6145                	addi	sp,sp,48
+    80200960:	8082                	ret
+
+0000000080200962 <io_putchar>:
+io_putchar():
+/embryos/chapter02/io.c:3
+#include "embryos.h"
+
+void io_putchar(char c) {
+    80200962:	1101                	addi	sp,sp,-32
+    80200964:	ec06                	sd	ra,24(sp)
+    80200966:	e822                	sd	s0,16(sp)
+    80200968:	1000                	addi	s0,sp,32
+    8020096a:	87aa                	mv	a5,a0
+    8020096c:	fef407a3          	sb	a5,-17(s0)
+/embryos/chapter02/io.c:4
+    L1(L_FREQ, L_IO_PUTCHAR, c & 0xFF);
+    80200970:	fef44783          	lbu	a5,-17(s0)
+    80200974:	863e                	mv	a2,a5
+    80200976:	45d1                	li	a1,20
+    80200978:	4509                	li	a0,2
+    8020097a:	fa5ff0ef          	jal	8020091e <L1>
+/embryos/chapter02/io.c:6
+    extern struct uart_info *uart;
+    if (uart == 0) sbi_putchar(c);
+    8020097e:	00010797          	auipc	a5,0x10
+    80200982:	6a278793          	addi	a5,a5,1698 # 80211020 <uart>
+    80200986:	639c                	ld	a5,0(a5)
+    80200988:	eb81                	bnez	a5,80200998 <io_putchar+0x36>
+/embryos/chapter02/io.c:6 (discriminator 1)
+    8020098a:	fef44783          	lbu	a5,-17(s0)
+    8020098e:	2781                	sext.w	a5,a5
+    80200990:	853e                	mv	a0,a5
+    80200992:	ea2ff0ef          	jal	80200034 <sbi_putchar>
+/embryos/chapter02/io.c:8
+    else uart->putchar(uart->base, c);
+}
+    80200996:	a015                	j	802009ba <io_putchar+0x58>
+/embryos/chapter02/io.c:7
+    else uart->putchar(uart->base, c);
+    80200998:	00010797          	auipc	a5,0x10
+    8020099c:	68878793          	addi	a5,a5,1672 # 80211020 <uart>
+    802009a0:	639c                	ld	a5,0(a5)
+    802009a2:	6b9c                	ld	a5,16(a5)
+    802009a4:	00010717          	auipc	a4,0x10
+    802009a8:	67c70713          	addi	a4,a4,1660 # 80211020 <uart>
+    802009ac:	6318                	ld	a4,0(a4)
+    802009ae:	6f18                	ld	a4,24(a4)
+    802009b0:	fef44683          	lbu	a3,-17(s0)
+    802009b4:	85b6                	mv	a1,a3
+    802009b6:	853a                	mv	a0,a4
+    802009b8:	9782                	jalr	a5
+/embryos/chapter02/io.c:8
+}
+    802009ba:	0001                	nop
+    802009bc:	60e2                	ld	ra,24(sp)
+    802009be:	6442                	ld	s0,16(sp)
+    802009c0:	6105                	addi	sp,sp,32
+    802009c2:	8082                	ret
+
+00000000802009c4 <L>:
+L():
+/embryos/chapter02/log.h:9
+static inline struct log_entry *L(unsigned int level, enum log_type type, int arity) {
+    802009c4:	715d                	addi	sp,sp,-80
+    802009c6:	e486                	sd	ra,72(sp)
+    802009c8:	e0a2                	sd	s0,64(sp)
+    802009ca:	0880                	addi	s0,sp,80
+    802009cc:	87aa                	mv	a5,a0
+    802009ce:	86ae                	mv	a3,a1
+    802009d0:	8732                	mv	a4,a2
+    802009d2:	faf42e23          	sw	a5,-68(s0)
+    802009d6:	87b6                	mv	a5,a3
+    802009d8:	faf42c23          	sw	a5,-72(s0)
+    802009dc:	87ba                	mv	a5,a4
+    802009de:	faf42a23          	sw	a5,-76(s0)
+/embryos/chapter02/log.h:10
+    struct log_header *lh = &log_header;
+    802009e2:	00001797          	auipc	a5,0x1
+    802009e6:	6be78793          	addi	a5,a5,1726 # 802020a0 <log_header>
+    802009ea:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/log.h:11
+    uint32_t offset = 0;
+    802009ee:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/log.h:12
+    for (unsigned i = 0; i < level; i++) offset += lh->sizes[i];
+    802009f2:	fe042423          	sw	zero,-24(s0)
+    802009f6:	a015                	j	80200a1a <L+0x56>
+/embryos/chapter02/log.h:12 (discriminator 3)
+    802009f8:	fd843703          	ld	a4,-40(s0)
+    802009fc:	fe846783          	lwu	a5,-24(s0)
+    80200a00:	078a                	slli	a5,a5,0x2
+    80200a02:	97ba                	add	a5,a5,a4
+    80200a04:	47dc                	lw	a5,12(a5)
+    80200a06:	fec42703          	lw	a4,-20(s0)
+    80200a0a:	9fb9                	addw	a5,a5,a4
+    80200a0c:	fef42623          	sw	a5,-20(s0)
+    80200a10:	fe842783          	lw	a5,-24(s0)
+    80200a14:	2785                	addiw	a5,a5,1
+    80200a16:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/log.h:12 (discriminator 1)
+    80200a1a:	fe842783          	lw	a5,-24(s0)
+    80200a1e:	873e                	mv	a4,a5
+    80200a20:	fbc42783          	lw	a5,-68(s0)
+    80200a24:	2701                	sext.w	a4,a4
+    80200a26:	2781                	sext.w	a5,a5
+    80200a28:	fcf768e3          	bltu	a4,a5,802009f8 <L+0x34>
+/embryos/chapter02/log.h:13
+    struct log_entry *le = &log[offset + lh->ts[level] % lh->sizes[level]];
+    80200a2c:	fd843703          	ld	a4,-40(s0)
+    80200a30:	fbc46783          	lwu	a5,-68(s0)
+    80200a34:	078a                	slli	a5,a5,0x2
+    80200a36:	97ba                	add	a5,a5,a4
+    80200a38:	4394                	lw	a3,0(a5)
+    80200a3a:	fd843703          	ld	a4,-40(s0)
+    80200a3e:	fbc46783          	lwu	a5,-68(s0)
+    80200a42:	078a                	slli	a5,a5,0x2
+    80200a44:	97ba                	add	a5,a5,a4
+    80200a46:	47dc                	lw	a5,12(a5)
+    80200a48:	8736                	mv	a4,a3
+    80200a4a:	02f777bb          	remuw	a5,a4,a5
+    80200a4e:	2781                	sext.w	a5,a5
+    80200a50:	fec42703          	lw	a4,-20(s0)
+    80200a54:	9fb9                	addw	a5,a5,a4
+    80200a56:	2781                	sext.w	a5,a5
+    80200a58:	1782                	slli	a5,a5,0x20
+    80200a5a:	9381                	srli	a5,a5,0x20
+    80200a5c:	00679713          	slli	a4,a5,0x6
+    80200a60:	00010797          	auipc	a5,0x10
+    80200a64:	5e078793          	addi	a5,a5,1504 # 80211040 <log>
+    80200a68:	97ba                	add	a5,a5,a4
+    80200a6a:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter02/log.h:14
+    le->type = type;
+    80200a6e:	fb842783          	lw	a5,-72(s0)
+    80200a72:	03079713          	slli	a4,a5,0x30
+    80200a76:	9341                	srli	a4,a4,0x30
+    80200a78:	fd043783          	ld	a5,-48(s0)
+    80200a7c:	00e79023          	sh	a4,0(a5)
+/embryos/chapter02/log.h:15
+    le->arity = arity;
+    80200a80:	fb442783          	lw	a5,-76(s0)
+    80200a84:	0ff7f713          	zext.b	a4,a5
+    80200a88:	fd043783          	ld	a5,-48(s0)
+    80200a8c:	00e78123          	sb	a4,2(a5)
+/embryos/chapter02/log.h:16
+    for (unsigned i = 0; i < LOG_N_LEVELS; i++) le->ts[i] = lh->ts[i];
+    80200a90:	fe042223          	sw	zero,-28(s0)
+    80200a94:	a025                	j	80200abc <L+0xf8>
+/embryos/chapter02/log.h:16 (discriminator 3)
+    80200a96:	fd843703          	ld	a4,-40(s0)
+    80200a9a:	fe446783          	lwu	a5,-28(s0)
+    80200a9e:	078a                	slli	a5,a5,0x2
+    80200aa0:	97ba                	add	a5,a5,a4
+    80200aa2:	4398                	lw	a4,0(a5)
+    80200aa4:	fd043683          	ld	a3,-48(s0)
+    80200aa8:	fe446783          	lwu	a5,-28(s0)
+    80200aac:	078a                	slli	a5,a5,0x2
+    80200aae:	97b6                	add	a5,a5,a3
+    80200ab0:	c3d8                	sw	a4,4(a5)
+    80200ab2:	fe442783          	lw	a5,-28(s0)
+    80200ab6:	2785                	addiw	a5,a5,1
+    80200ab8:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/log.h:16 (discriminator 1)
+    80200abc:	fe442783          	lw	a5,-28(s0)
+    80200ac0:	0007871b          	sext.w	a4,a5
+    80200ac4:	4789                	li	a5,2
+    80200ac6:	fce7f8e3          	bgeu	a5,a4,80200a96 <L+0xd2>
+/embryos/chapter02/log.h:18
+    asm volatile ("mv %0, tp" : "=r"(tmp));
+    80200aca:	8792                	mv	a5,tp
+    80200acc:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/log.h:19
+    le->self = (uint64_t)tmp;
+    80200ad0:	fd043783          	ld	a5,-48(s0)
+    80200ad4:	fc843703          	ld	a4,-56(s0)
+    80200ad8:	eb98                	sd	a4,16(a5)
+/embryos/chapter02/log.h:20
+    lh->ts[level]++;
+    80200ada:	fd843703          	ld	a4,-40(s0)
+    80200ade:	fbc46783          	lwu	a5,-68(s0)
+    80200ae2:	078a                	slli	a5,a5,0x2
+    80200ae4:	97ba                	add	a5,a5,a4
+    80200ae6:	439c                	lw	a5,0(a5)
+    80200ae8:	2785                	addiw	a5,a5,1
+    80200aea:	0007871b          	sext.w	a4,a5
+    80200aee:	fd843683          	ld	a3,-40(s0)
+    80200af2:	fbc46783          	lwu	a5,-68(s0)
+    80200af6:	078a                	slli	a5,a5,0x2
+    80200af8:	97b6                	add	a5,a5,a3
+    80200afa:	c398                	sw	a4,0(a5)
+/embryos/chapter02/log.h:21
+    return le;
+    80200afc:	fd043783          	ld	a5,-48(s0)
+/embryos/chapter02/log.h:22
+}
+    80200b00:	853e                	mv	a0,a5
+    80200b02:	60a6                	ld	ra,72(sp)
+    80200b04:	6406                	ld	s0,64(sp)
+    80200b06:	6161                	addi	sp,sp,80
+    80200b08:	8082                	ret
+
+0000000080200b0a <L2>:
+L2():
+/embryos/chapter02/log.h:35
+
+static inline void L2(unsigned int level, enum log_type type,
+        uint64_t w0, uint64_t w1) {
+    80200b0a:	7139                	addi	sp,sp,-64
+    80200b0c:	fc06                	sd	ra,56(sp)
+    80200b0e:	f822                	sd	s0,48(sp)
+    80200b10:	0080                	addi	s0,sp,64
+    80200b12:	87aa                	mv	a5,a0
+    80200b14:	872e                	mv	a4,a1
+    80200b16:	fcc43823          	sd	a2,-48(s0)
+    80200b1a:	fcd43423          	sd	a3,-56(s0)
+    80200b1e:	fcf42e23          	sw	a5,-36(s0)
+    80200b22:	87ba                	mv	a5,a4
+    80200b24:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter02/log.h:36
+    struct log_entry *le = L(level, type, 2);
+    80200b28:	fd842703          	lw	a4,-40(s0)
+    80200b2c:	fdc42783          	lw	a5,-36(s0)
+    80200b30:	4609                	li	a2,2
+    80200b32:	85ba                	mv	a1,a4
+    80200b34:	853e                	mv	a0,a5
+    80200b36:	e8fff0ef          	jal	802009c4 <L>
+    80200b3a:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter02/log.h:37
+    le->payload[0] = w0;
+    80200b3e:	fe843783          	ld	a5,-24(s0)
+    80200b42:	fd043703          	ld	a4,-48(s0)
+    80200b46:	ef98                	sd	a4,24(a5)
+/embryos/chapter02/log.h:38
+    le->payload[1] = w1;
+    80200b48:	fe843783          	ld	a5,-24(s0)
+    80200b4c:	fc843703          	ld	a4,-56(s0)
+    80200b50:	f398                	sd	a4,32(a5)
+/embryos/chapter02/log.h:39
+}
+    80200b52:	0001                	nop
+    80200b54:	70e2                	ld	ra,56(sp)
+    80200b56:	7442                	ld	s0,48(sp)
+    80200b58:	6121                	addi	sp,sp,64
+    80200b5a:	8082                	ret
+
+0000000080200b5c <match_uart_type>:
+match_uart_type():
+/embryos/chapter02/uart.c:18
+    { "litex",       uart_litex_init,   uart_litex_putchar    },
+};
+
+struct uart_info *uart = 0;      // Console ("debug") UART of this platform
+
+static int match_uart_type(const char *compat, const struct uart_info *ui, int count) {
+    80200b5c:	7139                	addi	sp,sp,-64
+    80200b5e:	fc06                	sd	ra,56(sp)
+    80200b60:	f822                	sd	s0,48(sp)
+    80200b62:	0080                	addi	s0,sp,64
+    80200b64:	fca43c23          	sd	a0,-40(s0)
+    80200b68:	fcb43823          	sd	a1,-48(s0)
+    80200b6c:	87b2                	mv	a5,a2
+    80200b6e:	fcf42623          	sw	a5,-52(s0)
+/embryos/chapter02/uart.c:19
+    for (int i = 0; i < count; i++)
+    80200b72:	fe042623          	sw	zero,-20(s0)
+    80200b76:	a03d                	j	80200ba4 <match_uart_type+0x48>
+/embryos/chapter02/uart.c:20
+        if (strstr(compat, ui[i].type)) return i;
+    80200b78:	fec42783          	lw	a5,-20(s0)
+    80200b7c:	0796                	slli	a5,a5,0x5
+    80200b7e:	fd043703          	ld	a4,-48(s0)
+    80200b82:	97ba                	add	a5,a5,a4
+    80200b84:	639c                	ld	a5,0(a5)
+    80200b86:	85be                	mv	a1,a5
+    80200b88:	fd843503          	ld	a0,-40(s0)
+    80200b8c:	f4cff0ef          	jal	802002d8 <strstr>
+    80200b90:	87aa                	mv	a5,a0
+/embryos/chapter02/uart.c:20 (discriminator 1)
+    80200b92:	c781                	beqz	a5,80200b9a <match_uart_type+0x3e>
+/embryos/chapter02/uart.c:20 (discriminator 2)
+    80200b94:	fec42783          	lw	a5,-20(s0)
+/embryos/chapter02/uart.c:20
+    80200b98:	a005                	j	80200bb8 <match_uart_type+0x5c>
+/embryos/chapter02/uart.c:19 (discriminator 2)
+    for (int i = 0; i < count; i++)
+    80200b9a:	fec42783          	lw	a5,-20(s0)
+    80200b9e:	2785                	addiw	a5,a5,1
+    80200ba0:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/uart.c:19 (discriminator 1)
+    80200ba4:	fec42783          	lw	a5,-20(s0)
+    80200ba8:	873e                	mv	a4,a5
+    80200baa:	fcc42783          	lw	a5,-52(s0)
+    80200bae:	2701                	sext.w	a4,a4
+    80200bb0:	2781                	sext.w	a5,a5
+    80200bb2:	fcf743e3          	blt	a4,a5,80200b78 <match_uart_type+0x1c>
+/embryos/chapter02/uart.c:21
+    return -1;
+    80200bb6:	57fd                	li	a5,-1
+/embryos/chapter02/uart.c:22
+}
+    80200bb8:	853e                	mv	a0,a5
+    80200bba:	70e2                	ld	ra,56(sp)
+    80200bbc:	7442                	ld	s0,48(sp)
+    80200bbe:	6121                	addi	sp,sp,64
+    80200bc0:	8082                	ret
+
+0000000080200bc2 <uart_init>:
+uart_init():
+/embryos/chapter02/uart.c:24
+
+void uart_init(const char *compat, int len, uintptr_t base) {
+    80200bc2:	7139                	addi	sp,sp,-64
+    80200bc4:	fc06                	sd	ra,56(sp)
+    80200bc6:	f822                	sd	s0,48(sp)
+    80200bc8:	0080                	addi	s0,sp,64
+    80200bca:	fca43c23          	sd	a0,-40(s0)
+    80200bce:	87ae                	mv	a5,a1
+    80200bd0:	fcc43423          	sd	a2,-56(s0)
+    80200bd4:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter02/uart.c:25
+    if (len == 0) len = strlen(compat);
+    80200bd8:	fd442783          	lw	a5,-44(s0)
+    80200bdc:	2781                	sext.w	a5,a5
+    80200bde:	eb81                	bnez	a5,80200bee <uart_init+0x2c>
+/embryos/chapter02/uart.c:25 (discriminator 1)
+    80200be0:	fd843503          	ld	a0,-40(s0)
+    80200be4:	eb4ff0ef          	jal	80200298 <strlen>
+    80200be8:	87aa                	mv	a5,a0
+/embryos/chapter02/uart.c:25 (discriminator 2)
+    80200bea:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter02/uart.c:26
+    const char *end = compat + len;
+    80200bee:	fd442783          	lw	a5,-44(s0)
+    80200bf2:	fd843703          	ld	a4,-40(s0)
+    80200bf6:	97ba                	add	a5,a5,a4
+    80200bf8:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter02/uart.c:27
+    while (compat < end) {
+    80200bfc:	a06d                	j	80200ca6 <uart_init+0xe4>
+/embryos/chapter02/uart.c:28
+        int idx = match_uart_type(compat, uart_info, sizeof(uart_info) / sizeof(uart_info[0]));
+    80200bfe:	4615                	li	a2,5
+    80200c00:	00001597          	auipc	a1,0x1
+    80200c04:	4b858593          	addi	a1,a1,1208 # 802020b8 <uart_info>
+    80200c08:	fd843503          	ld	a0,-40(s0)
+    80200c0c:	f51ff0ef          	jal	80200b5c <match_uart_type>
+    80200c10:	87aa                	mv	a5,a0
+    80200c12:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/uart.c:29
+        if (idx >= 0) {
+    80200c16:	fe442783          	lw	a5,-28(s0)
+    80200c1a:	2781                	sext.w	a5,a5
+    80200c1c:	0607ca63          	bltz	a5,80200c90 <uart_init+0xce>
+/embryos/chapter02/uart.c:30
+            uart = &uart_info[idx];
+    80200c20:	fe442783          	lw	a5,-28(s0)
+    80200c24:	00579713          	slli	a4,a5,0x5
+    80200c28:	00001797          	auipc	a5,0x1
+    80200c2c:	49078793          	addi	a5,a5,1168 # 802020b8 <uart_info>
+    80200c30:	973e                	add	a4,a4,a5
+    80200c32:	00010797          	auipc	a5,0x10
+    80200c36:	3ee78793          	addi	a5,a5,1006 # 80211020 <uart>
+    80200c3a:	e398                	sd	a4,0(a5)
+/embryos/chapter02/uart.c:31
+            uart->base = base;
+    80200c3c:	00010797          	auipc	a5,0x10
+    80200c40:	3e478793          	addi	a5,a5,996 # 80211020 <uart>
+    80200c44:	639c                	ld	a5,0(a5)
+    80200c46:	fc843703          	ld	a4,-56(s0)
+    80200c4a:	ef98                	sd	a4,24(a5)
+/embryos/chapter02/uart.c:32
+            uart->init(uart->base);
+    80200c4c:	00010797          	auipc	a5,0x10
+    80200c50:	3d478793          	addi	a5,a5,980 # 80211020 <uart>
+    80200c54:	639c                	ld	a5,0(a5)
+    80200c56:	679c                	ld	a5,8(a5)
+    80200c58:	00010717          	auipc	a4,0x10
+    80200c5c:	3c870713          	addi	a4,a4,968 # 80211020 <uart>
+    80200c60:	6318                	ld	a4,0(a4)
+    80200c62:	6f18                	ld	a4,24(a4)
+    80200c64:	853a                	mv	a0,a4
+    80200c66:	9782                	jalr	a5
+/embryos/chapter02/uart.c:33
+            L2(L_BASE, L_UART_INIT, idx, base);
+    80200c68:	fe442783          	lw	a5,-28(s0)
+    80200c6c:	fc843683          	ld	a3,-56(s0)
+    80200c70:	863e                	mv	a2,a5
+    80200c72:	4591                	li	a1,4
+    80200c74:	4501                	li	a0,0
+    80200c76:	e95ff0ef          	jal	80200b0a <L2>
+/embryos/chapter02/uart.c:34
+            kprintf("UART %s at %X\n", compat, base);
+    80200c7a:	fc843603          	ld	a2,-56(s0)
+    80200c7e:	fd843583          	ld	a1,-40(s0)
+    80200c82:	00001517          	auipc	a0,0x1
+    80200c86:	38e50513          	addi	a0,a0,910 # 80202010 <bp_flush+0x2a8>
+    80200c8a:	8c7ff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/uart.c:35
+            break;
+    80200c8e:	a01d                	j	80200cb4 <uart_init+0xf2>
+/embryos/chapter02/uart.c:37
+        }
+        compat += strlen(compat) + 1;
+    80200c90:	fd843503          	ld	a0,-40(s0)
+    80200c94:	e04ff0ef          	jal	80200298 <strlen>
+    80200c98:	87aa                	mv	a5,a0
+/embryos/chapter02/uart.c:37 (discriminator 1)
+    80200c9a:	0785                	addi	a5,a5,1
+    80200c9c:	fd843703          	ld	a4,-40(s0)
+    80200ca0:	97ba                	add	a5,a5,a4
+    80200ca2:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/uart.c:27
+    while (compat < end) {
+    80200ca6:	fd843703          	ld	a4,-40(s0)
+    80200caa:	fe843783          	ld	a5,-24(s0)
+    80200cae:	f4f768e3          	bltu	a4,a5,80200bfe <uart_init+0x3c>
+/embryos/chapter02/uart.c:39
+    }
+}
+    80200cb2:	0001                	nop
+    80200cb4:	0001                	nop
+    80200cb6:	70e2                	ld	ra,56(sp)
+    80200cb8:	7442                	ld	s0,48(sp)
+    80200cba:	6121                	addi	sp,sp,64
+    80200cbc:	8082                	ret
+
+0000000080200cbe <uart_ns16550_init>:
+uart_ns16550_init():
+/embryos/chapter02/uart_16550.c:13
+#define LSR_DATA_READY 0x01
+#define LSR_THR_EMPTY  0x20  // Transmitter Holding Register Empty
+
+#define UART(base) ((volatile uint8_t *) (base))
+
+void uart_ns16550_init(uintptr_t base) { }
+    80200cbe:	1101                	addi	sp,sp,-32
+    80200cc0:	ec06                	sd	ra,24(sp)
+    80200cc2:	e822                	sd	s0,16(sp)
+    80200cc4:	1000                	addi	s0,sp,32
+    80200cc6:	fea43423          	sd	a0,-24(s0)
+    80200cca:	0001                	nop
+    80200ccc:	60e2                	ld	ra,24(sp)
+    80200cce:	6442                	ld	s0,16(sp)
+    80200cd0:	6105                	addi	sp,sp,32
+    80200cd2:	8082                	ret
+
+0000000080200cd4 <uart_ns16550_putchar>:
+uart_ns16550_putchar():
+/embryos/chapter02/uart_16550.c:15
+
+void uart_ns16550_putchar(uintptr_t base, uint8_t ch) {
+    80200cd4:	1101                	addi	sp,sp,-32
+    80200cd6:	ec06                	sd	ra,24(sp)
+    80200cd8:	e822                	sd	s0,16(sp)
+    80200cda:	1000                	addi	s0,sp,32
+    80200cdc:	fea43423          	sd	a0,-24(s0)
+    80200ce0:	87ae                	mv	a5,a1
+    80200ce2:	fef403a3          	sb	a5,-25(s0)
+/embryos/chapter02/uart_16550.c:16
+    while ((UART(base)[UART_LSR] & LSR_THR_EMPTY) == 0) ;
+    80200ce6:	0001                	nop
+/embryos/chapter02/uart_16550.c:16 (discriminator 1)
+    80200ce8:	fe843783          	ld	a5,-24(s0)
+    80200cec:	0795                	addi	a5,a5,5
+    80200cee:	0007c783          	lbu	a5,0(a5)
+    80200cf2:	0ff7f793          	zext.b	a5,a5
+    80200cf6:	2781                	sext.w	a5,a5
+    80200cf8:	0207f793          	andi	a5,a5,32
+    80200cfc:	2781                	sext.w	a5,a5
+    80200cfe:	d7ed                	beqz	a5,80200ce8 <uart_ns16550_putchar+0x14>
+/embryos/chapter02/uart_16550.c:17
+    UART(base)[UART_THR] = ch;
+    80200d00:	fe843783          	ld	a5,-24(s0)
+    80200d04:	fe744703          	lbu	a4,-25(s0)
+    80200d08:	00e78023          	sb	a4,0(a5)
+/embryos/chapter02/uart_16550.c:18
+}
+    80200d0c:	0001                	nop
+    80200d0e:	60e2                	ld	ra,24(sp)
+    80200d10:	6442                	ld	s0,16(sp)
+    80200d12:	6105                	addi	sp,sp,32
+    80200d14:	8082                	ret
+
+0000000080200d16 <uart_sifive_init>:
+uart_sifive_init():
+/embryos/chapter02/uart_sifive.c:9
+
+#define UART(base)  ((volatile struct uart *) (base))
+
+#define EMPTY       (1u << 31)
+
+void uart_sifive_init(uintptr_t base) { }
+    80200d16:	1101                	addi	sp,sp,-32
+    80200d18:	ec06                	sd	ra,24(sp)
+    80200d1a:	e822                	sd	s0,16(sp)
+    80200d1c:	1000                	addi	s0,sp,32
+    80200d1e:	fea43423          	sd	a0,-24(s0)
+    80200d22:	0001                	nop
+    80200d24:	60e2                	ld	ra,24(sp)
+    80200d26:	6442                	ld	s0,16(sp)
+    80200d28:	6105                	addi	sp,sp,32
+    80200d2a:	8082                	ret
+
+0000000080200d2c <uart_sifive_putchar>:
+uart_sifive_putchar():
+/embryos/chapter02/uart_sifive.c:11
+
+void uart_sifive_putchar(uintptr_t base, char c) {
+    80200d2c:	1101                	addi	sp,sp,-32
+    80200d2e:	ec06                	sd	ra,24(sp)
+    80200d30:	e822                	sd	s0,16(sp)
+    80200d32:	1000                	addi	s0,sp,32
+    80200d34:	fea43423          	sd	a0,-24(s0)
+    80200d38:	87ae                	mv	a5,a1
+    80200d3a:	fef403a3          	sb	a5,-25(s0)
+/embryos/chapter02/uart_sifive.c:12
+    while (UART(base)->txdata & (1u << 31)) ;
+    80200d3e:	0001                	nop
+/embryos/chapter02/uart_sifive.c:12 (discriminator 1)
+    80200d40:	fe843783          	ld	a5,-24(s0)
+    80200d44:	439c                	lw	a5,0(a5)
+    80200d46:	2781                	sext.w	a5,a5
+    80200d48:	fe07cce3          	bltz	a5,80200d40 <uart_sifive_putchar+0x14>
+/embryos/chapter02/uart_sifive.c:13
+    UART(base)->txdata = (uint32_t) c;
+    80200d4c:	fe843783          	ld	a5,-24(s0)
+    80200d50:	fe744703          	lbu	a4,-25(s0)
+    80200d54:	2701                	sext.w	a4,a4
+    80200d56:	c398                	sw	a4,0(a5)
+/embryos/chapter02/uart_sifive.c:14
+}
+    80200d58:	0001                	nop
+    80200d5a:	60e2                	ld	ra,24(sp)
+    80200d5c:	6442                	ld	s0,16(sp)
+    80200d5e:	6105                	addi	sp,sp,32
+    80200d60:	8082                	ret
+
+0000000080200d62 <uart_pxa_wait_tx_empty>:
+uart_pxa_wait_tx_empty():
+/embryos/chapter02/uart_pxa.c:18
+
+#define LSR_DR     (1 << 0)
+#define LSR_THRE   (1 << 5)
+#define LSR_TEMT   (1 << 6)
+
+void uart_pxa_wait_tx_empty(uintptr_t base) {
+    80200d62:	1101                	addi	sp,sp,-32
+    80200d64:	ec06                	sd	ra,24(sp)
+    80200d66:	e822                	sd	s0,16(sp)
+    80200d68:	1000                	addi	s0,sp,32
+    80200d6a:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter02/uart_pxa.c:19
+    while (!(REG(base, UART_LSR) & LSR_THRE)) ;
+    80200d6e:	0001                	nop
+/embryos/chapter02/uart_pxa.c:19 (discriminator 1)
+    80200d70:	fe843783          	ld	a5,-24(s0)
+    80200d74:	07d1                	addi	a5,a5,20
+    80200d76:	439c                	lw	a5,0(a5)
+    80200d78:	2781                	sext.w	a5,a5
+    80200d7a:	0207f793          	andi	a5,a5,32
+    80200d7e:	2781                	sext.w	a5,a5
+    80200d80:	dbe5                	beqz	a5,80200d70 <uart_pxa_wait_tx_empty+0xe>
+/embryos/chapter02/uart_pxa.c:20
+    while (!(REG(base, UART_LSR) & LSR_TEMT)) ;
+    80200d82:	0001                	nop
+/embryos/chapter02/uart_pxa.c:20 (discriminator 1)
+    80200d84:	fe843783          	ld	a5,-24(s0)
+    80200d88:	07d1                	addi	a5,a5,20
+    80200d8a:	439c                	lw	a5,0(a5)
+    80200d8c:	2781                	sext.w	a5,a5
+    80200d8e:	0407f793          	andi	a5,a5,64
+    80200d92:	2781                	sext.w	a5,a5
+    80200d94:	dbe5                	beqz	a5,80200d84 <uart_pxa_wait_tx_empty+0x22>
+/embryos/chapter02/uart_pxa.c:21
+}
+    80200d96:	0001                	nop
+    80200d98:	0001                	nop
+    80200d9a:	60e2                	ld	ra,24(sp)
+    80200d9c:	6442                	ld	s0,16(sp)
+    80200d9e:	6105                	addi	sp,sp,32
+    80200da0:	8082                	ret
+
+0000000080200da2 <uart_pxa_putchar>:
+uart_pxa_putchar():
+/embryos/chapter02/uart_pxa.c:23
+
+void uart_pxa_putchar(uintptr_t base, int c) {
+    80200da2:	1101                	addi	sp,sp,-32
+    80200da4:	ec06                	sd	ra,24(sp)
+    80200da6:	e822                	sd	s0,16(sp)
+    80200da8:	1000                	addi	s0,sp,32
+    80200daa:	fea43423          	sd	a0,-24(s0)
+    80200dae:	87ae                	mv	a5,a1
+    80200db0:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/uart_pxa.c:24
+    uart_pxa_wait_tx_empty(base);
+    80200db4:	fe843503          	ld	a0,-24(s0)
+    80200db8:	fabff0ef          	jal	80200d62 <uart_pxa_wait_tx_empty>
+/embryos/chapter02/uart_pxa.c:25
+    REG(base, UART_THR) = (uint32_t)c;
+    80200dbc:	fe843783          	ld	a5,-24(s0)
+    80200dc0:	fe442703          	lw	a4,-28(s0)
+    80200dc4:	c398                	sw	a4,0(a5)
+/embryos/chapter02/uart_pxa.c:26
+}
+    80200dc6:	0001                	nop
+    80200dc8:	60e2                	ld	ra,24(sp)
+    80200dca:	6442                	ld	s0,16(sp)
+    80200dcc:	6105                	addi	sp,sp,32
+    80200dce:	8082                	ret
+
+0000000080200dd0 <uart_pxa_init>:
+uart_pxa_init():
+/embryos/chapter02/uart_pxa.c:28
+
+void uart_pxa_init(uintptr_t base) { }
+    80200dd0:	1101                	addi	sp,sp,-32
+    80200dd2:	ec06                	sd	ra,24(sp)
+    80200dd4:	e822                	sd	s0,16(sp)
+    80200dd6:	1000                	addi	s0,sp,32
+    80200dd8:	fea43423          	sd	a0,-24(s0)
+    80200ddc:	0001                	nop
+    80200dde:	60e2                	ld	ra,24(sp)
+    80200de0:	6442                	ld	s0,16(sp)
+    80200de2:	6105                	addi	sp,sp,32
+    80200de4:	8082                	ret
+
+0000000080200de6 <uart_litex_init>:
+uart_litex_init():
+/embryos/chapter02/uart_litex.c:7
+
+struct uart { uint32_t data, txfull, status, unknown, evpend; };
+
+#define UART(base)  ((volatile struct uart *) (base))
+
+void uart_litex_init(uintptr_t base) { }
+    80200de6:	1101                	addi	sp,sp,-32
+    80200de8:	ec06                	sd	ra,24(sp)
+    80200dea:	e822                	sd	s0,16(sp)
+    80200dec:	1000                	addi	s0,sp,32
+    80200dee:	fea43423          	sd	a0,-24(s0)
+    80200df2:	0001                	nop
+    80200df4:	60e2                	ld	ra,24(sp)
+    80200df6:	6442                	ld	s0,16(sp)
+    80200df8:	6105                	addi	sp,sp,32
+    80200dfa:	8082                	ret
+
+0000000080200dfc <uart_litex_putchar>:
+uart_litex_putchar():
+/embryos/chapter02/uart_litex.c:9
+
+void uart_litex_putchar(uintptr_t base, char c) {
+    80200dfc:	1101                	addi	sp,sp,-32
+    80200dfe:	ec06                	sd	ra,24(sp)
+    80200e00:	e822                	sd	s0,16(sp)
+    80200e02:	1000                	addi	s0,sp,32
+    80200e04:	fea43423          	sd	a0,-24(s0)
+    80200e08:	87ae                	mv	a5,a1
+    80200e0a:	fef403a3          	sb	a5,-25(s0)
+/embryos/chapter02/uart_litex.c:11
+    // while (UART(base)->status & 0x1) ;
+    while (UART(base)->txfull) ;
+    80200e0e:	0001                	nop
+/embryos/chapter02/uart_litex.c:11 (discriminator 1)
+    80200e10:	fe843783          	ld	a5,-24(s0)
+    80200e14:	43dc                	lw	a5,4(a5)
+    80200e16:	2781                	sext.w	a5,a5
+    80200e18:	ffe5                	bnez	a5,80200e10 <uart_litex_putchar+0x14>
+/embryos/chapter02/uart_litex.c:12
+    UART(base)->data = (uint32_t) c;
+    80200e1a:	fe843783          	ld	a5,-24(s0)
+    80200e1e:	fe744703          	lbu	a4,-25(s0)
+    80200e22:	2701                	sext.w	a4,a4
+    80200e24:	c398                	sw	a4,0(a5)
+/embryos/chapter02/uart_litex.c:13
+}
+    80200e26:	0001                	nop
+    80200e28:	60e2                	ld	ra,24(sp)
+    80200e2a:	6442                	ld	s0,16(sp)
+    80200e2c:	6105                	addi	sp,sp,32
+    80200e2e:	8082                	ret
+
+0000000080200e30 <L>:
+L():
+/embryos/chapter02/log.h:9
+static inline struct log_entry *L(unsigned int level, enum log_type type, int arity) {
+    80200e30:	715d                	addi	sp,sp,-80
+    80200e32:	e486                	sd	ra,72(sp)
+    80200e34:	e0a2                	sd	s0,64(sp)
+    80200e36:	0880                	addi	s0,sp,80
+    80200e38:	87aa                	mv	a5,a0
+    80200e3a:	86ae                	mv	a3,a1
+    80200e3c:	8732                	mv	a4,a2
+    80200e3e:	faf42e23          	sw	a5,-68(s0)
+    80200e42:	87b6                	mv	a5,a3
+    80200e44:	faf42c23          	sw	a5,-72(s0)
+    80200e48:	87ba                	mv	a5,a4
+    80200e4a:	faf42a23          	sw	a5,-76(s0)
+/embryos/chapter02/log.h:10
+    struct log_header *lh = &log_header;
+    80200e4e:	00001797          	auipc	a5,0x1
+    80200e52:	25278793          	addi	a5,a5,594 # 802020a0 <log_header>
+    80200e56:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/log.h:11
+    uint32_t offset = 0;
+    80200e5a:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/log.h:12
+    for (unsigned i = 0; i < level; i++) offset += lh->sizes[i];
+    80200e5e:	fe042423          	sw	zero,-24(s0)
+    80200e62:	a015                	j	80200e86 <L+0x56>
+/embryos/chapter02/log.h:12 (discriminator 3)
+    80200e64:	fd843703          	ld	a4,-40(s0)
+    80200e68:	fe846783          	lwu	a5,-24(s0)
+    80200e6c:	078a                	slli	a5,a5,0x2
+    80200e6e:	97ba                	add	a5,a5,a4
+    80200e70:	47dc                	lw	a5,12(a5)
+    80200e72:	fec42703          	lw	a4,-20(s0)
+    80200e76:	9fb9                	addw	a5,a5,a4
+    80200e78:	fef42623          	sw	a5,-20(s0)
+    80200e7c:	fe842783          	lw	a5,-24(s0)
+    80200e80:	2785                	addiw	a5,a5,1
+    80200e82:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/log.h:12 (discriminator 1)
+    80200e86:	fe842783          	lw	a5,-24(s0)
+    80200e8a:	873e                	mv	a4,a5
+    80200e8c:	fbc42783          	lw	a5,-68(s0)
+    80200e90:	2701                	sext.w	a4,a4
+    80200e92:	2781                	sext.w	a5,a5
+    80200e94:	fcf768e3          	bltu	a4,a5,80200e64 <L+0x34>
+/embryos/chapter02/log.h:13
+    struct log_entry *le = &log[offset + lh->ts[level] % lh->sizes[level]];
+    80200e98:	fd843703          	ld	a4,-40(s0)
+    80200e9c:	fbc46783          	lwu	a5,-68(s0)
+    80200ea0:	078a                	slli	a5,a5,0x2
+    80200ea2:	97ba                	add	a5,a5,a4
+    80200ea4:	4394                	lw	a3,0(a5)
+    80200ea6:	fd843703          	ld	a4,-40(s0)
+    80200eaa:	fbc46783          	lwu	a5,-68(s0)
+    80200eae:	078a                	slli	a5,a5,0x2
+    80200eb0:	97ba                	add	a5,a5,a4
+    80200eb2:	47dc                	lw	a5,12(a5)
+    80200eb4:	8736                	mv	a4,a3
+    80200eb6:	02f777bb          	remuw	a5,a4,a5
+    80200eba:	2781                	sext.w	a5,a5
+    80200ebc:	fec42703          	lw	a4,-20(s0)
+    80200ec0:	9fb9                	addw	a5,a5,a4
+    80200ec2:	2781                	sext.w	a5,a5
+    80200ec4:	1782                	slli	a5,a5,0x20
+    80200ec6:	9381                	srli	a5,a5,0x20
+    80200ec8:	00679713          	slli	a4,a5,0x6
+    80200ecc:	00010797          	auipc	a5,0x10
+    80200ed0:	17478793          	addi	a5,a5,372 # 80211040 <log>
+    80200ed4:	97ba                	add	a5,a5,a4
+    80200ed6:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter02/log.h:14
+    le->type = type;
+    80200eda:	fb842783          	lw	a5,-72(s0)
+    80200ede:	03079713          	slli	a4,a5,0x30
+    80200ee2:	9341                	srli	a4,a4,0x30
+    80200ee4:	fd043783          	ld	a5,-48(s0)
+    80200ee8:	00e79023          	sh	a4,0(a5)
+/embryos/chapter02/log.h:15
+    le->arity = arity;
+    80200eec:	fb442783          	lw	a5,-76(s0)
+    80200ef0:	0ff7f713          	zext.b	a4,a5
+    80200ef4:	fd043783          	ld	a5,-48(s0)
+    80200ef8:	00e78123          	sb	a4,2(a5)
+/embryos/chapter02/log.h:16
+    for (unsigned i = 0; i < LOG_N_LEVELS; i++) le->ts[i] = lh->ts[i];
+    80200efc:	fe042223          	sw	zero,-28(s0)
+    80200f00:	a025                	j	80200f28 <L+0xf8>
+/embryos/chapter02/log.h:16 (discriminator 3)
+    80200f02:	fd843703          	ld	a4,-40(s0)
+    80200f06:	fe446783          	lwu	a5,-28(s0)
+    80200f0a:	078a                	slli	a5,a5,0x2
+    80200f0c:	97ba                	add	a5,a5,a4
+    80200f0e:	4398                	lw	a4,0(a5)
+    80200f10:	fd043683          	ld	a3,-48(s0)
+    80200f14:	fe446783          	lwu	a5,-28(s0)
+    80200f18:	078a                	slli	a5,a5,0x2
+    80200f1a:	97b6                	add	a5,a5,a3
+    80200f1c:	c3d8                	sw	a4,4(a5)
+    80200f1e:	fe442783          	lw	a5,-28(s0)
+    80200f22:	2785                	addiw	a5,a5,1
+    80200f24:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/log.h:16 (discriminator 1)
+    80200f28:	fe442783          	lw	a5,-28(s0)
+    80200f2c:	0007871b          	sext.w	a4,a5
+    80200f30:	4789                	li	a5,2
+    80200f32:	fce7f8e3          	bgeu	a5,a4,80200f02 <L+0xd2>
+/embryos/chapter02/log.h:18
+    asm volatile ("mv %0, tp" : "=r"(tmp));
+    80200f36:	8792                	mv	a5,tp
+    80200f38:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/log.h:19
+    le->self = (uint64_t)tmp;
+    80200f3c:	fd043783          	ld	a5,-48(s0)
+    80200f40:	fc843703          	ld	a4,-56(s0)
+    80200f44:	eb98                	sd	a4,16(a5)
+/embryos/chapter02/log.h:20
+    lh->ts[level]++;
+    80200f46:	fd843703          	ld	a4,-40(s0)
+    80200f4a:	fbc46783          	lwu	a5,-68(s0)
+    80200f4e:	078a                	slli	a5,a5,0x2
+    80200f50:	97ba                	add	a5,a5,a4
+    80200f52:	439c                	lw	a5,0(a5)
+    80200f54:	2785                	addiw	a5,a5,1
+    80200f56:	0007871b          	sext.w	a4,a5
+    80200f5a:	fd843683          	ld	a3,-40(s0)
+    80200f5e:	fbc46783          	lwu	a5,-68(s0)
+    80200f62:	078a                	slli	a5,a5,0x2
+    80200f64:	97b6                	add	a5,a5,a3
+    80200f66:	c398                	sw	a4,0(a5)
+/embryos/chapter02/log.h:21
+    return le;
+    80200f68:	fd043783          	ld	a5,-48(s0)
+/embryos/chapter02/log.h:22
+}
+    80200f6c:	853e                	mv	a0,a5
+    80200f6e:	60a6                	ld	ra,72(sp)
+    80200f70:	6406                	ld	s0,64(sp)
+    80200f72:	6161                	addi	sp,sp,80
+    80200f74:	8082                	ret
+
+0000000080200f76 <L0>:
+L0():
+/embryos/chapter02/log.h:24
+static inline void L0(unsigned int level, enum log_type type) {
+    80200f76:	1101                	addi	sp,sp,-32
+    80200f78:	ec06                	sd	ra,24(sp)
+    80200f7a:	e822                	sd	s0,16(sp)
+    80200f7c:	1000                	addi	s0,sp,32
+    80200f7e:	87aa                	mv	a5,a0
+    80200f80:	872e                	mv	a4,a1
+    80200f82:	fef42623          	sw	a5,-20(s0)
+    80200f86:	87ba                	mv	a5,a4
+    80200f88:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/log.h:25
+    (void) L(level, type, 0);
+    80200f8c:	fe842703          	lw	a4,-24(s0)
+    80200f90:	fec42783          	lw	a5,-20(s0)
+    80200f94:	4601                	li	a2,0
+    80200f96:	85ba                	mv	a1,a4
+    80200f98:	853e                	mv	a0,a5
+    80200f9a:	e97ff0ef          	jal	80200e30 <L>
+/embryos/chapter02/log.h:26
+}
+    80200f9e:	0001                	nop
+    80200fa0:	60e2                	ld	ra,24(sp)
+    80200fa2:	6442                	ld	s0,16(sp)
+    80200fa4:	6105                	addi	sp,sp,32
+    80200fa6:	8082                	ret
+
+0000000080200fa8 <die>:
+die():
+/embryos/chapter02/die.c:3
+#include "embryos.h"
+
+void die(void *msg) {
+    80200fa8:	1101                	addi	sp,sp,-32
+    80200faa:	ec06                	sd	ra,24(sp)
+    80200fac:	e822                	sd	s0,16(sp)
+    80200fae:	1000                	addi	s0,sp,32
+    80200fb0:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter02/die.c:4
+    L0(L_NORM, L_DIE);
+    80200fb4:	4585                	li	a1,1
+    80200fb6:	4505                	li	a0,1
+    80200fb8:	fbfff0ef          	jal	80200f76 <L0>
+/embryos/chapter02/die.c:5
+    kprintf("%s", msg);
+    80200fbc:	fe843583          	ld	a1,-24(s0)
+    80200fc0:	00001517          	auipc	a0,0x1
+    80200fc4:	06050513          	addi	a0,a0,96 # 80202020 <bp_flush+0x2b8>
+    80200fc8:	d88ff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/die.c:6
+    for (;;) ;
+    80200fcc:	0001                	nop
+    80200fce:	bffd                	j	80200fcc <die+0x24>
+
+0000000080200fd0 <screen_put>:
+screen_put():
+/embryos/chapter02/screen.c:3
+#include "embryos.h"
+
+void screen_put(int col, int row, cell_t cell) {
+    80200fd0:	7139                	addi	sp,sp,-64
+    80200fd2:	fc06                	sd	ra,56(sp)
+    80200fd4:	f822                	sd	s0,48(sp)
+    80200fd6:	0080                	addi	s0,sp,64
+    80200fd8:	87aa                	mv	a5,a0
+    80200fda:	86ae                	mv	a3,a1
+    80200fdc:	8732                	mv	a4,a2
+    80200fde:	fcf42623          	sw	a5,-52(s0)
+    80200fe2:	87b6                	mv	a5,a3
+    80200fe4:	fcf42423          	sw	a5,-56(s0)
+    80200fe8:	87ba                	mv	a5,a4
+    80200fea:	fcf41323          	sh	a5,-58(s0)
+/embryos/chapter02/screen.c:4
+    if (col < 0 || col >= SCREEN_COLS) die("screen_put: bad column");
+    80200fee:	fcc42783          	lw	a5,-52(s0)
+    80200ff2:	2781                	sext.w	a5,a5
+    80200ff4:	0007ca63          	bltz	a5,80201008 <screen_put+0x38>
+/embryos/chapter02/screen.c:4 (discriminator 2)
+    80200ff8:	fcc42783          	lw	a5,-52(s0)
+    80200ffc:	0007871b          	sext.w	a4,a5
+    80201000:	04f00793          	li	a5,79
+    80201004:	00e7d863          	bge	a5,a4,80201014 <screen_put+0x44>
+/embryos/chapter02/screen.c:4 (discriminator 3)
+    80201008:	00001517          	auipc	a0,0x1
+    8020100c:	02050513          	addi	a0,a0,32 # 80202028 <bp_flush+0x2c0>
+    80201010:	f99ff0ef          	jal	80200fa8 <die>
+/embryos/chapter02/screen.c:5
+    if (row < 0 || row >= SCREEN_ROWS) die("screen_put: bad row");
+    80201014:	fc842783          	lw	a5,-56(s0)
+    80201018:	2781                	sext.w	a5,a5
+    8020101a:	0007c963          	bltz	a5,8020102c <screen_put+0x5c>
+/embryos/chapter02/screen.c:5 (discriminator 2)
+    8020101e:	fc842783          	lw	a5,-56(s0)
+    80201022:	0007871b          	sext.w	a4,a5
+    80201026:	47dd                	li	a5,23
+    80201028:	00e7d863          	bge	a5,a4,80201038 <screen_put+0x68>
+/embryos/chapter02/screen.c:5 (discriminator 3)
+    8020102c:	00001517          	auipc	a0,0x1
+    80201030:	01450513          	addi	a0,a0,20 # 80202040 <bp_flush+0x2d8>
+    80201034:	f75ff0ef          	jal	80200fa8 <die>
+/embryos/chapter02/screen.c:8
+    static int cur_row = -1, cur_col = -1;
+    static int cur_fg = -1, cur_bg = -1;
+    if (row != cur_row || col != cur_col + 1)
+    80201038:	00001797          	auipc	a5,0x1
+    8020103c:	12878793          	addi	a5,a5,296 # 80202160 <cur_row.3>
+    80201040:	439c                	lw	a5,0(a5)
+    80201042:	fc842703          	lw	a4,-56(s0)
+    80201046:	2701                	sext.w	a4,a4
+    80201048:	00f71e63          	bne	a4,a5,80201064 <screen_put+0x94>
+/embryos/chapter02/screen.c:8 (discriminator 1)
+    8020104c:	00001797          	auipc	a5,0x1
+    80201050:	11878793          	addi	a5,a5,280 # 80202164 <cur_col.2>
+    80201054:	439c                	lw	a5,0(a5)
+    80201056:	2785                	addiw	a5,a5,1
+    80201058:	2781                	sext.w	a5,a5
+    8020105a:	fcc42703          	lw	a4,-52(s0)
+    8020105e:	2701                	sext.w	a4,a4
+    80201060:	02f70263          	beq	a4,a5,80201084 <screen_put+0xb4>
+/embryos/chapter02/screen.c:9
+        kprintf("\033[%d;%dH", row + 1, col + 1);
+    80201064:	fc842783          	lw	a5,-56(s0)
+    80201068:	2785                	addiw	a5,a5,1
+    8020106a:	2781                	sext.w	a5,a5
+    8020106c:	fcc42703          	lw	a4,-52(s0)
+    80201070:	2705                	addiw	a4,a4,1
+    80201072:	2701                	sext.w	a4,a4
+    80201074:	863a                	mv	a2,a4
+    80201076:	85be                	mv	a1,a5
+    80201078:	00001517          	auipc	a0,0x1
+    8020107c:	fe050513          	addi	a0,a0,-32 # 80202058 <bp_flush+0x2f0>
+    80201080:	cd0ff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/screen.c:10
+    int t = CELL_T(cell);
+    80201084:	fc645783          	lhu	a5,-58(s0)
+    80201088:	00e7d79b          	srliw	a5,a5,0xe
+    8020108c:	17c2                	slli	a5,a5,0x30
+    8020108e:	93c1                	srli	a5,a5,0x30
+    80201090:	2781                	sext.w	a5,a5
+    80201092:	8b8d                	andi	a5,a5,3
+    80201094:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/screen.c:11
+    int fg = CELL_FG(cell) % 8, bg = CELL_BG(cell) % 8;
+    80201098:	fc645783          	lhu	a5,-58(s0)
+    8020109c:	0087d79b          	srliw	a5,a5,0x8
+    802010a0:	17c2                	slli	a5,a5,0x30
+    802010a2:	93c1                	srli	a5,a5,0x30
+    802010a4:	2781                	sext.w	a5,a5
+    802010a6:	8b9d                	andi	a5,a5,7
+    802010a8:	fef42423          	sw	a5,-24(s0)
+    802010ac:	fc645783          	lhu	a5,-58(s0)
+    802010b0:	00b7d79b          	srliw	a5,a5,0xb
+    802010b4:	17c2                	slli	a5,a5,0x30
+    802010b6:	93c1                	srli	a5,a5,0x30
+    802010b8:	2781                	sext.w	a5,a5
+    802010ba:	8b9d                	andi	a5,a5,7
+    802010bc:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter02/screen.c:12
+    char ch = CELL_CH(cell);
+    802010c0:	fc645783          	lhu	a5,-58(s0)
+    802010c4:	fef403a3          	sb	a5,-25(s0)
+/embryos/chapter02/screen.c:13
+    if (fg == bg) { t = CELL_ASCII; ch = ' '; fg = (bg + 1) % 8; }
+    802010c8:	fe842783          	lw	a5,-24(s0)
+    802010cc:	873e                	mv	a4,a5
+    802010ce:	fe042783          	lw	a5,-32(s0)
+    802010d2:	2701                	sext.w	a4,a4
+    802010d4:	2781                	sext.w	a5,a5
+    802010d6:	02f71763          	bne	a4,a5,80201104 <screen_put+0x134>
+/embryos/chapter02/screen.c:13 (discriminator 1)
+    802010da:	fe042623          	sw	zero,-20(s0)
+    802010de:	02000793          	li	a5,32
+    802010e2:	fef403a3          	sb	a5,-25(s0)
+    802010e6:	fe042783          	lw	a5,-32(s0)
+    802010ea:	2785                	addiw	a5,a5,1
+    802010ec:	2781                	sext.w	a5,a5
+    802010ee:	873e                	mv	a4,a5
+    802010f0:	41f7579b          	sraiw	a5,a4,0x1f
+    802010f4:	01d7d79b          	srliw	a5,a5,0x1d
+    802010f8:	9f3d                	addw	a4,a4,a5
+    802010fa:	8b1d                	andi	a4,a4,7
+    802010fc:	40f707bb          	subw	a5,a4,a5
+    80201100:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/screen.c:17
+    // Workaround for MacOSX Terminal which doesn't draw the upper
+    // block all the way to the top.  We switch the blocks and the
+    // foreground and background colors.
+    if (t == CELL_BLOCK && (CELL_CH(ch) & 0x3) == 1) {
+    80201104:	fec42783          	lw	a5,-20(s0)
+    80201108:	0007871b          	sext.w	a4,a5
+    8020110c:	4785                	li	a5,1
+    8020110e:	08f71663          	bne	a4,a5,8020119a <screen_put+0x1ca>
+/embryos/chapter02/screen.c:17 (discriminator 1)
+    80201112:	fe744783          	lbu	a5,-25(s0)
+    80201116:	2781                	sext.w	a5,a5
+    80201118:	8b8d                	andi	a5,a5,3
+    8020111a:	0007871b          	sext.w	a4,a5
+    8020111e:	4785                	li	a5,1
+    80201120:	06f71d63          	bne	a4,a5,8020119a <screen_put+0x1ca>
+/embryos/chapter02/screen.c:18
+        if (bg != cur_fg) { kprintf("\033[3%dm", bg); cur_fg = bg; }
+    80201124:	00001797          	auipc	a5,0x1
+    80201128:	04478793          	addi	a5,a5,68 # 80202168 <cur_fg.1>
+    8020112c:	439c                	lw	a5,0(a5)
+    8020112e:	fe042703          	lw	a4,-32(s0)
+    80201132:	2701                	sext.w	a4,a4
+    80201134:	02f70263          	beq	a4,a5,80201158 <screen_put+0x188>
+/embryos/chapter02/screen.c:18 (discriminator 1)
+    80201138:	fe042783          	lw	a5,-32(s0)
+    8020113c:	85be                	mv	a1,a5
+    8020113e:	00001517          	auipc	a0,0x1
+    80201142:	f2a50513          	addi	a0,a0,-214 # 80202068 <bp_flush+0x300>
+    80201146:	c0aff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/screen.c:18 (discriminator 2)
+    8020114a:	00001797          	auipc	a5,0x1
+    8020114e:	01e78793          	addi	a5,a5,30 # 80202168 <cur_fg.1>
+    80201152:	fe042703          	lw	a4,-32(s0)
+    80201156:	c398                	sw	a4,0(a5)
+/embryos/chapter02/screen.c:19
+        if (fg != cur_bg) { kprintf("\033[4%dm", fg); cur_bg = fg; }
+    80201158:	00001797          	auipc	a5,0x1
+    8020115c:	01478793          	addi	a5,a5,20 # 8020216c <cur_bg.0>
+    80201160:	439c                	lw	a5,0(a5)
+    80201162:	fe842703          	lw	a4,-24(s0)
+    80201166:	2701                	sext.w	a4,a4
+    80201168:	02f70263          	beq	a4,a5,8020118c <screen_put+0x1bc>
+/embryos/chapter02/screen.c:19 (discriminator 1)
+    8020116c:	fe842783          	lw	a5,-24(s0)
+    80201170:	85be                	mv	a1,a5
+    80201172:	00001517          	auipc	a0,0x1
+    80201176:	efe50513          	addi	a0,a0,-258 # 80202070 <bp_flush+0x308>
+    8020117a:	bd6ff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/screen.c:19 (discriminator 2)
+    8020117e:	00001797          	auipc	a5,0x1
+    80201182:	fee78793          	addi	a5,a5,-18 # 8020216c <cur_bg.0>
+    80201186:	fe842703          	lw	a4,-24(s0)
+    8020118a:	c398                	sw	a4,0(a5)
+/embryos/chapter02/screen.c:20
+        kprintf("\xE2\x96\x84");
+    8020118c:	00001517          	auipc	a0,0x1
+    80201190:	eec50513          	addi	a0,a0,-276 # 80202078 <bp_flush+0x310>
+    80201194:	bbcff0ef          	jal	80200550 <kprintf>
+    80201198:	aa61                	j	80201330 <screen_put+0x360>
+/embryos/chapter02/screen.c:23
+    }
+    else {
+        if (fg != cur_fg) { kprintf("\033[3%dm", fg); cur_fg = fg; }
+    8020119a:	00001797          	auipc	a5,0x1
+    8020119e:	fce78793          	addi	a5,a5,-50 # 80202168 <cur_fg.1>
+    802011a2:	439c                	lw	a5,0(a5)
+    802011a4:	fe842703          	lw	a4,-24(s0)
+    802011a8:	2701                	sext.w	a4,a4
+    802011aa:	02f70263          	beq	a4,a5,802011ce <screen_put+0x1fe>
+/embryos/chapter02/screen.c:23 (discriminator 1)
+    802011ae:	fe842783          	lw	a5,-24(s0)
+    802011b2:	85be                	mv	a1,a5
+    802011b4:	00001517          	auipc	a0,0x1
+    802011b8:	eb450513          	addi	a0,a0,-332 # 80202068 <bp_flush+0x300>
+    802011bc:	b94ff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/screen.c:23 (discriminator 2)
+    802011c0:	00001797          	auipc	a5,0x1
+    802011c4:	fa878793          	addi	a5,a5,-88 # 80202168 <cur_fg.1>
+    802011c8:	fe842703          	lw	a4,-24(s0)
+    802011cc:	c398                	sw	a4,0(a5)
+/embryos/chapter02/screen.c:24
+        if (bg != cur_bg) { kprintf("\033[4%dm", bg); cur_bg = bg; }
+    802011ce:	00001797          	auipc	a5,0x1
+    802011d2:	f9e78793          	addi	a5,a5,-98 # 8020216c <cur_bg.0>
+    802011d6:	439c                	lw	a5,0(a5)
+    802011d8:	fe042703          	lw	a4,-32(s0)
+    802011dc:	2701                	sext.w	a4,a4
+    802011de:	02f70263          	beq	a4,a5,80201202 <screen_put+0x232>
+/embryos/chapter02/screen.c:24 (discriminator 1)
+    802011e2:	fe042783          	lw	a5,-32(s0)
+    802011e6:	85be                	mv	a1,a5
+    802011e8:	00001517          	auipc	a0,0x1
+    802011ec:	e8850513          	addi	a0,a0,-376 # 80202070 <bp_flush+0x308>
+    802011f0:	b60ff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/screen.c:24 (discriminator 2)
+    802011f4:	00001797          	auipc	a5,0x1
+    802011f8:	f7878793          	addi	a5,a5,-136 # 8020216c <cur_bg.0>
+    802011fc:	fe042703          	lw	a4,-32(s0)
+    80201200:	c398                	sw	a4,0(a5)
+/embryos/chapter02/screen.c:25
+        switch (t) {
+    80201202:	fec42783          	lw	a5,-20(s0)
+    80201206:	0007871b          	sext.w	a4,a5
+    8020120a:	4789                	li	a5,2
+    8020120c:	0af70f63          	beq	a4,a5,802012ca <screen_put+0x2fa>
+    80201210:	fec42783          	lw	a5,-20(s0)
+    80201214:	0007871b          	sext.w	a4,a5
+    80201218:	4789                	li	a5,2
+    8020121a:	10e7c563          	blt	a5,a4,80201324 <screen_put+0x354>
+    8020121e:	fec42783          	lw	a5,-20(s0)
+    80201222:	2781                	sext.w	a5,a5
+    80201224:	cb89                	beqz	a5,80201236 <screen_put+0x266>
+    80201226:	fec42783          	lw	a5,-20(s0)
+    8020122a:	0007871b          	sext.w	a4,a5
+    8020122e:	4785                	li	a5,1
+    80201230:	02f70c63          	beq	a4,a5,80201268 <screen_put+0x298>
+    80201234:	a8c5                	j	80201324 <screen_put+0x354>
+/embryos/chapter02/screen.c:27
+        case CELL_ASCII:
+            if (ch < 32 || ch > 126) ch = '?';
+    80201236:	fe744783          	lbu	a5,-25(s0)
+    8020123a:	0ff7f713          	zext.b	a4,a5
+    8020123e:	47fd                	li	a5,31
+    80201240:	00e7fa63          	bgeu	a5,a4,80201254 <screen_put+0x284>
+/embryos/chapter02/screen.c:27 (discriminator 2)
+    80201244:	fe744783          	lbu	a5,-25(s0)
+    80201248:	0ff7f713          	zext.b	a4,a5
+    8020124c:	07e00793          	li	a5,126
+    80201250:	00e7f663          	bgeu	a5,a4,8020125c <screen_put+0x28c>
+/embryos/chapter02/screen.c:27 (discriminator 3)
+    80201254:	03f00793          	li	a5,63
+    80201258:	fef403a3          	sb	a5,-25(s0)
+/embryos/chapter02/screen.c:28
+            io_putchar(CELL_CH(ch));
+    8020125c:	fe744783          	lbu	a5,-25(s0)
+    80201260:	853e                	mv	a0,a5
+    80201262:	f00ff0ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/screen.c:29
+            break;
+    80201266:	a0e9                	j	80201330 <screen_put+0x360>
+/embryos/chapter02/screen.c:31
+        case CELL_BLOCK:
+            switch (CELL_CH(ch) & 0x3) {
+    80201268:	fe744783          	lbu	a5,-25(s0)
+    8020126c:	2781                	sext.w	a5,a5
+    8020126e:	8b8d                	andi	a5,a5,3
+    80201270:	2781                	sext.w	a5,a5
+    80201272:	470d                	li	a4,3
+    80201274:	04e78363          	beq	a5,a4,802012ba <screen_put+0x2ea>
+    80201278:	470d                	li	a4,3
+    8020127a:	0af74a63          	blt	a4,a5,8020132e <screen_put+0x35e>
+    8020127e:	4709                	li	a4,2
+    80201280:	02e78663          	beq	a5,a4,802012ac <screen_put+0x2dc>
+    80201284:	4709                	li	a4,2
+    80201286:	0af74463          	blt	a4,a5,8020132e <screen_put+0x35e>
+    8020128a:	c789                	beqz	a5,80201294 <screen_put+0x2c4>
+    8020128c:	4705                	li	a4,1
+    8020128e:	00e78863          	beq	a5,a4,8020129e <screen_put+0x2ce>
+/embryos/chapter02/screen.c:37
+                case 0: io_putchar(' '); break;
+                case 1: kprintf("\xE2\x96\x80"); break; // unused
+                case 2: kprintf("\xE2\x96\x84"); break;
+                case 3: kprintf("\xE2\x96\x88"); break;
+            }
+            break;
+    80201292:	a871                	j	8020132e <screen_put+0x35e>
+/embryos/chapter02/screen.c:32
+                case 0: io_putchar(' '); break;
+    80201294:	02000513          	li	a0,32
+    80201298:	ecaff0ef          	jal	80200962 <io_putchar>
+    8020129c:	a035                	j	802012c8 <screen_put+0x2f8>
+/embryos/chapter02/screen.c:33
+                case 1: kprintf("\xE2\x96\x80"); break; // unused
+    8020129e:	00001517          	auipc	a0,0x1
+    802012a2:	de250513          	addi	a0,a0,-542 # 80202080 <bp_flush+0x318>
+    802012a6:	aaaff0ef          	jal	80200550 <kprintf>
+    802012aa:	a839                	j	802012c8 <screen_put+0x2f8>
+/embryos/chapter02/screen.c:34
+                case 2: kprintf("\xE2\x96\x84"); break;
+    802012ac:	00001517          	auipc	a0,0x1
+    802012b0:	dcc50513          	addi	a0,a0,-564 # 80202078 <bp_flush+0x310>
+    802012b4:	a9cff0ef          	jal	80200550 <kprintf>
+    802012b8:	a801                	j	802012c8 <screen_put+0x2f8>
+/embryos/chapter02/screen.c:35
+                case 3: kprintf("\xE2\x96\x88"); break;
+    802012ba:	00001517          	auipc	a0,0x1
+    802012be:	dce50513          	addi	a0,a0,-562 # 80202088 <bp_flush+0x320>
+    802012c2:	a8eff0ef          	jal	80200550 <kprintf>
+    802012c6:	0001                	nop
+/embryos/chapter02/screen.c:37
+            break;
+    802012c8:	a09d                	j	8020132e <screen_put+0x35e>
+/embryos/chapter02/screen.c:40
+        case CELL_BRAILLE:
+            {
+                unsigned char mask = CELL_CH(ch);
+    802012ca:	fe744783          	lbu	a5,-25(s0)
+    802012ce:	fcf40fa3          	sb	a5,-33(s0)
+/embryos/chapter02/screen.c:41
+                unsigned char b2 = 0xA0 | (mask >> 6);     // top 2 bits
+    802012d2:	fdf44783          	lbu	a5,-33(s0)
+    802012d6:	0067d79b          	srliw	a5,a5,0x6
+    802012da:	0ff7f793          	zext.b	a5,a5
+    802012de:	fa07e793          	ori	a5,a5,-96
+    802012e2:	fcf40f23          	sb	a5,-34(s0)
+/embryos/chapter02/screen.c:42
+                unsigned char b3 = 0x80 | (mask & 0x3F);   // lower 6 bits
+    802012e6:	fdf40783          	lb	a5,-33(s0)
+    802012ea:	03f7f793          	andi	a5,a5,63
+    802012ee:	0187979b          	slliw	a5,a5,0x18
+    802012f2:	4187d79b          	sraiw	a5,a5,0x18
+    802012f6:	f807e793          	ori	a5,a5,-128
+    802012fa:	0187979b          	slliw	a5,a5,0x18
+    802012fe:	4187d79b          	sraiw	a5,a5,0x18
+    80201302:	fcf40ea3          	sb	a5,-35(s0)
+/embryos/chapter02/screen.c:43
+                io_putchar(0xE2); io_putchar(b2); io_putchar(b3);
+    80201306:	0e200513          	li	a0,226
+    8020130a:	e58ff0ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/screen.c:43 (discriminator 1)
+    8020130e:	fde44783          	lbu	a5,-34(s0)
+    80201312:	853e                	mv	a0,a5
+    80201314:	e4eff0ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/screen.c:43 (discriminator 2)
+    80201318:	fdd44783          	lbu	a5,-35(s0)
+    8020131c:	853e                	mv	a0,a5
+    8020131e:	e44ff0ef          	jal	80200962 <io_putchar>
+/embryos/chapter02/screen.c:45
+            }
+            break;
+    80201322:	a039                	j	80201330 <screen_put+0x360>
+/embryos/chapter02/screen.c:47
+        default:
+            io_putchar(CELL_CH('?'));
+    80201324:	03f00513          	li	a0,63
+    80201328:	e3aff0ef          	jal	80200962 <io_putchar>
+    8020132c:	a011                	j	80201330 <screen_put+0x360>
+/embryos/chapter02/screen.c:37
+            break;
+    8020132e:	0001                	nop
+/embryos/chapter02/screen.c:50
+        }
+    }
+    cur_row = row; cur_col = col;
+    80201330:	00001797          	auipc	a5,0x1
+    80201334:	e3078793          	addi	a5,a5,-464 # 80202160 <cur_row.3>
+    80201338:	fc842703          	lw	a4,-56(s0)
+    8020133c:	c398                	sw	a4,0(a5)
+    8020133e:	00001797          	auipc	a5,0x1
+    80201342:	e2678793          	addi	a5,a5,-474 # 80202164 <cur_col.2>
+    80201346:	fcc42703          	lw	a4,-52(s0)
+    8020134a:	c398                	sw	a4,0(a5)
+/embryos/chapter02/screen.c:51
+}
+    8020134c:	0001                	nop
+    8020134e:	70e2                	ld	ra,56(sp)
+    80201350:	7442                	ld	s0,48(sp)
+    80201352:	6121                	addi	sp,sp,64
+    80201354:	8082                	ret
+
+0000000080201356 <screen_fill>:
+screen_fill():
+/embryos/chapter02/screen.c:53
+
+void screen_fill(int x, int y, int w, int h, cell_t cell) {
+    80201356:	7139                	addi	sp,sp,-64
+    80201358:	fc06                	sd	ra,56(sp)
+    8020135a:	f822                	sd	s0,48(sp)
+    8020135c:	0080                	addi	s0,sp,64
+    8020135e:	87aa                	mv	a5,a0
+    80201360:	fcf42e23          	sw	a5,-36(s0)
+    80201364:	87ae                	mv	a5,a1
+    80201366:	fcf42c23          	sw	a5,-40(s0)
+    8020136a:	87b2                	mv	a5,a2
+    8020136c:	fcf42a23          	sw	a5,-44(s0)
+    80201370:	87b6                	mv	a5,a3
+    80201372:	fcf42823          	sw	a5,-48(s0)
+    80201376:	87ba                	mv	a5,a4
+    80201378:	fcf41723          	sh	a5,-50(s0)
+/embryos/chapter02/screen.c:54
+    kprintf("\033[?25l");    // hide cursor (we simulate our own)
+    8020137c:	00001517          	auipc	a0,0x1
+    80201380:	d1450513          	addi	a0,a0,-748 # 80202090 <bp_flush+0x328>
+    80201384:	9ccff0ef          	jal	80200550 <kprintf>
+/embryos/chapter02/screen.c:56
+
+    if (x < 0) { w += x; x = 0; }
+    80201388:	fdc42783          	lw	a5,-36(s0)
+    8020138c:	2781                	sext.w	a5,a5
+    8020138e:	0007dc63          	bgez	a5,802013a6 <screen_fill+0x50>
+/embryos/chapter02/screen.c:56 (discriminator 1)
+    80201392:	fd442783          	lw	a5,-44(s0)
+    80201396:	873e                	mv	a4,a5
+    80201398:	fdc42783          	lw	a5,-36(s0)
+    8020139c:	9fb9                	addw	a5,a5,a4
+    8020139e:	fcf42a23          	sw	a5,-44(s0)
+    802013a2:	fc042e23          	sw	zero,-36(s0)
+/embryos/chapter02/screen.c:57
+    if (y < 0) { h += y; y = 0; }
+    802013a6:	fd842783          	lw	a5,-40(s0)
+    802013aa:	2781                	sext.w	a5,a5
+    802013ac:	0007dc63          	bgez	a5,802013c4 <screen_fill+0x6e>
+/embryos/chapter02/screen.c:57 (discriminator 1)
+    802013b0:	fd042783          	lw	a5,-48(s0)
+    802013b4:	873e                	mv	a4,a5
+    802013b6:	fd842783          	lw	a5,-40(s0)
+    802013ba:	9fb9                	addw	a5,a5,a4
+    802013bc:	fcf42823          	sw	a5,-48(s0)
+    802013c0:	fc042c23          	sw	zero,-40(s0)
+/embryos/chapter02/screen.c:58
+    if (x + w > SCREEN_COLS) w = SCREEN_COLS - x;
+    802013c4:	fdc42783          	lw	a5,-36(s0)
+    802013c8:	873e                	mv	a4,a5
+    802013ca:	fd442783          	lw	a5,-44(s0)
+    802013ce:	9fb9                	addw	a5,a5,a4
+    802013d0:	0007871b          	sext.w	a4,a5
+    802013d4:	05000793          	li	a5,80
+    802013d8:	00e7d963          	bge	a5,a4,802013ea <screen_fill+0x94>
+/embryos/chapter02/screen.c:58 (discriminator 1)
+    802013dc:	05000793          	li	a5,80
+    802013e0:	fdc42703          	lw	a4,-36(s0)
+    802013e4:	9f99                	subw	a5,a5,a4
+    802013e6:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter02/screen.c:59
+    if (y + h > SCREEN_ROWS) h = SCREEN_ROWS - y;
+    802013ea:	fd842783          	lw	a5,-40(s0)
+    802013ee:	873e                	mv	a4,a5
+    802013f0:	fd042783          	lw	a5,-48(s0)
+    802013f4:	9fb9                	addw	a5,a5,a4
+    802013f6:	0007871b          	sext.w	a4,a5
+    802013fa:	47e1                	li	a5,24
+    802013fc:	00e7d863          	bge	a5,a4,8020140c <screen_fill+0xb6>
+/embryos/chapter02/screen.c:59 (discriminator 1)
+    80201400:	47e1                	li	a5,24
+    80201402:	fd842703          	lw	a4,-40(s0)
+    80201406:	9f99                	subw	a5,a5,a4
+    80201408:	fcf42823          	sw	a5,-48(s0)
+/embryos/chapter02/screen.c:60
+    if (w <= 0 || h <= 0) return;
+    8020140c:	fd442783          	lw	a5,-44(s0)
+    80201410:	2781                	sext.w	a5,a5
+    80201412:	06f05a63          	blez	a5,80201486 <screen_fill+0x130>
+/embryos/chapter02/screen.c:60 (discriminator 2)
+    80201416:	fd042783          	lw	a5,-48(s0)
+    8020141a:	2781                	sext.w	a5,a5
+    8020141c:	06f05563          	blez	a5,80201486 <screen_fill+0x130>
+/embryos/chapter02/screen.c:62
+
+    for (int r = y; r < y + h; r++)
+    80201420:	fd842783          	lw	a5,-40(s0)
+    80201424:	fef42623          	sw	a5,-20(s0)
+    80201428:	a091                	j	8020146c <screen_fill+0x116>
+/embryos/chapter02/screen.c:63
+        for (int c = 0; c < w; c++) screen_put(c, r, cell);
+    8020142a:	fe042423          	sw	zero,-24(s0)
+    8020142e:	a00d                	j	80201450 <screen_fill+0xfa>
+/embryos/chapter02/screen.c:63 (discriminator 4)
+    80201430:	fce45683          	lhu	a3,-50(s0)
+    80201434:	fec42703          	lw	a4,-20(s0)
+    80201438:	fe842783          	lw	a5,-24(s0)
+    8020143c:	8636                	mv	a2,a3
+    8020143e:	85ba                	mv	a1,a4
+    80201440:	853e                	mv	a0,a5
+    80201442:	b8fff0ef          	jal	80200fd0 <screen_put>
+    80201446:	fe842783          	lw	a5,-24(s0)
+    8020144a:	2785                	addiw	a5,a5,1
+    8020144c:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/screen.c:63 (discriminator 3)
+    80201450:	fe842783          	lw	a5,-24(s0)
+    80201454:	873e                	mv	a4,a5
+    80201456:	fd442783          	lw	a5,-44(s0)
+    8020145a:	2701                	sext.w	a4,a4
+    8020145c:	2781                	sext.w	a5,a5
+    8020145e:	fcf749e3          	blt	a4,a5,80201430 <screen_fill+0xda>
+/embryos/chapter02/screen.c:62 (discriminator 2)
+    for (int r = y; r < y + h; r++)
+    80201462:	fec42783          	lw	a5,-20(s0)
+    80201466:	2785                	addiw	a5,a5,1
+    80201468:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/screen.c:62 (discriminator 1)
+    8020146c:	fd842783          	lw	a5,-40(s0)
+    80201470:	873e                	mv	a4,a5
+    80201472:	fd042783          	lw	a5,-48(s0)
+    80201476:	9fb9                	addw	a5,a5,a4
+    80201478:	2781                	sext.w	a5,a5
+    8020147a:	fec42703          	lw	a4,-20(s0)
+    8020147e:	2701                	sext.w	a4,a4
+    80201480:	faf745e3          	blt	a4,a5,8020142a <screen_fill+0xd4>
+    80201484:	a011                	j	80201488 <screen_fill+0x132>
+/embryos/chapter02/screen.c:60
+    if (w <= 0 || h <= 0) return;
+    80201486:	0001                	nop
+/embryos/chapter02/screen.c:64
+}
+    80201488:	70e2                	ld	ra,56(sp)
+    8020148a:	7442                	ld	s0,48(sp)
+    8020148c:	6121                	addi	sp,sp,64
+    8020148e:	8082                	ret
+
+0000000080201490 <L>:
+L():
+/embryos/chapter02/./log.h:9
+#include "log_defs.h"
+
+extern struct log_entry log[], __log_end[];
+extern struct log_header log_header;
+
+static inline struct log_entry *L(unsigned int level, enum log_type type, int arity) {
+    80201490:	715d                	addi	sp,sp,-80
+    80201492:	e486                	sd	ra,72(sp)
+    80201494:	e0a2                	sd	s0,64(sp)
+    80201496:	0880                	addi	s0,sp,80
+    80201498:	87aa                	mv	a5,a0
+    8020149a:	86ae                	mv	a3,a1
+    8020149c:	8732                	mv	a4,a2
+    8020149e:	faf42e23          	sw	a5,-68(s0)
+    802014a2:	87b6                	mv	a5,a3
+    802014a4:	faf42c23          	sw	a5,-72(s0)
+    802014a8:	87ba                	mv	a5,a4
+    802014aa:	faf42a23          	sw	a5,-76(s0)
+/embryos/chapter02/./log.h:10
+    struct log_header *lh = &log_header;
+    802014ae:	00001797          	auipc	a5,0x1
+    802014b2:	bf278793          	addi	a5,a5,-1038 # 802020a0 <log_header>
+    802014b6:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/./log.h:11
+    uint32_t offset = 0;
+    802014ba:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/./log.h:12
+    for (unsigned i = 0; i < level; i++) offset += lh->sizes[i];
+    802014be:	fe042423          	sw	zero,-24(s0)
+    802014c2:	a015                	j	802014e6 <L+0x56>
+/embryos/chapter02/./log.h:12 (discriminator 3)
+    802014c4:	fd843703          	ld	a4,-40(s0)
+    802014c8:	fe846783          	lwu	a5,-24(s0)
+    802014cc:	078a                	slli	a5,a5,0x2
+    802014ce:	97ba                	add	a5,a5,a4
+    802014d0:	47dc                	lw	a5,12(a5)
+    802014d2:	fec42703          	lw	a4,-20(s0)
+    802014d6:	9fb9                	addw	a5,a5,a4
+    802014d8:	fef42623          	sw	a5,-20(s0)
+    802014dc:	fe842783          	lw	a5,-24(s0)
+    802014e0:	2785                	addiw	a5,a5,1
+    802014e2:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/./log.h:12 (discriminator 1)
+    802014e6:	fe842783          	lw	a5,-24(s0)
+    802014ea:	873e                	mv	a4,a5
+    802014ec:	fbc42783          	lw	a5,-68(s0)
+    802014f0:	2701                	sext.w	a4,a4
+    802014f2:	2781                	sext.w	a5,a5
+    802014f4:	fcf768e3          	bltu	a4,a5,802014c4 <L+0x34>
+/embryos/chapter02/./log.h:13
+    struct log_entry *le = &log[offset + lh->ts[level] % lh->sizes[level]];
+    802014f8:	fd843703          	ld	a4,-40(s0)
+    802014fc:	fbc46783          	lwu	a5,-68(s0)
+    80201500:	078a                	slli	a5,a5,0x2
+    80201502:	97ba                	add	a5,a5,a4
+    80201504:	4394                	lw	a3,0(a5)
+    80201506:	fd843703          	ld	a4,-40(s0)
+    8020150a:	fbc46783          	lwu	a5,-68(s0)
+    8020150e:	078a                	slli	a5,a5,0x2
+    80201510:	97ba                	add	a5,a5,a4
+    80201512:	47dc                	lw	a5,12(a5)
+    80201514:	8736                	mv	a4,a3
+    80201516:	02f777bb          	remuw	a5,a4,a5
+    8020151a:	2781                	sext.w	a5,a5
+    8020151c:	fec42703          	lw	a4,-20(s0)
+    80201520:	9fb9                	addw	a5,a5,a4
+    80201522:	2781                	sext.w	a5,a5
+    80201524:	1782                	slli	a5,a5,0x20
+    80201526:	9381                	srli	a5,a5,0x20
+    80201528:	00679713          	slli	a4,a5,0x6
+    8020152c:	00010797          	auipc	a5,0x10
+    80201530:	b1478793          	addi	a5,a5,-1260 # 80211040 <log>
+    80201534:	97ba                	add	a5,a5,a4
+    80201536:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter02/./log.h:14
+    le->type = type;
+    8020153a:	fb842783          	lw	a5,-72(s0)
+    8020153e:	03079713          	slli	a4,a5,0x30
+    80201542:	9341                	srli	a4,a4,0x30
+    80201544:	fd043783          	ld	a5,-48(s0)
+    80201548:	00e79023          	sh	a4,0(a5)
+/embryos/chapter02/./log.h:15
+    le->arity = arity;
+    8020154c:	fb442783          	lw	a5,-76(s0)
+    80201550:	0ff7f713          	zext.b	a4,a5
+    80201554:	fd043783          	ld	a5,-48(s0)
+    80201558:	00e78123          	sb	a4,2(a5)
+/embryos/chapter02/./log.h:16
+    for (unsigned i = 0; i < LOG_N_LEVELS; i++) le->ts[i] = lh->ts[i];
+    8020155c:	fe042223          	sw	zero,-28(s0)
+    80201560:	a025                	j	80201588 <L+0xf8>
+/embryos/chapter02/./log.h:16 (discriminator 3)
+    80201562:	fd843703          	ld	a4,-40(s0)
+    80201566:	fe446783          	lwu	a5,-28(s0)
+    8020156a:	078a                	slli	a5,a5,0x2
+    8020156c:	97ba                	add	a5,a5,a4
+    8020156e:	4398                	lw	a4,0(a5)
+    80201570:	fd043683          	ld	a3,-48(s0)
+    80201574:	fe446783          	lwu	a5,-28(s0)
+    80201578:	078a                	slli	a5,a5,0x2
+    8020157a:	97b6                	add	a5,a5,a3
+    8020157c:	c3d8                	sw	a4,4(a5)
+    8020157e:	fe442783          	lw	a5,-28(s0)
+    80201582:	2785                	addiw	a5,a5,1
+    80201584:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/./log.h:16 (discriminator 1)
+    80201588:	fe442783          	lw	a5,-28(s0)
+    8020158c:	0007871b          	sext.w	a4,a5
+    80201590:	4789                	li	a5,2
+    80201592:	fce7f8e3          	bgeu	a5,a4,80201562 <L+0xd2>
+/embryos/chapter02/./log.h:18
+    uintptr_t tmp;
+    asm volatile ("mv %0, tp" : "=r"(tmp));
+    80201596:	8792                	mv	a5,tp
+    80201598:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/./log.h:19
+    le->self = (uint64_t)tmp;
+    8020159c:	fd043783          	ld	a5,-48(s0)
+    802015a0:	fc843703          	ld	a4,-56(s0)
+    802015a4:	eb98                	sd	a4,16(a5)
+/embryos/chapter02/./log.h:20
+    lh->ts[level]++;
+    802015a6:	fd843703          	ld	a4,-40(s0)
+    802015aa:	fbc46783          	lwu	a5,-68(s0)
+    802015ae:	078a                	slli	a5,a5,0x2
+    802015b0:	97ba                	add	a5,a5,a4
+    802015b2:	439c                	lw	a5,0(a5)
+    802015b4:	2785                	addiw	a5,a5,1
+    802015b6:	0007871b          	sext.w	a4,a5
+    802015ba:	fd843683          	ld	a3,-40(s0)
+    802015be:	fbc46783          	lwu	a5,-68(s0)
+    802015c2:	078a                	slli	a5,a5,0x2
+    802015c4:	97b6                	add	a5,a5,a3
+    802015c6:	c398                	sw	a4,0(a5)
+/embryos/chapter02/./log.h:21
+    return le;
+    802015c8:	fd043783          	ld	a5,-48(s0)
+/embryos/chapter02/./log.h:22
+}
+    802015cc:	853e                	mv	a0,a5
+    802015ce:	60a6                	ld	ra,72(sp)
+    802015d0:	6406                	ld	s0,64(sp)
+    802015d2:	6161                	addi	sp,sp,80
+    802015d4:	8082                	ret
+
+00000000802015d6 <L1>:
+L1():
+/embryos/chapter02/./log.h:29
+static inline void L0(unsigned int level, enum log_type type) {
+    (void) L(level, type, 0);
+}
+
+static inline void L1(unsigned int level, enum log_type type,
+        uint64_t w0) {
+    802015d6:	7179                	addi	sp,sp,-48
+    802015d8:	f406                	sd	ra,40(sp)
+    802015da:	f022                	sd	s0,32(sp)
+    802015dc:	1800                	addi	s0,sp,48
+    802015de:	87aa                	mv	a5,a0
+    802015e0:	872e                	mv	a4,a1
+    802015e2:	fcc43823          	sd	a2,-48(s0)
+    802015e6:	fcf42e23          	sw	a5,-36(s0)
+    802015ea:	87ba                	mv	a5,a4
+    802015ec:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter02/./log.h:30
+    struct log_entry *le = L(level, type, 1);
+    802015f0:	fd842703          	lw	a4,-40(s0)
+    802015f4:	fdc42783          	lw	a5,-36(s0)
+    802015f8:	4605                	li	a2,1
+    802015fa:	85ba                	mv	a1,a4
+    802015fc:	853e                	mv	a0,a5
+    802015fe:	e93ff0ef          	jal	80201490 <L>
+    80201602:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter02/./log.h:31
+    le->payload[0] = w0;
+    80201606:	fe843783          	ld	a5,-24(s0)
+    8020160a:	fd043703          	ld	a4,-48(s0)
+    8020160e:	ef98                	sd	a4,24(a5)
+/embryos/chapter02/./log.h:32
+}
+    80201610:	0001                	nop
+    80201612:	70a2                	ld	ra,40(sp)
+    80201614:	7402                	ld	s0,32(sp)
+    80201616:	6145                	addi	sp,sp,48
+    80201618:	8082                	ret
+
+000000008020161a <user_delay>:
+user_delay():
+/embryos/chapter02/apps/syslib.h:13
+static inline void user_put(int col, int row, cell_t cell) {
+    L3(L_FREQ, L_USER_PUT, col, row, cell);
+    screen_put(col, row, cell);
+}
+
+static inline void user_delay(int ms) {  // pseudo system call
+    8020161a:	7179                	addi	sp,sp,-48
+    8020161c:	f406                	sd	ra,40(sp)
+    8020161e:	f022                	sd	s0,32(sp)
+    80201620:	1800                	addi	s0,sp,48
+    80201622:	87aa                	mv	a5,a0
+    80201624:	fcf42e23          	sw	a5,-36(s0)
+/embryos/chapter02/apps/syslib.h:14
+    L1(L_NORM, L_USER_DELAY, ms);
+    80201628:	fdc42783          	lw	a5,-36(s0)
+    8020162c:	863e                	mv	a2,a5
+    8020162e:	45a5                	li	a1,9
+    80201630:	4505                	li	a0,1
+    80201632:	fa5ff0ef          	jal	802015d6 <L1>
+/embryos/chapter02/apps/syslib.h:15
+    while (--ms > 0)
+    80201636:	a02d                	j	80201660 <user_delay+0x46>
+/embryos/chapter02/apps/syslib.h:16
+        for (volatile int i = 0; i < DELAY_MS; i++) ;
+    80201638:	fe042623          	sw	zero,-20(s0)
+    8020163c:	a801                	j	8020164c <user_delay+0x32>
+/embryos/chapter02/apps/syslib.h:16 (discriminator 3)
+    8020163e:	fec42783          	lw	a5,-20(s0)
+    80201642:	2781                	sext.w	a5,a5
+    80201644:	2785                	addiw	a5,a5,1
+    80201646:	2781                	sext.w	a5,a5
+    80201648:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/apps/syslib.h:16 (discriminator 1)
+    8020164c:	fec42783          	lw	a5,-20(s0)
+    80201650:	0007871b          	sext.w	a4,a5
+    80201654:	000507b7          	lui	a5,0x50
+    80201658:	9c678793          	addi	a5,a5,-1594 # 4f9c6 <N_LOG_EVENTS+0x4b9c6>
+    8020165c:	fee7d1e3          	bge	a5,a4,8020163e <user_delay+0x24>
+/embryos/chapter02/apps/syslib.h:15
+    while (--ms > 0)
+    80201660:	fdc42783          	lw	a5,-36(s0)
+    80201664:	37fd                	addiw	a5,a5,-1
+    80201666:	fcf42e23          	sw	a5,-36(s0)
+    8020166a:	fdc42783          	lw	a5,-36(s0)
+    8020166e:	2781                	sext.w	a5,a5
+    80201670:	fcf044e3          	bgtz	a5,80201638 <user_delay+0x1e>
+/embryos/chapter02/apps/syslib.h:17
+}
+    80201674:	0001                	nop
+    80201676:	0001                	nop
+    80201678:	70a2                	ld	ra,40(sp)
+    8020167a:	7402                	ld	s0,32(sp)
+    8020167c:	6145                	addi	sp,sp,48
+    8020167e:	8082                	ret
+
+0000000080201680 <in_range>:
+in_range():
+/embryos/chapter02/apps/blockdemo.c:7
+#include "blockpixel.h"
+
+#define WIDTH   39
+#define HEIGHT  22
+
+int in_range(int x, int y) {
+    80201680:	1101                	addi	sp,sp,-32
+    80201682:	ec06                	sd	ra,24(sp)
+    80201684:	e822                	sd	s0,16(sp)
+    80201686:	1000                	addi	s0,sp,32
+    80201688:	87aa                	mv	a5,a0
+    8020168a:	872e                	mv	a4,a1
+    8020168c:	fef42623          	sw	a5,-20(s0)
+    80201690:	87ba                	mv	a5,a4
+    80201692:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/apps/blockdemo.c:8
+    x -= WIDTH / 2;
+    80201696:	fec42783          	lw	a5,-20(s0)
+    8020169a:	37b5                	addiw	a5,a5,-19
+    8020169c:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/apps/blockdemo.c:9
+    y -= HEIGHT / 2;
+    802016a0:	fe842783          	lw	a5,-24(s0)
+    802016a4:	37d5                	addiw	a5,a5,-11
+    802016a6:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/apps/blockdemo.c:10
+    return (x * x) + (y * y) < 75;
+    802016aa:	fec42783          	lw	a5,-20(s0)
+    802016ae:	02f787bb          	mulw	a5,a5,a5
+    802016b2:	0007871b          	sext.w	a4,a5
+    802016b6:	fe842783          	lw	a5,-24(s0)
+    802016ba:	02f787bb          	mulw	a5,a5,a5
+    802016be:	2781                	sext.w	a5,a5
+    802016c0:	9fb9                	addw	a5,a5,a4
+    802016c2:	0007871b          	sext.w	a4,a5
+    802016c6:	04a00793          	li	a5,74
+    802016ca:	00e7a7b3          	slt	a5,a5,a4
+    802016ce:	0017b793          	seqz	a5,a5
+    802016d2:	0ff7f793          	zext.b	a5,a5
+    802016d6:	2781                	sext.w	a5,a5
+/embryos/chapter02/apps/blockdemo.c:11
+}
+    802016d8:	853e                	mv	a0,a5
+    802016da:	60e2                	ld	ra,24(sp)
+    802016dc:	6442                	ld	s0,16(sp)
+    802016de:	6105                	addi	sp,sp,32
+    802016e0:	8082                	ret
+
+00000000802016e2 <blockdemo_main>:
+blockdemo_main():
+/embryos/chapter02/apps/blockdemo.c:13
+
+void blockdemo_main(void) {
+    802016e2:	c6010113          	addi	sp,sp,-928
+    802016e6:	38113c23          	sd	ra,920(sp)
+    802016ea:	38813823          	sd	s0,912(sp)
+    802016ee:	1700                	addi	s0,sp,928
+/embryos/chapter02/apps/blockdemo.c:17
+    struct bp bp;
+    uint8_t buffer[WIDTH * HEIGHT];
+
+    bp_init(&bp, 0, 0, WIDTH, HEIGHT, buffer);
+    802016f0:	c6840793          	addi	a5,s0,-920
+    802016f4:	fc840513          	addi	a0,s0,-56
+    802016f8:	4759                	li	a4,22
+    802016fa:	02700693          	li	a3,39
+    802016fe:	4601                	li	a2,0
+    80201700:	4581                	li	a1,0
+    80201702:	378000ef          	jal	80201a7a <bp_init>
+/embryos/chapter02/apps/blockdemo.c:19
+
+    for (int i = 0;; i++) {
+    80201706:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/apps/blockdemo.c:20
+        int color = i;
+    8020170a:	fec42783          	lw	a5,-20(s0)
+    8020170e:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/apps/blockdemo.c:21
+        for (int y = 0; y < HEIGHT; y++)
+    80201712:	fe042223          	sw	zero,-28(s0)
+    80201716:	a8ad                	j	80201790 <blockdemo_main+0xae>
+/embryos/chapter02/apps/blockdemo.c:22
+            for (int x = 0; x < WIDTH; x++, color++)
+    80201718:	fe042023          	sw	zero,-32(s0)
+    8020171c:	a8a9                	j	80201776 <blockdemo_main+0x94>
+/embryos/chapter02/apps/blockdemo.c:23
+                if (in_range(x, y))
+    8020171e:	fe442703          	lw	a4,-28(s0)
+    80201722:	fe042783          	lw	a5,-32(s0)
+    80201726:	85ba                	mv	a1,a4
+    80201728:	853e                	mv	a0,a5
+    8020172a:	f57ff0ef          	jal	80201680 <in_range>
+    8020172e:	87aa                	mv	a5,a0
+/embryos/chapter02/apps/blockdemo.c:23 (discriminator 1)
+    80201730:	cb8d                	beqz	a5,80201762 <blockdemo_main+0x80>
+/embryos/chapter02/apps/blockdemo.c:24
+                    bp_put(&bp, x, y, color % 8, BP_LAZY);
+    80201732:	fe842783          	lw	a5,-24(s0)
+    80201736:	873e                	mv	a4,a5
+    80201738:	41f7579b          	sraiw	a5,a4,0x1f
+    8020173c:	01d7d79b          	srliw	a5,a5,0x1d
+    80201740:	9f3d                	addw	a4,a4,a5
+    80201742:	8b1d                	andi	a4,a4,7
+    80201744:	40f707bb          	subw	a5,a4,a5
+    80201748:	2781                	sext.w	a5,a5
+    8020174a:	0ff7f693          	zext.b	a3,a5
+    8020174e:	fe442603          	lw	a2,-28(s0)
+    80201752:	fe042583          	lw	a1,-32(s0)
+    80201756:	fc840793          	addi	a5,s0,-56
+    8020175a:	4705                	li	a4,1
+    8020175c:	853e                	mv	a0,a5
+    8020175e:	3be000ef          	jal	80201b1c <bp_put>
+/embryos/chapter02/apps/blockdemo.c:22 (discriminator 2)
+            for (int x = 0; x < WIDTH; x++, color++)
+    80201762:	fe042783          	lw	a5,-32(s0)
+    80201766:	2785                	addiw	a5,a5,1
+    80201768:	fef42023          	sw	a5,-32(s0)
+    8020176c:	fe842783          	lw	a5,-24(s0)
+    80201770:	2785                	addiw	a5,a5,1
+    80201772:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/apps/blockdemo.c:22 (discriminator 1)
+    80201776:	fe042783          	lw	a5,-32(s0)
+    8020177a:	0007871b          	sext.w	a4,a5
+    8020177e:	02600793          	li	a5,38
+    80201782:	f8e7dee3          	bge	a5,a4,8020171e <blockdemo_main+0x3c>
+/embryos/chapter02/apps/blockdemo.c:21 (discriminator 2)
+        for (int y = 0; y < HEIGHT; y++)
+    80201786:	fe442783          	lw	a5,-28(s0)
+    8020178a:	2785                	addiw	a5,a5,1
+    8020178c:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/apps/blockdemo.c:21 (discriminator 1)
+    80201790:	fe442783          	lw	a5,-28(s0)
+    80201794:	0007871b          	sext.w	a4,a5
+    80201798:	47d5                	li	a5,21
+    8020179a:	f6e7dfe3          	bge	a5,a4,80201718 <blockdemo_main+0x36>
+/embryos/chapter02/apps/blockdemo.c:25
+        bp_flush(&bp);
+    8020179e:	fc840793          	addi	a5,s0,-56
+    802017a2:	853e                	mv	a0,a5
+    802017a4:	5c4000ef          	jal	80201d68 <bp_flush>
+/embryos/chapter02/apps/blockdemo.c:26
+        user_delay(250);
+    802017a8:	0fa00513          	li	a0,250
+    802017ac:	e6fff0ef          	jal	8020161a <user_delay>
+/embryos/chapter02/apps/blockdemo.c:19
+    for (int i = 0;; i++) {
+    802017b0:	fec42783          	lw	a5,-20(s0)
+    802017b4:	2785                	addiw	a5,a5,1
+    802017b6:	fef42623          	sw	a5,-20(s0)
+    802017ba:	bf81                	j	8020170a <blockdemo_main+0x28>
+
+00000000802017bc <L>:
+L():
+/embryos/chapter02/./log.h:9
+static inline struct log_entry *L(unsigned int level, enum log_type type, int arity) {
+    802017bc:	715d                	addi	sp,sp,-80
+    802017be:	e486                	sd	ra,72(sp)
+    802017c0:	e0a2                	sd	s0,64(sp)
+    802017c2:	0880                	addi	s0,sp,80
+    802017c4:	87aa                	mv	a5,a0
+    802017c6:	86ae                	mv	a3,a1
+    802017c8:	8732                	mv	a4,a2
+    802017ca:	faf42e23          	sw	a5,-68(s0)
+    802017ce:	87b6                	mv	a5,a3
+    802017d0:	faf42c23          	sw	a5,-72(s0)
+    802017d4:	87ba                	mv	a5,a4
+    802017d6:	faf42a23          	sw	a5,-76(s0)
+/embryos/chapter02/./log.h:10
+    struct log_header *lh = &log_header;
+    802017da:	00001797          	auipc	a5,0x1
+    802017de:	8c678793          	addi	a5,a5,-1850 # 802020a0 <log_header>
+    802017e2:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter02/./log.h:11
+    uint32_t offset = 0;
+    802017e6:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter02/./log.h:12
+    for (unsigned i = 0; i < level; i++) offset += lh->sizes[i];
+    802017ea:	fe042423          	sw	zero,-24(s0)
+    802017ee:	a015                	j	80201812 <L+0x56>
+/embryos/chapter02/./log.h:12 (discriminator 3)
+    802017f0:	fd843703          	ld	a4,-40(s0)
+    802017f4:	fe846783          	lwu	a5,-24(s0)
+    802017f8:	078a                	slli	a5,a5,0x2
+    802017fa:	97ba                	add	a5,a5,a4
+    802017fc:	47dc                	lw	a5,12(a5)
+    802017fe:	fec42703          	lw	a4,-20(s0)
+    80201802:	9fb9                	addw	a5,a5,a4
+    80201804:	fef42623          	sw	a5,-20(s0)
+    80201808:	fe842783          	lw	a5,-24(s0)
+    8020180c:	2785                	addiw	a5,a5,1
+    8020180e:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/./log.h:12 (discriminator 1)
+    80201812:	fe842783          	lw	a5,-24(s0)
+    80201816:	873e                	mv	a4,a5
+    80201818:	fbc42783          	lw	a5,-68(s0)
+    8020181c:	2701                	sext.w	a4,a4
+    8020181e:	2781                	sext.w	a5,a5
+    80201820:	fcf768e3          	bltu	a4,a5,802017f0 <L+0x34>
+/embryos/chapter02/./log.h:13
+    struct log_entry *le = &log[offset + lh->ts[level] % lh->sizes[level]];
+    80201824:	fd843703          	ld	a4,-40(s0)
+    80201828:	fbc46783          	lwu	a5,-68(s0)
+    8020182c:	078a                	slli	a5,a5,0x2
+    8020182e:	97ba                	add	a5,a5,a4
+    80201830:	4394                	lw	a3,0(a5)
+    80201832:	fd843703          	ld	a4,-40(s0)
+    80201836:	fbc46783          	lwu	a5,-68(s0)
+    8020183a:	078a                	slli	a5,a5,0x2
+    8020183c:	97ba                	add	a5,a5,a4
+    8020183e:	47dc                	lw	a5,12(a5)
+    80201840:	8736                	mv	a4,a3
+    80201842:	02f777bb          	remuw	a5,a4,a5
+    80201846:	2781                	sext.w	a5,a5
+    80201848:	fec42703          	lw	a4,-20(s0)
+    8020184c:	9fb9                	addw	a5,a5,a4
+    8020184e:	2781                	sext.w	a5,a5
+    80201850:	1782                	slli	a5,a5,0x20
+    80201852:	9381                	srli	a5,a5,0x20
+    80201854:	00679713          	slli	a4,a5,0x6
+    80201858:	0000f797          	auipc	a5,0xf
+    8020185c:	7e878793          	addi	a5,a5,2024 # 80211040 <log>
+    80201860:	97ba                	add	a5,a5,a4
+    80201862:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter02/./log.h:14
+    le->type = type;
+    80201866:	fb842783          	lw	a5,-72(s0)
+    8020186a:	03079713          	slli	a4,a5,0x30
+    8020186e:	9341                	srli	a4,a4,0x30
+    80201870:	fd043783          	ld	a5,-48(s0)
+    80201874:	00e79023          	sh	a4,0(a5)
+/embryos/chapter02/./log.h:15
+    le->arity = arity;
+    80201878:	fb442783          	lw	a5,-76(s0)
+    8020187c:	0ff7f713          	zext.b	a4,a5
+    80201880:	fd043783          	ld	a5,-48(s0)
+    80201884:	00e78123          	sb	a4,2(a5)
+/embryos/chapter02/./log.h:16
+    for (unsigned i = 0; i < LOG_N_LEVELS; i++) le->ts[i] = lh->ts[i];
+    80201888:	fe042223          	sw	zero,-28(s0)
+    8020188c:	a025                	j	802018b4 <L+0xf8>
+/embryos/chapter02/./log.h:16 (discriminator 3)
+    8020188e:	fd843703          	ld	a4,-40(s0)
+    80201892:	fe446783          	lwu	a5,-28(s0)
+    80201896:	078a                	slli	a5,a5,0x2
+    80201898:	97ba                	add	a5,a5,a4
+    8020189a:	4398                	lw	a4,0(a5)
+    8020189c:	fd043683          	ld	a3,-48(s0)
+    802018a0:	fe446783          	lwu	a5,-28(s0)
+    802018a4:	078a                	slli	a5,a5,0x2
+    802018a6:	97b6                	add	a5,a5,a3
+    802018a8:	c3d8                	sw	a4,4(a5)
+    802018aa:	fe442783          	lw	a5,-28(s0)
+    802018ae:	2785                	addiw	a5,a5,1
+    802018b0:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/./log.h:16 (discriminator 1)
+    802018b4:	fe442783          	lw	a5,-28(s0)
+    802018b8:	0007871b          	sext.w	a4,a5
+    802018bc:	4789                	li	a5,2
+    802018be:	fce7f8e3          	bgeu	a5,a4,8020188e <L+0xd2>
+/embryos/chapter02/./log.h:18
+    asm volatile ("mv %0, tp" : "=r"(tmp));
+    802018c2:	8792                	mv	a5,tp
+    802018c4:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter02/./log.h:19
+    le->self = (uint64_t)tmp;
+    802018c8:	fd043783          	ld	a5,-48(s0)
+    802018cc:	fc843703          	ld	a4,-56(s0)
+    802018d0:	eb98                	sd	a4,16(a5)
+/embryos/chapter02/./log.h:20
+    lh->ts[level]++;
+    802018d2:	fd843703          	ld	a4,-40(s0)
+    802018d6:	fbc46783          	lwu	a5,-68(s0)
+    802018da:	078a                	slli	a5,a5,0x2
+    802018dc:	97ba                	add	a5,a5,a4
+    802018de:	439c                	lw	a5,0(a5)
+    802018e0:	2785                	addiw	a5,a5,1
+    802018e2:	0007871b          	sext.w	a4,a5
+    802018e6:	fd843683          	ld	a3,-40(s0)
+    802018ea:	fbc46783          	lwu	a5,-68(s0)
+    802018ee:	078a                	slli	a5,a5,0x2
+    802018f0:	97b6                	add	a5,a5,a3
+    802018f2:	c398                	sw	a4,0(a5)
+/embryos/chapter02/./log.h:21
+    return le;
+    802018f4:	fd043783          	ld	a5,-48(s0)
+/embryos/chapter02/./log.h:22
+}
+    802018f8:	853e                	mv	a0,a5
+    802018fa:	60a6                	ld	ra,72(sp)
+    802018fc:	6406                	ld	s0,64(sp)
+    802018fe:	6161                	addi	sp,sp,80
+    80201900:	8082                	ret
+
+0000000080201902 <L3>:
+L3():
+/embryos/chapter02/./log.h:42
+    le->payload[0] = w0;
+    le->payload[1] = w1;
+}
+
+static inline void L3(unsigned int level, enum log_type type,
+        uint64_t w0, uint64_t w1, uint64_t w2) {
+    80201902:	7139                	addi	sp,sp,-64
+    80201904:	fc06                	sd	ra,56(sp)
+    80201906:	f822                	sd	s0,48(sp)
+    80201908:	0080                	addi	s0,sp,64
+    8020190a:	87aa                	mv	a5,a0
+    8020190c:	fcc43823          	sd	a2,-48(s0)
+    80201910:	fcd43423          	sd	a3,-56(s0)
+    80201914:	fce43023          	sd	a4,-64(s0)
+    80201918:	fcf42e23          	sw	a5,-36(s0)
+    8020191c:	87ae                	mv	a5,a1
+    8020191e:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter02/./log.h:43
+    struct log_entry *le = L(level, type, 3);
+    80201922:	fd842703          	lw	a4,-40(s0)
+    80201926:	fdc42783          	lw	a5,-36(s0)
+    8020192a:	460d                	li	a2,3
+    8020192c:	85ba                	mv	a1,a4
+    8020192e:	853e                	mv	a0,a5
+    80201930:	e8dff0ef          	jal	802017bc <L>
+    80201934:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter02/./log.h:44
+    le->payload[0] = w0;
+    80201938:	fe843783          	ld	a5,-24(s0)
+    8020193c:	fd043703          	ld	a4,-48(s0)
+    80201940:	ef98                	sd	a4,24(a5)
+/embryos/chapter02/./log.h:45
+    le->payload[1] = w1;
+    80201942:	fe843783          	ld	a5,-24(s0)
+    80201946:	fc843703          	ld	a4,-56(s0)
+    8020194a:	f398                	sd	a4,32(a5)
+/embryos/chapter02/./log.h:46
+    le->payload[2] = w2;
+    8020194c:	fe843783          	ld	a5,-24(s0)
+    80201950:	fc043703          	ld	a4,-64(s0)
+    80201954:	f798                	sd	a4,40(a5)
+/embryos/chapter02/./log.h:47
+}
+    80201956:	0001                	nop
+    80201958:	70e2                	ld	ra,56(sp)
+    8020195a:	7442                	ld	s0,48(sp)
+    8020195c:	6121                	addi	sp,sp,64
+    8020195e:	8082                	ret
+
+0000000080201960 <user_put>:
+user_put():
+/embryos/chapter02/apps/syslib.h:8
+static inline void user_put(int col, int row, cell_t cell) {
+    80201960:	1101                	addi	sp,sp,-32
+    80201962:	ec06                	sd	ra,24(sp)
+    80201964:	e822                	sd	s0,16(sp)
+    80201966:	1000                	addi	s0,sp,32
+    80201968:	87aa                	mv	a5,a0
+    8020196a:	86ae                	mv	a3,a1
+    8020196c:	8732                	mv	a4,a2
+    8020196e:	fef42623          	sw	a5,-20(s0)
+    80201972:	87b6                	mv	a5,a3
+    80201974:	fef42423          	sw	a5,-24(s0)
+    80201978:	87ba                	mv	a5,a4
+    8020197a:	fef41323          	sh	a5,-26(s0)
+/embryos/chapter02/apps/syslib.h:9
+    L3(L_FREQ, L_USER_PUT, col, row, cell);
+    8020197e:	fec42783          	lw	a5,-20(s0)
+    80201982:	fe842683          	lw	a3,-24(s0)
+    80201986:	fe645703          	lhu	a4,-26(s0)
+    8020198a:	863e                	mv	a2,a5
+    8020198c:	45b5                	li	a1,13
+    8020198e:	4509                	li	a0,2
+    80201990:	f73ff0ef          	jal	80201902 <L3>
+/embryos/chapter02/apps/syslib.h:10
+    screen_put(col, row, cell);
+    80201994:	fe645683          	lhu	a3,-26(s0)
+    80201998:	fe842703          	lw	a4,-24(s0)
+    8020199c:	fec42783          	lw	a5,-20(s0)
+    802019a0:	8636                	mv	a2,a3
+    802019a2:	85ba                	mv	a1,a4
+    802019a4:	853e                	mv	a0,a5
+    802019a6:	e2aff0ef          	jal	80200fd0 <screen_put>
+/embryos/chapter02/apps/syslib.h:11
+}
+    802019aa:	0001                	nop
+    802019ac:	60e2                	ld	ra,24(sp)
+    802019ae:	6442                	ld	s0,16(sp)
+    802019b0:	6105                	addi	sp,sp,32
+    802019b2:	8082                	ret
+
+00000000802019b4 <idx>:
+idx():
+/embryos/chapter02/apps/blockpixel.c:12
+#define BP_IS_DIRTY(b)        ((b) & BP_DIRTY_MASK)
+#define BP_SET_DIRTY(b)       ((b) |=  BP_DIRTY_MASK)
+#define BP_CLEAR_DIRTY(b)     ((b) &= ~BP_DIRTY_MASK)
+#define BP_MAKE(color, dirty) (((color)&7) | ((dirty)?BP_DIRTY_MASK:0))
+
+static inline int idx(struct bp *bp, int px, int py) {
+    802019b4:	1101                	addi	sp,sp,-32
+    802019b6:	ec06                	sd	ra,24(sp)
+    802019b8:	e822                	sd	s0,16(sp)
+    802019ba:	1000                	addi	s0,sp,32
+    802019bc:	fea43423          	sd	a0,-24(s0)
+    802019c0:	87ae                	mv	a5,a1
+    802019c2:	8732                	mv	a4,a2
+    802019c4:	fef42223          	sw	a5,-28(s0)
+    802019c8:	87ba                	mv	a5,a4
+    802019ca:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter02/apps/blockpixel.c:13
+    return py * bp->width + px;
+    802019ce:	fe843783          	ld	a5,-24(s0)
+    802019d2:	479c                	lw	a5,8(a5)
+    802019d4:	fe042703          	lw	a4,-32(s0)
+    802019d8:	02f707bb          	mulw	a5,a4,a5
+    802019dc:	2781                	sext.w	a5,a5
+    802019de:	fe442703          	lw	a4,-28(s0)
+    802019e2:	9fb9                	addw	a5,a5,a4
+    802019e4:	2781                	sext.w	a5,a5
+/embryos/chapter02/apps/blockpixel.c:14
+}
+    802019e6:	853e                	mv	a0,a5
+    802019e8:	60e2                	ld	ra,24(sp)
+    802019ea:	6442                	ld	s0,16(sp)
+    802019ec:	6105                	addi	sp,sp,32
+    802019ee:	8082                	ret
+
+00000000802019f0 <bp_render_pair>:
+bp_render_pair():
+/embryos/chapter02/apps/blockpixel.c:17
+
+static inline void bp_render_pair(uint8_t top_color, uint8_t bottom_color,
+                                  int *code, int *fg, int *bg) {
+    802019f0:	7179                	addi	sp,sp,-48
+    802019f2:	f406                	sd	ra,40(sp)
+    802019f4:	f022                	sd	s0,32(sp)
+    802019f6:	1800                	addi	s0,sp,48
+    802019f8:	87aa                	mv	a5,a0
+    802019fa:	fec43023          	sd	a2,-32(s0)
+    802019fe:	fcd43c23          	sd	a3,-40(s0)
+    80201a02:	fce43823          	sd	a4,-48(s0)
+    80201a06:	fef407a3          	sb	a5,-17(s0)
+    80201a0a:	87ae                	mv	a5,a1
+    80201a0c:	fef40723          	sb	a5,-18(s0)
+/embryos/chapter02/apps/blockpixel.c:18
+    if (top_color == bottom_color) { // Entire cell drawn using background
+    80201a10:	fef44783          	lbu	a5,-17(s0)
+    80201a14:	873e                	mv	a4,a5
+    80201a16:	fee44783          	lbu	a5,-18(s0)
+    80201a1a:	0ff77713          	zext.b	a4,a4
+    80201a1e:	0ff7f793          	zext.b	a5,a5
+    80201a22:	02f71563          	bne	a4,a5,80201a4c <bp_render_pair+0x5c>
+/embryos/chapter02/apps/blockpixel.c:19
+        *code = 0; // space with bg filling the full cell
+    80201a26:	fe043783          	ld	a5,-32(s0)
+    80201a2a:	0007a023          	sw	zero,0(a5)
+/embryos/chapter02/apps/blockpixel.c:20
+        *fg = top_color; *bg = top_color;
+    80201a2e:	fef44783          	lbu	a5,-17(s0)
+    80201a32:	0007871b          	sext.w	a4,a5
+    80201a36:	fd843783          	ld	a5,-40(s0)
+    80201a3a:	c398                	sw	a4,0(a5)
+    80201a3c:	fef44783          	lbu	a5,-17(s0)
+    80201a40:	0007871b          	sext.w	a4,a5
+    80201a44:	fd043783          	ld	a5,-48(s0)
+    80201a48:	c398                	sw	a4,0(a5)
+/embryos/chapter02/apps/blockpixel.c:26
+    }
+    else { // Mixed colors: choose canonical representation
+        *code = 1; // top pixel = fg, bottom pixel = bg
+        *fg = top_color; *bg = bottom_color;
+    }
+}
+    80201a4a:	a01d                	j	80201a70 <bp_render_pair+0x80>
+/embryos/chapter02/apps/blockpixel.c:23
+        *code = 1; // top pixel = fg, bottom pixel = bg
+    80201a4c:	fe043783          	ld	a5,-32(s0)
+    80201a50:	4705                	li	a4,1
+    80201a52:	c398                	sw	a4,0(a5)
+/embryos/chapter02/apps/blockpixel.c:24
+        *fg = top_color; *bg = bottom_color;
+    80201a54:	fef44783          	lbu	a5,-17(s0)
+    80201a58:	0007871b          	sext.w	a4,a5
+    80201a5c:	fd843783          	ld	a5,-40(s0)
+    80201a60:	c398                	sw	a4,0(a5)
+    80201a62:	fee44783          	lbu	a5,-18(s0)
+    80201a66:	0007871b          	sext.w	a4,a5
+    80201a6a:	fd043783          	ld	a5,-48(s0)
+    80201a6e:	c398                	sw	a4,0(a5)
+/embryos/chapter02/apps/blockpixel.c:26
+}
+    80201a70:	0001                	nop
+    80201a72:	70a2                	ld	ra,40(sp)
+    80201a74:	7402                	ld	s0,32(sp)
+    80201a76:	6145                	addi	sp,sp,48
+    80201a78:	8082                	ret
+
+0000000080201a7a <bp_init>:
+bp_init():
+/embryos/chapter02/apps/blockpixel.c:29
+
+void bp_init(struct bp *bp, int x, int y, int width, int height,
+                                 uint8_t *buffer) {
+    80201a7a:	7139                	addi	sp,sp,-64
+    80201a7c:	fc06                	sd	ra,56(sp)
+    80201a7e:	f822                	sd	s0,48(sp)
+    80201a80:	0080                	addi	s0,sp,64
+    80201a82:	fca43c23          	sd	a0,-40(s0)
+    80201a86:	fcf43023          	sd	a5,-64(s0)
+    80201a8a:	87ae                	mv	a5,a1
+    80201a8c:	fcf42a23          	sw	a5,-44(s0)
+    80201a90:	87b2                	mv	a5,a2
+    80201a92:	fcf42823          	sw	a5,-48(s0)
+    80201a96:	87b6                	mv	a5,a3
+    80201a98:	fcf42623          	sw	a5,-52(s0)
+    80201a9c:	87ba                	mv	a5,a4
+    80201a9e:	fcf42423          	sw	a5,-56(s0)
+/embryos/chapter02/apps/blockpixel.c:30
+    bp->x = x; bp->y = y; bp->width = width; bp->height = height;
+    80201aa2:	fd843783          	ld	a5,-40(s0)
+    80201aa6:	fd442703          	lw	a4,-44(s0)
+    80201aaa:	c398                	sw	a4,0(a5)
+    80201aac:	fd843783          	ld	a5,-40(s0)
+    80201ab0:	fd042703          	lw	a4,-48(s0)
+    80201ab4:	c3d8                	sw	a4,4(a5)
+    80201ab6:	fd843783          	ld	a5,-40(s0)
+    80201aba:	fcc42703          	lw	a4,-52(s0)
+    80201abe:	c798                	sw	a4,8(a5)
+    80201ac0:	fd843783          	ld	a5,-40(s0)
+    80201ac4:	fc842703          	lw	a4,-56(s0)
+    80201ac8:	c7d8                	sw	a4,12(a5)
+/embryos/chapter02/apps/blockpixel.c:31
+    bp->buf = buffer;
+    80201aca:	fd843783          	ld	a5,-40(s0)
+    80201ace:	fc043703          	ld	a4,-64(s0)
+    80201ad2:	eb98                	sd	a4,16(a5)
+/embryos/chapter02/apps/blockpixel.c:32
+    for (int i = 0; i < width * height; i++) bp->buf[i] = BP_MAKE(0, 1);
+    80201ad4:	fe042623          	sw	zero,-20(s0)
+    80201ad8:	a839                	j	80201af6 <bp_init+0x7c>
+/embryos/chapter02/apps/blockpixel.c:32 (discriminator 3)
+    80201ada:	fd843783          	ld	a5,-40(s0)
+    80201ade:	6b98                	ld	a4,16(a5)
+    80201ae0:	fec42783          	lw	a5,-20(s0)
+    80201ae4:	97ba                	add	a5,a5,a4
+    80201ae6:	4721                	li	a4,8
+    80201ae8:	00e78023          	sb	a4,0(a5)
+    80201aec:	fec42783          	lw	a5,-20(s0)
+    80201af0:	2785                	addiw	a5,a5,1
+    80201af2:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/apps/blockpixel.c:32 (discriminator 1)
+    80201af6:	fcc42783          	lw	a5,-52(s0)
+    80201afa:	873e                	mv	a4,a5
+    80201afc:	fc842783          	lw	a5,-56(s0)
+    80201b00:	02f707bb          	mulw	a5,a4,a5
+    80201b04:	2781                	sext.w	a5,a5
+    80201b06:	fec42703          	lw	a4,-20(s0)
+    80201b0a:	2701                	sext.w	a4,a4
+    80201b0c:	fcf747e3          	blt	a4,a5,80201ada <bp_init+0x60>
+/embryos/chapter02/apps/blockpixel.c:33
+}
+    80201b10:	0001                	nop
+    80201b12:	0001                	nop
+    80201b14:	70e2                	ld	ra,56(sp)
+    80201b16:	7442                	ld	s0,48(sp)
+    80201b18:	6121                	addi	sp,sp,64
+    80201b1a:	8082                	ret
+
+0000000080201b1c <bp_put>:
+bp_put():
+/embryos/chapter02/apps/blockpixel.c:35
+
+void bp_put(struct bp *bp, int px, int py, uint8_t color, enum bp_mode mode) {
+    80201b1c:	711d                	addi	sp,sp,-96
+    80201b1e:	ec86                	sd	ra,88(sp)
+    80201b20:	e8a2                	sd	s0,80(sp)
+    80201b22:	e4a6                	sd	s1,72(sp)
+    80201b24:	e0ca                	sd	s2,64(sp)
+    80201b26:	1080                	addi	s0,sp,96
+    80201b28:	faa43c23          	sd	a0,-72(s0)
+    80201b2c:	87ae                	mv	a5,a1
+    80201b2e:	faf42a23          	sw	a5,-76(s0)
+    80201b32:	87b2                	mv	a5,a2
+    80201b34:	faf42823          	sw	a5,-80(s0)
+    80201b38:	87b6                	mv	a5,a3
+    80201b3a:	faf407a3          	sb	a5,-81(s0)
+    80201b3e:	87ba                	mv	a5,a4
+    80201b40:	faf42423          	sw	a5,-88(s0)
+/embryos/chapter02/apps/blockpixel.c:36
+    if (px < 0 || px >= bp->width) return;
+    80201b44:	fb442783          	lw	a5,-76(s0)
+    80201b48:	2781                	sext.w	a5,a5
+    80201b4a:	2007c463          	bltz	a5,80201d52 <bp_put+0x236>
+/embryos/chapter02/apps/blockpixel.c:36 (discriminator 2)
+    80201b4e:	fb843783          	ld	a5,-72(s0)
+    80201b52:	479c                	lw	a5,8(a5)
+    80201b54:	fb442703          	lw	a4,-76(s0)
+    80201b58:	2701                	sext.w	a4,a4
+    80201b5a:	1ef75c63          	bge	a4,a5,80201d52 <bp_put+0x236>
+/embryos/chapter02/apps/blockpixel.c:37
+    if (py < 0 || py >= bp->height) return;
+    80201b5e:	fb042783          	lw	a5,-80(s0)
+    80201b62:	2781                	sext.w	a5,a5
+    80201b64:	1e07c963          	bltz	a5,80201d56 <bp_put+0x23a>
+/embryos/chapter02/apps/blockpixel.c:37 (discriminator 2)
+    80201b68:	fb843783          	ld	a5,-72(s0)
+    80201b6c:	47dc                	lw	a5,12(a5)
+    80201b6e:	fb042703          	lw	a4,-80(s0)
+    80201b72:	2701                	sext.w	a4,a4
+    80201b74:	1ef75163          	bge	a4,a5,80201d56 <bp_put+0x23a>
+/embryos/chapter02/apps/blockpixel.c:38
+    bp->buf[idx(bp, px, py)] = BP_MAKE(color, 1);
+    80201b78:	faf40783          	lb	a5,-81(s0)
+    80201b7c:	8b9d                	andi	a5,a5,7
+    80201b7e:	0187979b          	slliw	a5,a5,0x18
+    80201b82:	4187d79b          	sraiw	a5,a5,0x18
+    80201b86:	0087e793          	ori	a5,a5,8
+    80201b8a:	0187991b          	slliw	s2,a5,0x18
+    80201b8e:	4189591b          	sraiw	s2,s2,0x18
+    80201b92:	fb843783          	ld	a5,-72(s0)
+    80201b96:	6b84                	ld	s1,16(a5)
+    80201b98:	fb042703          	lw	a4,-80(s0)
+    80201b9c:	fb442783          	lw	a5,-76(s0)
+    80201ba0:	863a                	mv	a2,a4
+    80201ba2:	85be                	mv	a1,a5
+    80201ba4:	fb843503          	ld	a0,-72(s0)
+    80201ba8:	e0dff0ef          	jal	802019b4 <idx>
+    80201bac:	87aa                	mv	a5,a0
+/embryos/chapter02/apps/blockpixel.c:38 (discriminator 1)
+    80201bae:	97a6                	add	a5,a5,s1
+    80201bb0:	0ff97713          	zext.b	a4,s2
+    80201bb4:	00e78023          	sb	a4,0(a5)
+/embryos/chapter02/apps/blockpixel.c:39
+    if (mode == BP_LAZY) return;
+    80201bb8:	fa842783          	lw	a5,-88(s0)
+    80201bbc:	0007871b          	sext.w	a4,a5
+    80201bc0:	4785                	li	a5,1
+    80201bc2:	18f70c63          	beq	a4,a5,80201d5a <bp_put+0x23e>
+/embryos/chapter02/apps/blockpixel.c:40
+    int cell_x = px, cell_y = py / 2;
+    80201bc6:	fb442783          	lw	a5,-76(s0)
+    80201bca:	fcf42e23          	sw	a5,-36(s0)
+    80201bce:	fb042783          	lw	a5,-80(s0)
+    80201bd2:	01f7d71b          	srliw	a4,a5,0x1f
+    80201bd6:	9fb9                	addw	a5,a5,a4
+    80201bd8:	4017d79b          	sraiw	a5,a5,0x1
+    80201bdc:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter02/apps/blockpixel.c:41
+    int top_index    = (cell_y * 2) * bp->width + cell_x;
+    80201be0:	fb843783          	ld	a5,-72(s0)
+    80201be4:	479c                	lw	a5,8(a5)
+    80201be6:	fd842703          	lw	a4,-40(s0)
+    80201bea:	02f707bb          	mulw	a5,a4,a5
+    80201bee:	2781                	sext.w	a5,a5
+    80201bf0:	0017979b          	slliw	a5,a5,0x1
+    80201bf4:	2781                	sext.w	a5,a5
+    80201bf6:	fdc42703          	lw	a4,-36(s0)
+    80201bfa:	9fb9                	addw	a5,a5,a4
+    80201bfc:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter02/apps/blockpixel.c:42
+    int bottom_index = top_index + bp->width;
+    80201c00:	fb843783          	ld	a5,-72(s0)
+    80201c04:	479c                	lw	a5,8(a5)
+    80201c06:	fd442703          	lw	a4,-44(s0)
+    80201c0a:	9fb9                	addw	a5,a5,a4
+    80201c0c:	fcf42823          	sw	a5,-48(s0)
+/embryos/chapter02/apps/blockpixel.c:43
+    uint8_t top_color    = BP_GET_COLOR(bp->buf[top_index]);
+    80201c10:	fb843783          	ld	a5,-72(s0)
+    80201c14:	6b98                	ld	a4,16(a5)
+    80201c16:	fd442783          	lw	a5,-44(s0)
+    80201c1a:	97ba                	add	a5,a5,a4
+    80201c1c:	0007c783          	lbu	a5,0(a5)
+    80201c20:	8b9d                	andi	a5,a5,7
+    80201c22:	fcf407a3          	sb	a5,-49(s0)
+/embryos/chapter02/apps/blockpixel.c:44
+    uint8_t bottom_color = BP_GET_COLOR(bp->buf[bottom_index]);
+    80201c26:	fb843783          	ld	a5,-72(s0)
+    80201c2a:	6b98                	ld	a4,16(a5)
+    80201c2c:	fd042783          	lw	a5,-48(s0)
+    80201c30:	97ba                	add	a5,a5,a4
+    80201c32:	0007c783          	lbu	a5,0(a5)
+    80201c36:	8b9d                	andi	a5,a5,7
+    80201c38:	fcf40723          	sb	a5,-50(s0)
+/embryos/chapter02/apps/blockpixel.c:46
+    int code, fg, bg;
+    bp_render_pair(top_color, bottom_color, &code, &fg, &bg);
+    80201c3c:	fc040713          	addi	a4,s0,-64
+    80201c40:	fc440693          	addi	a3,s0,-60
+    80201c44:	fc840613          	addi	a2,s0,-56
+    80201c48:	fce44583          	lbu	a1,-50(s0)
+    80201c4c:	fcf44783          	lbu	a5,-49(s0)
+    80201c50:	853e                	mv	a0,a5
+    80201c52:	d9fff0ef          	jal	802019f0 <bp_render_pair>
+/embryos/chapter02/apps/blockpixel.c:47
+    user_put(bp->x + cell_x, bp->y + cell_y,
+    80201c56:	fb843783          	ld	a5,-72(s0)
+    80201c5a:	439c                	lw	a5,0(a5)
+    80201c5c:	fdc42703          	lw	a4,-36(s0)
+    80201c60:	9fb9                	addw	a5,a5,a4
+    80201c62:	0007851b          	sext.w	a0,a5
+    80201c66:	fb843783          	ld	a5,-72(s0)
+    80201c6a:	43dc                	lw	a5,4(a5)
+    80201c6c:	fd842703          	lw	a4,-40(s0)
+    80201c70:	9fb9                	addw	a5,a5,a4
+    80201c72:	0007859b          	sext.w	a1,a5
+/embryos/chapter02/apps/blockpixel.c:48
+             CELL_EXT(CELL_BLOCK, code, fg, bg));
+    80201c76:	fc842783          	lw	a5,-56(s0)
+    80201c7a:	0107979b          	slliw	a5,a5,0x10
+    80201c7e:	4107d79b          	sraiw	a5,a5,0x10
+    80201c82:	0ff7f793          	zext.b	a5,a5
+    80201c86:	0107971b          	slliw	a4,a5,0x10
+    80201c8a:	4107571b          	sraiw	a4,a4,0x10
+    80201c8e:	fc442783          	lw	a5,-60(s0)
+    80201c92:	0107979b          	slliw	a5,a5,0x10
+    80201c96:	4107d79b          	sraiw	a5,a5,0x10
+    80201c9a:	0087979b          	slliw	a5,a5,0x8
+    80201c9e:	0107979b          	slliw	a5,a5,0x10
+    80201ca2:	4107d79b          	sraiw	a5,a5,0x10
+    80201ca6:	7007f793          	andi	a5,a5,1792
+    80201caa:	0107979b          	slliw	a5,a5,0x10
+    80201cae:	4107d79b          	sraiw	a5,a5,0x10
+    80201cb2:	8fd9                	or	a5,a5,a4
+    80201cb4:	0107971b          	slliw	a4,a5,0x10
+    80201cb8:	4107571b          	sraiw	a4,a4,0x10
+    80201cbc:	fc042783          	lw	a5,-64(s0)
+    80201cc0:	0107979b          	slliw	a5,a5,0x10
+    80201cc4:	4107d79b          	sraiw	a5,a5,0x10
+    80201cc8:	00b7979b          	slliw	a5,a5,0xb
+    80201ccc:	0107969b          	slliw	a3,a5,0x10
+    80201cd0:	4106d69b          	sraiw	a3,a3,0x10
+    80201cd4:	6791                	lui	a5,0x4
+    80201cd6:	80078793          	addi	a5,a5,-2048 # 3800 <BLOCK_SIZE+0x3000>
+    80201cda:	8ff5                	and	a5,a5,a3
+    80201cdc:	0107979b          	slliw	a5,a5,0x10
+    80201ce0:	4107d79b          	sraiw	a5,a5,0x10
+    80201ce4:	8fd9                	or	a5,a5,a4
+    80201ce6:	0107971b          	slliw	a4,a5,0x10
+    80201cea:	4107571b          	sraiw	a4,a4,0x10
+    80201cee:	6791                	lui	a5,0x4
+    80201cf0:	8fd9                	or	a5,a5,a4
+    80201cf2:	0107979b          	slliw	a5,a5,0x10
+    80201cf6:	4107d79b          	sraiw	a5,a5,0x10
+/embryos/chapter02/apps/blockpixel.c:47
+    user_put(bp->x + cell_x, bp->y + cell_y,
+    80201cfa:	17c2                	slli	a5,a5,0x30
+    80201cfc:	93c1                	srli	a5,a5,0x30
+    80201cfe:	863e                	mv	a2,a5
+    80201d00:	c61ff0ef          	jal	80201960 <user_put>
+/embryos/chapter02/apps/blockpixel.c:49
+    BP_CLEAR_DIRTY(bp->buf[top_index]);
+    80201d04:	fb843783          	ld	a5,-72(s0)
+    80201d08:	6b98                	ld	a4,16(a5)
+    80201d0a:	fd442783          	lw	a5,-44(s0)
+    80201d0e:	97ba                	add	a5,a5,a4
+    80201d10:	0007c703          	lbu	a4,0(a5) # 4000 <N_LOG_EVENTS>
+    80201d14:	fb843783          	ld	a5,-72(s0)
+    80201d18:	6b94                	ld	a3,16(a5)
+    80201d1a:	fd442783          	lw	a5,-44(s0)
+    80201d1e:	97b6                	add	a5,a5,a3
+    80201d20:	9b5d                	andi	a4,a4,-9
+    80201d22:	0ff77713          	zext.b	a4,a4
+    80201d26:	00e78023          	sb	a4,0(a5)
+/embryos/chapter02/apps/blockpixel.c:50
+    BP_CLEAR_DIRTY(bp->buf[bottom_index]);
+    80201d2a:	fb843783          	ld	a5,-72(s0)
+    80201d2e:	6b98                	ld	a4,16(a5)
+    80201d30:	fd042783          	lw	a5,-48(s0)
+    80201d34:	97ba                	add	a5,a5,a4
+    80201d36:	0007c703          	lbu	a4,0(a5)
+    80201d3a:	fb843783          	ld	a5,-72(s0)
+    80201d3e:	6b94                	ld	a3,16(a5)
+    80201d40:	fd042783          	lw	a5,-48(s0)
+    80201d44:	97b6                	add	a5,a5,a3
+    80201d46:	9b5d                	andi	a4,a4,-9
+    80201d48:	0ff77713          	zext.b	a4,a4
+    80201d4c:	00e78023          	sb	a4,0(a5)
+    80201d50:	a031                	j	80201d5c <bp_put+0x240>
+/embryos/chapter02/apps/blockpixel.c:36
+    if (px < 0 || px >= bp->width) return;
+    80201d52:	0001                	nop
+    80201d54:	a021                	j	80201d5c <bp_put+0x240>
+/embryos/chapter02/apps/blockpixel.c:37
+    if (py < 0 || py >= bp->height) return;
+    80201d56:	0001                	nop
+    80201d58:	a011                	j	80201d5c <bp_put+0x240>
+/embryos/chapter02/apps/blockpixel.c:39
+    if (mode == BP_LAZY) return;
+    80201d5a:	0001                	nop
+/embryos/chapter02/apps/blockpixel.c:51
+}
+    80201d5c:	60e6                	ld	ra,88(sp)
+    80201d5e:	6446                	ld	s0,80(sp)
+    80201d60:	64a6                	ld	s1,72(sp)
+    80201d62:	6906                	ld	s2,64(sp)
+    80201d64:	6125                	addi	sp,sp,96
+    80201d66:	8082                	ret
+
+0000000080201d68 <bp_flush>:
+bp_flush():
+/embryos/chapter02/apps/blockpixel.c:53
+
+void bp_flush(struct bp *bp) {
+    80201d68:	7139                	addi	sp,sp,-64
+    80201d6a:	fc06                	sd	ra,56(sp)
+    80201d6c:	f822                	sd	s0,48(sp)
+    80201d6e:	0080                	addi	s0,sp,64
+    80201d70:	fca43423          	sd	a0,-56(s0)
+/embryos/chapter02/apps/blockpixel.c:54
+    for (int cell_y = 0; cell_y < bp->height/2; cell_y++)
+    80201d74:	fe042623          	sw	zero,-20(s0)
+    80201d78:	aac9                	j	80201f4a <bp_flush+0x1e2>
+/embryos/chapter02/apps/blockpixel.c:55
+        for (int cell_x = 0; cell_x < bp->width; cell_x++) {
+    80201d7a:	fe042423          	sw	zero,-24(s0)
+    80201d7e:	aa4d                	j	80201f30 <bp_flush+0x1c8>
+/embryos/chapter02/apps/blockpixel.c:56
+            int top_index    = (cell_y * 2) * bp->width + cell_x;
+    80201d80:	fc843783          	ld	a5,-56(s0)
+    80201d84:	479c                	lw	a5,8(a5)
+    80201d86:	fec42703          	lw	a4,-20(s0)
+    80201d8a:	02f707bb          	mulw	a5,a4,a5
+    80201d8e:	2781                	sext.w	a5,a5
+    80201d90:	0017979b          	slliw	a5,a5,0x1
+    80201d94:	2781                	sext.w	a5,a5
+    80201d96:	fe842703          	lw	a4,-24(s0)
+    80201d9a:	9fb9                	addw	a5,a5,a4
+    80201d9c:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter02/apps/blockpixel.c:57
+            int bottom_index = top_index + bp->width;
+    80201da0:	fc843783          	ld	a5,-56(s0)
+    80201da4:	479c                	lw	a5,8(a5)
+    80201da6:	fe442703          	lw	a4,-28(s0)
+    80201daa:	9fb9                	addw	a5,a5,a4
+    80201dac:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter02/apps/blockpixel.c:58
+            if (!BP_IS_DIRTY(bp->buf[top_index]) &&
+    80201db0:	fc843783          	ld	a5,-56(s0)
+    80201db4:	6b98                	ld	a4,16(a5)
+    80201db6:	fe442783          	lw	a5,-28(s0)
+    80201dba:	97ba                	add	a5,a5,a4
+    80201dbc:	0007c783          	lbu	a5,0(a5)
+    80201dc0:	2781                	sext.w	a5,a5
+    80201dc2:	8ba1                	andi	a5,a5,8
+    80201dc4:	2781                	sext.w	a5,a5
+    80201dc6:	ef91                	bnez	a5,80201de2 <bp_flush+0x7a>
+/embryos/chapter02/apps/blockpixel.c:59
+                !BP_IS_DIRTY(bp->buf[bottom_index])) continue;
+    80201dc8:	fc843783          	ld	a5,-56(s0)
+    80201dcc:	6b98                	ld	a4,16(a5)
+    80201dce:	fe042783          	lw	a5,-32(s0)
+    80201dd2:	97ba                	add	a5,a5,a4
+    80201dd4:	0007c783          	lbu	a5,0(a5)
+    80201dd8:	2781                	sext.w	a5,a5
+    80201dda:	8ba1                	andi	a5,a5,8
+    80201ddc:	2781                	sext.w	a5,a5
+/embryos/chapter02/apps/blockpixel.c:58 (discriminator 1)
+            if (!BP_IS_DIRTY(bp->buf[top_index]) &&
+    80201dde:	14078363          	beqz	a5,80201f24 <bp_flush+0x1bc>
+/embryos/chapter02/apps/blockpixel.c:60
+            uint8_t top_color    = BP_GET_COLOR(bp->buf[top_index]);
+    80201de2:	fc843783          	ld	a5,-56(s0)
+    80201de6:	6b98                	ld	a4,16(a5)
+    80201de8:	fe442783          	lw	a5,-28(s0)
+    80201dec:	97ba                	add	a5,a5,a4
+    80201dee:	0007c783          	lbu	a5,0(a5)
+    80201df2:	8b9d                	andi	a5,a5,7
+    80201df4:	fcf40fa3          	sb	a5,-33(s0)
+/embryos/chapter02/apps/blockpixel.c:61
+            uint8_t bottom_color = BP_GET_COLOR(bp->buf[bottom_index]);
+    80201df8:	fc843783          	ld	a5,-56(s0)
+    80201dfc:	6b98                	ld	a4,16(a5)
+    80201dfe:	fe042783          	lw	a5,-32(s0)
+    80201e02:	97ba                	add	a5,a5,a4
+    80201e04:	0007c783          	lbu	a5,0(a5)
+    80201e08:	8b9d                	andi	a5,a5,7
+    80201e0a:	fcf40f23          	sb	a5,-34(s0)
+/embryos/chapter02/apps/blockpixel.c:63
+            int code, fg, bg;
+            bp_render_pair(top_color, bottom_color, &code, &fg, &bg);
+    80201e0e:	fd040713          	addi	a4,s0,-48
+    80201e12:	fd440693          	addi	a3,s0,-44
+    80201e16:	fd840613          	addi	a2,s0,-40
+    80201e1a:	fde44583          	lbu	a1,-34(s0)
+    80201e1e:	fdf44783          	lbu	a5,-33(s0)
+    80201e22:	853e                	mv	a0,a5
+    80201e24:	bcdff0ef          	jal	802019f0 <bp_render_pair>
+/embryos/chapter02/apps/blockpixel.c:64
+            user_put(bp->x + cell_x, bp->y + cell_y,
+    80201e28:	fc843783          	ld	a5,-56(s0)
+    80201e2c:	439c                	lw	a5,0(a5)
+    80201e2e:	fe842703          	lw	a4,-24(s0)
+    80201e32:	9fb9                	addw	a5,a5,a4
+    80201e34:	0007851b          	sext.w	a0,a5
+    80201e38:	fc843783          	ld	a5,-56(s0)
+    80201e3c:	43dc                	lw	a5,4(a5)
+    80201e3e:	fec42703          	lw	a4,-20(s0)
+    80201e42:	9fb9                	addw	a5,a5,a4
+    80201e44:	0007859b          	sext.w	a1,a5
+/embryos/chapter02/apps/blockpixel.c:65
+                     CELL_EXT(CELL_BLOCK, code, fg, bg));
+    80201e48:	fd842783          	lw	a5,-40(s0)
+    80201e4c:	0107979b          	slliw	a5,a5,0x10
+    80201e50:	4107d79b          	sraiw	a5,a5,0x10
+    80201e54:	0ff7f793          	zext.b	a5,a5
+    80201e58:	0107971b          	slliw	a4,a5,0x10
+    80201e5c:	4107571b          	sraiw	a4,a4,0x10
+    80201e60:	fd442783          	lw	a5,-44(s0)
+    80201e64:	0107979b          	slliw	a5,a5,0x10
+    80201e68:	4107d79b          	sraiw	a5,a5,0x10
+    80201e6c:	0087979b          	slliw	a5,a5,0x8
+    80201e70:	0107979b          	slliw	a5,a5,0x10
+    80201e74:	4107d79b          	sraiw	a5,a5,0x10
+    80201e78:	7007f793          	andi	a5,a5,1792
+    80201e7c:	0107979b          	slliw	a5,a5,0x10
+    80201e80:	4107d79b          	sraiw	a5,a5,0x10
+    80201e84:	8fd9                	or	a5,a5,a4
+    80201e86:	0107971b          	slliw	a4,a5,0x10
+    80201e8a:	4107571b          	sraiw	a4,a4,0x10
+    80201e8e:	fd042783          	lw	a5,-48(s0)
+    80201e92:	0107979b          	slliw	a5,a5,0x10
+    80201e96:	4107d79b          	sraiw	a5,a5,0x10
+    80201e9a:	00b7979b          	slliw	a5,a5,0xb
+    80201e9e:	0107969b          	slliw	a3,a5,0x10
+    80201ea2:	4106d69b          	sraiw	a3,a3,0x10
+    80201ea6:	6791                	lui	a5,0x4
+    80201ea8:	80078793          	addi	a5,a5,-2048 # 3800 <BLOCK_SIZE+0x3000>
+    80201eac:	8ff5                	and	a5,a5,a3
+    80201eae:	0107979b          	slliw	a5,a5,0x10
+    80201eb2:	4107d79b          	sraiw	a5,a5,0x10
+    80201eb6:	8fd9                	or	a5,a5,a4
+    80201eb8:	0107971b          	slliw	a4,a5,0x10
+    80201ebc:	4107571b          	sraiw	a4,a4,0x10
+    80201ec0:	6791                	lui	a5,0x4
+    80201ec2:	8fd9                	or	a5,a5,a4
+    80201ec4:	0107979b          	slliw	a5,a5,0x10
+    80201ec8:	4107d79b          	sraiw	a5,a5,0x10
+/embryos/chapter02/apps/blockpixel.c:64
+            user_put(bp->x + cell_x, bp->y + cell_y,
+    80201ecc:	17c2                	slli	a5,a5,0x30
+    80201ece:	93c1                	srli	a5,a5,0x30
+    80201ed0:	863e                	mv	a2,a5
+    80201ed2:	a8fff0ef          	jal	80201960 <user_put>
+/embryos/chapter02/apps/blockpixel.c:66
+            BP_CLEAR_DIRTY(bp->buf[top_index]);
+    80201ed6:	fc843783          	ld	a5,-56(s0)
+    80201eda:	6b98                	ld	a4,16(a5)
+    80201edc:	fe442783          	lw	a5,-28(s0)
+    80201ee0:	97ba                	add	a5,a5,a4
+    80201ee2:	0007c703          	lbu	a4,0(a5) # 4000 <N_LOG_EVENTS>
+    80201ee6:	fc843783          	ld	a5,-56(s0)
+    80201eea:	6b94                	ld	a3,16(a5)
+    80201eec:	fe442783          	lw	a5,-28(s0)
+    80201ef0:	97b6                	add	a5,a5,a3
+    80201ef2:	9b5d                	andi	a4,a4,-9
+    80201ef4:	0ff77713          	zext.b	a4,a4
+    80201ef8:	00e78023          	sb	a4,0(a5)
+/embryos/chapter02/apps/blockpixel.c:67
+            BP_CLEAR_DIRTY(bp->buf[bottom_index]);
+    80201efc:	fc843783          	ld	a5,-56(s0)
+    80201f00:	6b98                	ld	a4,16(a5)
+    80201f02:	fe042783          	lw	a5,-32(s0)
+    80201f06:	97ba                	add	a5,a5,a4
+    80201f08:	0007c703          	lbu	a4,0(a5)
+    80201f0c:	fc843783          	ld	a5,-56(s0)
+    80201f10:	6b94                	ld	a3,16(a5)
+    80201f12:	fe042783          	lw	a5,-32(s0)
+    80201f16:	97b6                	add	a5,a5,a3
+    80201f18:	9b5d                	andi	a4,a4,-9
+    80201f1a:	0ff77713          	zext.b	a4,a4
+    80201f1e:	00e78023          	sb	a4,0(a5)
+    80201f22:	a011                	j	80201f26 <bp_flush+0x1be>
+/embryos/chapter02/apps/blockpixel.c:59
+                !BP_IS_DIRTY(bp->buf[bottom_index])) continue;
+    80201f24:	0001                	nop
+/embryos/chapter02/apps/blockpixel.c:55 (discriminator 2)
+        for (int cell_x = 0; cell_x < bp->width; cell_x++) {
+    80201f26:	fe842783          	lw	a5,-24(s0)
+    80201f2a:	2785                	addiw	a5,a5,1
+    80201f2c:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter02/apps/blockpixel.c:55 (discriminator 1)
+    80201f30:	fc843783          	ld	a5,-56(s0)
+    80201f34:	479c                	lw	a5,8(a5)
+    80201f36:	fe842703          	lw	a4,-24(s0)
+    80201f3a:	2701                	sext.w	a4,a4
+    80201f3c:	e4f742e3          	blt	a4,a5,80201d80 <bp_flush+0x18>
+/embryos/chapter02/apps/blockpixel.c:54 (discriminator 2)
+    for (int cell_y = 0; cell_y < bp->height/2; cell_y++)
+    80201f40:	fec42783          	lw	a5,-20(s0)
+    80201f44:	2785                	addiw	a5,a5,1
+    80201f46:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter02/apps/blockpixel.c:54 (discriminator 1)
+    80201f4a:	fc843783          	ld	a5,-56(s0)
+    80201f4e:	47dc                	lw	a5,12(a5)
+    80201f50:	01f7d71b          	srliw	a4,a5,0x1f
+    80201f54:	9fb9                	addw	a5,a5,a4
+    80201f56:	4017d79b          	sraiw	a5,a5,0x1
+    80201f5a:	2781                	sext.w	a5,a5
+    80201f5c:	fec42703          	lw	a4,-20(s0)
+    80201f60:	2701                	sext.w	a4,a4
+    80201f62:	e0f74ce3          	blt	a4,a5,80201d7a <bp_flush+0x12>
+/embryos/chapter02/apps/blockpixel.c:69
+        }
+}
+    80201f66:	0001                	nop
+    80201f68:	0001                	nop
+    80201f6a:	70e2                	ld	ra,56(sp)
+    80201f6c:	7442                	ld	s0,48(sp)
+    80201f6e:	6121                	addi	sp,sp,64
+    80201f70:	8082                	ret
+    80201f72:	0000                	unimp
+    80201f74:	0000                	unimp
+    80201f76:	0000                	unimp
+    80201f78:	520a                	lw	tp,160(sp)
+    80201f7a:	7365                	lui	t1,0xffff9
+    80201f7c:	6174                	ld	a3,192(a0)
+    80201f7e:	7472                	ld	s0,312(sp)
+    80201f80:	6220                	ld	s0,64(a2)
+    80201f82:	6f6c                	ld	a1,216(a4)
+    80201f84:	64656b63          	bltu	a0,t1,802025da <cur_bg.0+0x46e>
+    80201f88:	000a                	c.slli	zero,0x2
+    80201f8a:	0000                	unimp
+    80201f8c:	0000                	unimp
+    80201f8e:	0000                	unimp
+    80201f90:	0d0a                	slli	s10,s10,0x2
+    80201f92:	30335b1b          	.insn	4, 0x30335b1b
+    80201f96:	1b6d                	addi	s6,s6,-5
+    80201f98:	6d37345b          	.insn	4, 0x6d37345b
+    80201f9c:	6d70                	ld	a2,216(a0)
+    80201f9e:	6d65                	lui	s10,0x19
+    80201fa0:	65766173          	csrrsi	sp,hviprio2h,12
+    80201fa4:	3020                	.insn	2, 0x3020
+    80201fa6:	2578                	.insn	2, 0x2578
+    80201fa8:	2070                	.insn	2, 0x2070
+    80201faa:	7830                	ld	a2,112(s0)
+    80201fac:	7025                	c.lui	zero,0xfffe9
+    80201fae:	6d20                	ld	s0,88(a0)
+    80201fb0:	6d65                	lui	s10,0x19
+    80201fb2:	622e                	ld	tp,200(sp)
+    80201fb4:	6e69                	lui	t3,0x1a
+    80201fb6:	0000                	unimp
+    80201fb8:	6d45                	lui	s10,0x11
+    80201fba:	7262                	ld	tp,56(sp)
+    80201fbc:	4f79                	li	t5,30
+    80201fbe:	694c0053          	.insn	4, 0x694c0053
+    80201fc2:	6566                	ld	a0,88(sp)
+    80201fc4:	6820                	ld	s0,80(s0)
+    80201fc6:	7361                	lui	t1,0xffff8
+    80201fc8:	4220                	lw	s0,64(a2)
+    80201fca:	6765                	lui	a4,0x19
+    80201fcc:	6e75                	lui	t3,0x1d
+    80201fce:	0000                	unimp
+    80201fd0:	736e                	ld	t1,248(sp)
+    80201fd2:	3631                	addiw	a2,a2,-20
+    80201fd4:	3535                	addiw	a0,a0,-19
+    80201fd6:	6130                	ld	a2,64(a0)
+	...
+    80201fe0:	7764                	ld	s1,232(a4)
+    80201fe2:	612d                	addi	sp,sp,224
+    80201fe4:	6270                	ld	a2,192(a2)
+    80201fe6:	752d                	lui	a0,0xfffeb
+    80201fe8:	7261                	lui	tp,0xffff8
+    80201fea:	0074                	addi	a3,sp,12
+    80201fec:	0000                	unimp
+    80201fee:	0000                	unimp
+    80201ff0:	6175                	addi	sp,sp,368
+    80201ff2:	7472                	ld	s0,312(sp)
+    80201ff4:	0030                	addi	a2,sp,8
+    80201ff6:	0000                	unimp
+    80201ff8:	7870                	ld	a2,240(s0)
+    80201ffa:	2d61                	addiw	s10,s10,24 # 11018 <N_LOG_EVENTS+0xd018>
+    80201ffc:	6175                	addi	sp,sp,368
+    80201ffe:	7472                	ld	s0,312(sp)
+	...
+    80202008:	696c                	ld	a1,208(a0)
+    8020200a:	6574                	ld	a3,200(a0)
+    8020200c:	0078                	addi	a4,sp,12
+    8020200e:	0000                	unimp
+    80202010:	4155                	li	sp,21
+    80202012:	5452                	lw	s0,52(sp)
+    80202014:	2520                	.insn	2, 0x2520
+    80202016:	74612073          	csrs	0x746,sp
+    8020201a:	2520                	.insn	2, 0x2520
+    8020201c:	0a58                	addi	a4,sp,276
+    8020201e:	0000                	unimp
+    80202020:	7325                	lui	t1,0xfffe9
+    80202022:	0000                	unimp
+    80202024:	0000                	unimp
+    80202026:	0000                	unimp
+    80202028:	65726373          	csrrsi	t1,hviprio2h,4
+    8020202c:	6e65                	lui	t3,0x19
+    8020202e:	705f 7475 203a      	.insn	6, 0x203a7475705f
+    80202034:	6162                	ld	sp,24(sp)
+    80202036:	2064                	.insn	2, 0x2064
+    80202038:	756c6f63          	bltu	s8,s6,80202796 <cur_bg.0+0x62a>
+    8020203c:	6e6d                	lui	t3,0x1b
+    8020203e:	0000                	unimp
+    80202040:	65726373          	csrrsi	t1,hviprio2h,4
+    80202044:	6e65                	lui	t3,0x19
+    80202046:	705f 7475 203a      	.insn	6, 0x203a7475705f
+    8020204c:	6162                	ld	sp,24(sp)
+    8020204e:	2064                	.insn	2, 0x2064
+    80202050:	6f72                	ld	t5,280(sp)
+    80202052:	00000077          	.insn	4, 0x0077
+    80202056:	0000                	unimp
+    80202058:	64255b1b          	.insn	4, 0x64255b1b
+    8020205c:	4864253b          	.insn	4, 0x4864253b
+	...
+    80202068:	25335b1b          	.insn	4, 0x25335b1b
+    8020206c:	6d64                	ld	s1,216(a0)
+    8020206e:	0000                	unimp
+    80202070:	25345b1b          	.insn	4, 0x25345b1b
+    80202074:	6d64                	ld	s1,216(a0)
+    80202076:	0000                	unimp
+    80202078:	96e2                	add	a3,a3,s8
+    8020207a:	0084                	addi	s1,sp,64
+    8020207c:	0000                	unimp
+    8020207e:	0000                	unimp
+    80202080:	96e2                	add	a3,a3,s8
+    80202082:	0080                	addi	s0,sp,64
+    80202084:	0000                	unimp
+    80202086:	0000                	unimp
+    80202088:	96e2                	add	a3,a3,s8
+    8020208a:	0088                	addi	a0,sp,64
+    8020208c:	0000                	unimp
+    8020208e:	0000                	unimp
+    80202090:	323f5b1b          	.insn	4, 0x323f5b1b
+    80202094:	6c35                	lui	s8,0xd
+	...
