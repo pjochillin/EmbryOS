@@ -40,7 +40,7 @@ void sched_wake_sleepers(void)
             uint64_t ticks = mtime_get();
             uint64_t current_time = (ticks * 1000000000ULL) / time_base;
 
-            if (current_time >= pcb->sleep_deadline)
+            if (current_time > pcb->sleep_deadline)
             {
                 // Wake up this process - clear flag FIRST
                 pcb->sleeping = 0;
