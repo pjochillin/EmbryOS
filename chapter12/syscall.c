@@ -83,7 +83,7 @@ void syscall_handler(struct trap_frame *tf)
         L2(L_NORM, L_USER_SLEEP, current_time, deadline);
 
         // If deadline has already passed, return immediately
-        if (deadline < current_time)
+        if (deadline <= current_time)
         {
             break;
         }
