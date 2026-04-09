@@ -14,7 +14,6 @@
 #include "vm.h"
 #include "bd.h"
 #include "bd_ramdisk.h"
-#include "bd_simple.h"
 #include "stat.h"
 #include "files.h"
 #include "flat.h"

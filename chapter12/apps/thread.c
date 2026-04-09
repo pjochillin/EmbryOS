@@ -52,6 +52,21 @@ static unsigned int thread_count;
 /* Set in thread_exit before ctx_switch; cleared by new thread after switch */
 static struct thread *thread_to_free;
 
+/* Free stack/struct for a thread that exited in another context. Must run on
+ * every path that can run after a ctx_switch/ctx_start (including entry to
+ * yield/sleep/exit and right after switch returns). */
+static void reap_exited_thread(void)
+{
+  if (!thread_to_free)
+    return;
+  if (thread_to_free->stack_base)
+  {
+    free(thread_to_free->stack_base);
+    free(thread_to_free);
+  }
+  thread_to_free = NULL;
+}
+
 static void run_enqueue(struct thread *t)
 {
   t->state = RUNNABLE;
@@ -190,6 +205,7 @@ void thread_create(void (*f)(void *), void *arg, unsigned int stack_size)
 
 void thread_yield(void)
 {
+  reap_exited_thread();
   wake_sleepers();
   struct thread *next = run_dequeue();
   if (!next)
@@ -201,15 +217,18 @@ void thread_yield(void)
   {
     next->first_run = 0;
     ctx_start(&prev->sp, next->sp);
+    reap_exited_thread();
   }
   else
   {
     ctx_switch(&prev->sp, next->sp);
+    reap_exited_thread();
   }
 }
 
 void thread_sleep(uint64_t deadline)
 {
+  reap_exited_thread();
   current->state = SLEEPING;
   current->deadline = deadline;
   current->next = sleep_head;
@@ -217,22 +236,28 @@ void thread_sleep(uint64_t deadline)
 
   for (;;)
   {
+    reap_exited_thread();
     wake_sleepers();
     struct thread *next = run_dequeue();
     if (next)
     {
       struct thread *prev = current;
       if (next == prev)
+      {
+        reap_exited_thread();
         return;
+      }
       current = next;
       if (next->first_run)
       {
         next->first_run = 0;
         ctx_start(&prev->sp, next->sp);
+        reap_exited_thread();
       }
       else
       {
         ctx_switch(&prev->sp, next->sp);
+        reap_exited_thread();
       }
       return; /* back from scheduler; our deadline passed and we were woken */
     }
@@ -258,6 +283,7 @@ void thread_sleep(uint64_t deadline)
 
 int thread_get(void)
 {
+  reap_exited_thread();
   int c = user_get(0);
   if (c != USER_GET_NO_INPUT)
     return c;
@@ -268,22 +294,28 @@ int thread_get(void)
 
   for (;;)
   {
+    reap_exited_thread();
     wake_sleepers();
     struct thread *next = run_dequeue();
     if (next)
     {
       struct thread *prev = current;
       if (next == prev)
+      {
+        reap_exited_thread();
         return current->input_result;
+      }
       current = next;
       if (next->first_run)
       {
         next->first_run = 0;
         ctx_start(&prev->sp, next->sp);
+        reap_exited_thread();
       }
       else
       {
         ctx_switch(&prev->sp, next->sp);
+        reap_exited_thread();
       }
       return current->input_result;
     }
@@ -309,10 +341,12 @@ int thread_get(void)
 
 void thread_exit(void)
 {
+  reap_exited_thread();
   thread_count--;
   struct thread *prev = current;
   for (;;)
   {
+    reap_exited_thread();
     wake_sleepers();
     struct thread *next = run_dequeue();
     if (next)
@@ -323,20 +357,12 @@ void thread_exit(void)
       {
         next->first_run = 0;
         ctx_start(&prev->sp, next->sp);
+        reap_exited_thread();
       }
       else
       {
         ctx_switch(&prev->sp, next->sp);
-      }
-      /* Land here in the new thread after switch */
-      if (thread_to_free)
-      {
-        if (thread_to_free->stack_base)
-        {
-          free(thread_to_free->stack_base);
-          free(thread_to_free);
-        }
-        thread_to_free = NULL;
+        reap_exited_thread();
       }
       return;
     }
@@ -388,6 +414,7 @@ void sema_inc(struct sema *sema)
 
 void sema_dec(struct sema *sema)
 {
+  reap_exited_thread();
   if (sema->count > 0)
   {
     sema->count--;
@@ -401,22 +428,28 @@ void sema_dec(struct sema *sema)
 
   for (;;)
   {
+    reap_exited_thread();
     wake_sleepers();
     struct thread *next = run_dequeue();
     if (next)
     {
       struct thread *prev = current;
       if (next == prev)
+      {
+        reap_exited_thread();
         return;
+      }
       current = next;
       if (next->first_run)
       {
         next->first_run = 0;
         ctx_start(&prev->sp, next->sp);
+        reap_exited_thread();
       }
       else
       {
         ctx_switch(&prev->sp, next->sp);
+        reap_exited_thread();
       }
       return;
     }
